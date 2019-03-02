@@ -1,0 +1,28 @@
+<configs>
+
+	<!-- Set 0 : Broken      old: darkgrey 808080 -->
+	<set xpath="/qualityinfo/quality[@color='808080']/@color">828282</set>
+	
+	<!-- Set 1 : Common      old: sand     9C8867    new: white    EEEEEE -->
+	<set xpath="/qualityinfo/quality[@color='9C8867']/@color">EEEEEE</set>
+	
+	<!-- Set 2 : Uncommon    old: orange   CF7F29    new: green    42C235 -->
+	<set xpath="/qualityinfo/quality[@color='CF7F29']/@color">42C235</set>
+	
+	<!-- Set 3 : Rare        old: yellow   A2A41B    new: blue     315DCE -->
+	<set xpath="/qualityinfo/quality[@color='A2A41B']/@color">315DCF</set>
+	
+	<!-- Set 4 : Epic        old: green    42C234    new: purple   A42ACD -->
+	<set xpath="/qualityinfo/quality[@color='42C234']/@color">A42ACD</set>
+	
+	<!-- Set 5 : Legendary   old: blue     315DCE    new: orange   F4A239 -->
+	<!-- Set 5 : Legendary   old: blue     305CCD    new: orange   E08E25  (only for Ruckys BorderlandZ-Mod otherwise a WRN!) -->
+	<set xpath="/qualityinfo/quality[@color='315DCE']/@color">F4A239</set>
+	<set xpath="/qualityinfo/quality[@color='305CCD']/@color">E08E25</set>
+	
+	<!-- Set 6 : Pearlescent old: purple   A42ACC    new: orange   CC7A11 -->
+	<!-- Set 6 : Pearlescent old: purple   A329CB    new: cyan     19F0F0  (only for Ruckys BorderlandZ-Mod otherwise a WRN!) -->
+	<set xpath="/qualityinfo/quality[@color='A42ACC']/@color">CC7A11</set>
+	<set xpath="/qualityinfo/quality[@color='A329CB']/@color">19F0F0</set>
+
+</configs>
