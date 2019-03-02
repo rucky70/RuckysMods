@@ -1,0 +1,88 @@
+<configs>
+
+	<!-- Vanilla quality changes -->
+
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='1,2']/@default_quality">1,120</set>
+	
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='5,6']/@quality">201,255</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='3,4']/@quality">121,200</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='1,2']/@quality">1,120</set>
+
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='1']/@default_quality">1,80</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='2']/@default_quality">81,120</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='3']/@default_quality">121,160</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='4']/@default_quality">161,200</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='5']/@default_quality">201,240</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate[@default_quality='6']/@default_quality">241,255</set>
+
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='1']/@quality">1,80</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='2']/@quality">81,120</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='3']/@quality">121,160</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='4']/@quality">161,200</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='5']/@quality">201,240</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='6']/@quality">241,255</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='2,3']/@quality">81,160</set>
+	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='4,5']/@quality">161,240</set>
+	
+	<!-- test loot container -->
+	
+	<insertBefore xpath="/lootcontainers/lootcontainer[@id='1']" >
+	<lootgroup name="QSR-Test-Suitcase" count="all">
+		<item name="gunPistol" quality="161,161"/>
+		<item name="gunPistol" quality="164,164"/>
+		<item name="gunPistol" quality="167,167"/>
+		<item name="gunPistol" quality="169,169"/>
+		<item name="gunPistol" quality="171,171"/>
+		<item name="gunPistol" quality="173,173"/>
+		<item name="gunPistol" quality="176,176"/>
+		<item name="gunPistol" quality="179,179"/>
+		<item name="gunPistol" quality="181,181"/>
+		<item name="gunPistol" quality="184,184"/>
+		<item name="gunPistol" quality="187,187"/>
+		<item name="gunPistol" quality="189,189"/>
+		<item name="gunPistol" quality="191,191"/>
+		<item name="gunPistol" quality="193,193"/>
+		<item name="gunPistol" quality="196,196"/>
+		<item name="gunPistol" quality="199,199"/>
+		<item name="gunPistol" quality="210,210"/>
+		<item name="gunPistol" quality="230,230"/>
+		<item name="gunPistol" quality="245,245"/>
+		<item name="gunPistol" quality="255,255"/>
+		<item name="gunPistol" quality="255,255"/>
+		<item name="modGunBarrelExtender" quality="70,70"/>
+		<item name="modGunBarrelExtender" quality="110,110"/>
+		<item name="modGunBarrelExtender" quality="150,150"/>
+		<item name="modGunBarrelExtender" quality="161,161"/>
+		<item name="modGunBarrelExtender" quality="165,165"/>
+		<item name="modGunBarrelExtender" quality="175,175"/>
+		<item name="modGunBarrelExtender" quality="180,180"/>
+		<item name="modGunBarrelExtender" quality="185,185"/>
+		<item name="modGunBarrelExtender" quality="190,190"/>
+		<item name="modGunBarrelExtender" quality="195,195"/>
+		<item name="modGunBarrelExtender" quality="200,200"/>
+		<item name="modGunBarrelExtender" quality="230,230"/>
+		<item name="modGunRodAndSpring" quality="70,70"/>
+		<item name="modGunRodAndSpring" quality="110,110"/>
+		<item name="modGunRodAndSpring" quality="150,150"/>
+		<item name="modGunRodAndSpring" quality="161,161"/>
+		<item name="modGunRodAndSpring" quality="165,165"/>
+		<item name="modGunRodAndSpring" quality="175,175"/>
+		<item name="modGunRodAndSpring" quality="180,180"/>
+		<item name="modGunRodAndSpring" quality="185,185"/>
+		<item name="modGunRodAndSpring" quality="190,190"/>
+		<item name="modGunRodAndSpring" quality="195,195"/>
+		<item name="modGunRodAndSpring" quality="200,200"/>
+		<item name="modGunRodAndSpring" quality="230,230"/>
+		<item name="resourceRepairKit" count="25" />
+		<!--<item name="ammo9mmBullet" count="300" />-->
+		<item name="QSR-Test-VendingMachine" count="1" />
+	</lootgroup>
+	</insertBefore>
+	
+	<insertAfter xpath="/lootcontainers/lootcontainer[@id='116']" >
+	<lootcontainer id="250" count="1" size="8,6" destroy_on_close="false" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" open_time="1.5" >
+		<item group="QSR-Test-Suitcase" />
+	</lootcontainer>
+	</insertAfter>	
+
+</configs>

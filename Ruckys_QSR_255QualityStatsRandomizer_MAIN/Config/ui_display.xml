@@ -1,0 +1,40 @@
+<configs>
+
+	<!-- we're replacing that dRecoil display value as it's a text value and we're not sure yet how we can compute a more appropriate number -->
+
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedGun']/display_entry[@name='dRecoil']" />
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedShotgun']/display_entry[@name='dRecoil']" />
+	<insertAfter xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedGun']/display_entry[@name='RoundsPerMinute']"><display_entry name="ModSlots" title_key="statModSlots"/></insertAfter>
+	<insertAfter xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedShotgun']/display_entry[@name='RoundsPerMinute']"><display_entry name="ModSlots" title_key="statModSlots"/></insertAfter>
+
+	<insertAfter xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedLauncher']/display_entry[@name='ProjectileVelocity']"><display_entry name="WeaponHandling" title_key="statWeaponHandling" display_type="Percent" show_inverted="true"/></insertAfter>
+	<insertAfter xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedLauncher']/display_entry[@name='ProjectileVelocity']"><display_entry name="ModSlots" title_key="statModSlots"/></insertAfter>
+
+	<!-- we'll display float numbers to see better differences between each weapon -->
+	
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedGun']/display_entry[@name='EntityDamage']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedGun']/display_entry[@name='RoundsPerMinute']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedGun']/display_entry[@name='DamageFalloffRange']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedShotgun']/display_entry[@name='EntityDamage']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedShotgun']/display_entry[@name='RoundsPerMinute']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedShotgun']/display_entry[@name='DamageFalloffRange']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedLauncher']/display_entry[@name='EntityDamage']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedLauncher']/display_entry[@name='ProjectileVelocity']" name="display_type">Decimal</setattribute>
+	<setattribute xpath="/ui_display_info/item_display/item_display_info[@display_type='rangedLauncher']/display_entry[@name='DamageFalloffRange']" name="display_type">Decimal</setattribute>
+
+	<!-- display panel layout for the gun modifiers otherwise we couldn't compare them -->
+
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modRangedGun" display_group="groupAttire">
+			<display_entry name="EntityDamage" title_key="statEntityDamageRanged" display_type="Percent" show_inverted="true"/>
+			<display_entry name="BlockDamage" title_key="statBlockDamage" display_type="Percent" show_inverted="true"/>
+			<display_entry name="MagazineSize" title_key="statMagazineSize" display_type="Percent" show_inverted="true"/>
+			<display_entry name="RoundsPerMinute" title_key="statRoundsPerMinute" display_type="Percent" show_inverted="true"/>
+			<display_entry name="BurstRoundCount" title_key="statBurstRoundCount" display_type="Percent" show_inverted="true"/>
+			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange" display_type="Percent" show_inverted="true"/>
+			<display_entry name="WeaponHandling" title_key="statWeaponHandling" display_type="Percent" show_inverted="true"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" display_type="Decimal"/>
+		</item_display_info>	
+	</append>
+
+</configs>

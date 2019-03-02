@@ -1,0 +1,37 @@
+<configs>
+
+	<!-- test case -->
+	
+	<append xpath="/blocks">
+	<block name="QSR-Test-Suitcase(Locked)">
+		<property name="CustomIcon" value="cntSuitcase"/>
+		<property name="DisplayType" value="blockHardened" />
+		<property name="Material" value="Mcloth"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<drop event="Destroy" count="0"/>
+		<property name="MaxDamage" value="10"/>
+		<property name="DowngradeBlock" value="QSR-Test-Suitcase" />
+	</block>
+	<block name="QSR-Test-Suitcase">
+		<property name="Extends" value="QSR-Test-Suitcase(Locked)" param1="DowngradeBlock"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="MaxDamage" value="150"/>
+		<property name="Class" value="Loot" />
+		<property name="LootList" value="250" />
+	</block>
+	<block name="QSR-Test-VendingMachine">
+		<property name="CustomIcon" value="cntVendingMachine2Broken"/>
+		<property name="Extends" value="cntVendingMachine2Broken"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="Model" value="Entities/Crafting/vending_machinePrefab"/>
+		<property name="Class" value="VendingMachine"/>
+		<property name="TraderID" value="2"/>
+	</block>
+	</append>
+	
+	
+</configs>

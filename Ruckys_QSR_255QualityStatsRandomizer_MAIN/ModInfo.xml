@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Ruckys QSR 255-Quality-Stats-Randomizer" />
+        <Description value="Changes the 6 Quality system to a 255 one and semi randomize most stats on guns and gun mods" />
+        <Author value="Rucky" />
+        <Version value="A17.2" />
+    </ModInfo>
+</xml>

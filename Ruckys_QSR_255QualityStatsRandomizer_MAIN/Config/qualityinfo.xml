@@ -1,0 +1,334 @@
+<configs>
+
+	<!-- IMPORTANT : You will need to REPLACE the File Assembly-CSharp.dll in 
+		{SteamApps\common}\7 Days To Die\7DaysToDie_Data\Managed
+		with the one located in the DLL folder in this Modlet !! -->
+
+	<!-- Quality levels:
+		0 :   0 -40
+		1 :  41 -80
+		2 :  81-120
+		3 : 121-160
+		4 : 161-200
+		5 : 201-225  226-240
+		6 : 241-250  251-255
+	-->
+
+	<!-- first romoving all previous entries -->
+	
+	<remove xpath="/qualityinfo/quality[@key='0']" />
+	<remove xpath="/qualityinfo/quality[@key='1']" />
+	<remove xpath="/qualityinfo/quality[@key='2']" />
+	<remove xpath="/qualityinfo/quality[@key='3']" />
+	<remove xpath="/qualityinfo/quality[@key='4']" />
+	<remove xpath="/qualityinfo/quality[@key='5']" />
+	<remove xpath="/qualityinfo/quality[@key='6']" />
+
+	<!-- now adding the 7 different quality sets for together 255 entires: first 6 a 40 each, the 7th is 15 entries -->
+
+	<append xpath="/qualityinfo">
+
+	<!-- Set 0 : Broken      darkgrey 808080 -->
+
+	<quality key="0" color="808080"/>
+
+	<quality key="1" color="808080"/>
+	<quality key="2" color="808080"/>
+	<quality key="3" color="808080"/>
+	<quality key="4" color="808080"/>
+	<quality key="5" color="808080"/>
+	<quality key="6" color="808080"/>
+	<quality key="7" color="808080"/>
+	<quality key="8" color="808080"/>
+	<quality key="9" color="808080"/>
+	<quality key="10" color="808080"/>
+	
+	<quality key="11" color="808080"/>
+	<quality key="12" color="808080"/>
+	<quality key="13" color="808080"/>
+	<quality key="14" color="808080"/>
+	<quality key="15" color="808080"/>
+	<quality key="16" color="808080"/>
+	<quality key="17" color="808080"/>
+	<quality key="18" color="808080"/>
+	<quality key="19" color="808080"/>	
+	<quality key="20" color="808080"/>
+	
+	<quality key="21" color="808080"/>
+	<quality key="22" color="808080"/>
+	<quality key="23" color="808080"/>
+	<quality key="24" color="808080"/>
+	<quality key="25" color="808080"/>
+	<quality key="26" color="808080"/>
+	<quality key="27" color="808080"/>
+	<quality key="28" color="808080"/>
+	<quality key="29" color="808080"/>
+	<quality key="30" color="808080"/>
+	
+	<quality key="31" color="808080"/>
+	<quality key="32" color="808080"/>
+	<quality key="33" color="808080"/>
+	<quality key="34" color="808080"/>
+	<quality key="35" color="808080"/>
+	<quality key="36" color="808080"/>
+	<quality key="37" color="808080"/>
+	<quality key="38" color="808080"/>
+	<quality key="39" color="808080"/>
+	<quality key="40" color="808080"/>
+	
+	<!-- Set 1 : Common      sand     9C8867 -->
+	
+	<quality key="41" color="9C8867"/>
+	<quality key="42" color="9C8867"/>
+	<quality key="43" color="9C8867"/>
+	<quality key="44" color="9C8867"/>
+	<quality key="45" color="9C8867"/>
+	<quality key="46" color="9C8867"/>
+	<quality key="47" color="9C8867"/>
+	<quality key="48" color="9C8867"/>
+	<quality key="49" color="9C8867"/>
+	<quality key="50" color="9C8867"/>
+	
+	<quality key="51" color="9C8867"/>
+	<quality key="52" color="9C8867"/>
+	<quality key="53" color="9C8867"/>
+	<quality key="54" color="9C8867"/>
+	<quality key="55" color="9C8867"/>
+	<quality key="56" color="9C8867"/>
+	<quality key="57" color="9C8867"/>
+	<quality key="58" color="9C8867"/>
+	<quality key="59" color="9C8867"/>
+	<quality key="60" color="9C8867"/>
+	
+	<quality key="61" color="9C8867"/>
+	<quality key="62" color="9C8867"/>
+	<quality key="63" color="9C8867"/>
+	<quality key="64" color="9C8867"/>
+	<quality key="65" color="9C8867"/>
+	<quality key="66" color="9C8867"/>
+	<quality key="67" color="9C8867"/>
+	<quality key="68" color="9C8867"/>
+	<quality key="69" color="9C8867"/>
+	<quality key="70" color="9C8867"/>
+	
+	<quality key="71" color="9C8867"/>
+	<quality key="72" color="9C8867"/>
+	<quality key="73" color="9C8867"/>
+	<quality key="74" color="9C8867"/>
+	<quality key="75" color="9C8867"/>
+	<quality key="76" color="9C8867"/>
+	<quality key="77" color="9C8867"/>
+	<quality key="78" color="9C8867"/>
+	<quality key="79" color="9C8867"/>
+	<quality key="80" color="9C8867"/>
+	
+	<!-- Set 2 : Uncommon    orange   CF7F29 -->
+	
+	<quality key="81" color="CF7F29"/>
+	<quality key="82" color="CF7F29"/>
+	<quality key="83" color="CF7F29"/>
+	<quality key="84" color="CF7F29"/>
+	<quality key="85" color="CF7F29"/>
+	<quality key="86" color="CF7F29"/>
+	<quality key="87" color="CF7F29"/>
+	<quality key="88" color="CF7F29"/>
+	<quality key="89" color="CF7F29"/>
+	<quality key="90" color="CF7F29"/>
+	
+	<quality key="91" color="CF7F29"/>
+	<quality key="92" color="CF7F29"/>
+	<quality key="93" color="CF7F29"/>
+	<quality key="94" color="CF7F29"/>
+	<quality key="95" color="CF7F29"/>
+	<quality key="96" color="CF7F29"/>
+	<quality key="97" color="CF7F29"/>
+	<quality key="98" color="CF7F29"/>
+	<quality key="99" color="CF7F29"/>
+	<quality key="100" color="CF7F29"/>
+	
+	<quality key="101" color="CF7F29"/>
+	<quality key="102" color="CF7F29"/>
+	<quality key="103" color="CF7F29"/>
+	<quality key="104" color="CF7F29"/>
+	<quality key="105" color="CF7F29"/>
+	<quality key="106" color="CF7F29"/>
+	<quality key="107" color="CF7F29"/>
+	<quality key="108" color="CF7F29"/>
+	<quality key="109" color="CF7F29"/>
+	<quality key="110" color="CF7F29"/>
+	
+	<quality key="111" color="CF7F29"/>
+	<quality key="112" color="CF7F29"/>
+	<quality key="113" color="CF7F29"/>
+	<quality key="114" color="CF7F29"/>
+	<quality key="115" color="CF7F29"/>
+	<quality key="116" color="CF7F29"/>
+	<quality key="117" color="CF7F29"/>
+	<quality key="118" color="CF7F29"/>
+	<quality key="119" color="CF7F29"/>
+	<quality key="120" color="CF7F29"/>
+	
+	<!-- Set 3 : Rare        yellow   A2A41B -->
+
+	<quality key="121" color="A2A41B"/>
+	<quality key="122" color="A2A41B"/>
+	<quality key="123" color="A2A41B"/>
+	<quality key="124" color="A2A41B"/>
+	<quality key="125" color="A2A41B"/>
+	<quality key="126" color="A2A41B"/>
+	<quality key="127" color="A2A41B"/>
+	<quality key="128" color="A2A41B"/>
+	<quality key="129" color="A2A41B"/>
+	<quality key="130" color="A2A41B"/>
+	
+	<quality key="131" color="A2A41B"/>
+	<quality key="132" color="A2A41B"/>
+	<quality key="133" color="A2A41B"/>
+	<quality key="134" color="A2A41B"/>
+	<quality key="135" color="A2A41B"/>
+	<quality key="136" color="A2A41B"/>
+	<quality key="137" color="A2A41B"/>
+	<quality key="138" color="A2A41B"/>
+	<quality key="139" color="A2A41B"/>
+	<quality key="140" color="A2A41B"/>
+	
+	<quality key="141" color="A2A41B"/>
+	<quality key="142" color="A2A41B"/>
+	<quality key="143" color="A2A41B"/>
+	<quality key="144" color="A2A41B"/>
+	<quality key="145" color="A2A41B"/>
+	<quality key="146" color="A2A41B"/>
+	<quality key="147" color="A2A41B"/>
+	<quality key="148" color="A2A41B"/>
+	<quality key="149" color="A2A41B"/>
+	<quality key="150" color="A2A41B"/>
+	
+	<quality key="151" color="A2A41B"/>
+	<quality key="152" color="A2A41B"/>
+	<quality key="153" color="A2A41B"/>
+	<quality key="154" color="A2A41B"/>
+	<quality key="155" color="A2A41B"/>
+	<quality key="156" color="A2A41B"/>
+	<quality key="157" color="A2A41B"/>
+	<quality key="158" color="A2A41B"/>
+	<quality key="159" color="A2A41B"/>
+	<quality key="160" color="A2A41B"/>
+	
+	<!-- Set 4 : Epic        green    42C234 -->
+
+	<quality key="161" color="42C234"/>
+	<quality key="162" color="42C234"/>
+	<quality key="163" color="42C234"/>
+	<quality key="164" color="42C234"/>
+	<quality key="165" color="42C234"/>
+	<quality key="166" color="42C234"/>
+	<quality key="167" color="42C234"/>
+	<quality key="168" color="42C234"/>
+	<quality key="169" color="42C234"/>
+	<quality key="170" color="42C234"/>
+	
+	<quality key="171" color="42C234"/>
+	<quality key="172" color="42C234"/>
+	<quality key="173" color="42C234"/>
+	<quality key="174" color="42C234"/>
+	<quality key="175" color="42C234"/>
+	<quality key="176" color="42C234"/>
+	<quality key="177" color="42C234"/>
+	<quality key="178" color="42C234"/>
+	<quality key="179" color="42C234"/>
+	<quality key="180" color="42C234"/>
+	
+	<quality key="181" color="42C234"/>
+	<quality key="182" color="42C234"/>
+	<quality key="183" color="42C234"/>
+	<quality key="184" color="42C234"/>
+	<quality key="185" color="42C234"/>
+	<quality key="186" color="42C234"/>
+	<quality key="187" color="42C234"/>
+	<quality key="188" color="42C234"/>
+	<quality key="189" color="42C234"/>
+	<quality key="190" color="42C234"/>
+	
+	<quality key="191" color="42C234"/>
+	<quality key="192" color="42C234"/>
+	<quality key="193" color="42C234"/>
+	<quality key="194" color="42C234"/>
+	<quality key="195" color="42C234"/>
+	<quality key="196" color="42C234"/>
+	<quality key="197" color="42C234"/>
+	<quality key="198" color="42C234"/>
+	<quality key="199" color="42C234"/>
+	<quality key="200" color="42C234"/>
+	
+	<!-- Set 5 : Legendary   blue     315DCE -->
+	<!-- Set 5 : Legendary   blue     305CCD -->
+	
+	<quality key="201" color="315DCE"/>
+	<quality key="202" color="315DCE"/>
+	<quality key="203" color="315DCE"/>
+	<quality key="204" color="315DCE"/>
+	<quality key="205" color="315DCE"/>
+	<quality key="206" color="315DCE"/>
+	<quality key="207" color="315DCE"/>
+	<quality key="208" color="315DCE"/>
+	<quality key="209" color="315DCE"/>	
+	<quality key="210" color="315DCE"/>
+	
+	<quality key="211" color="315DCE"/>
+	<quality key="212" color="315DCE"/>
+	<quality key="213" color="315DCE"/>
+	<quality key="214" color="315DCE"/>
+	<quality key="215" color="315DCE"/>
+	<quality key="216" color="315DCE"/>
+	<quality key="217" color="315DCE"/>
+	<quality key="218" color="315DCE"/>
+	<quality key="219" color="315DCE"/>
+	<quality key="220" color="315DCE"/>
+	
+	<quality key="221" color="315DCE"/>
+	<quality key="222" color="315DCE"/>
+	<quality key="223" color="315DCE"/>
+	<quality key="224" color="315DCE"/>
+	<quality key="225" color="315DCE"/>
+	
+	<quality key="226" color="305CCD"/>
+	<quality key="227" color="305CCD"/>
+	<quality key="228" color="305CCD"/>
+	<quality key="229" color="305CCD"/>
+	<quality key="230" color="305CCD"/>
+	
+	<quality key="231" color="305CCD"/>
+	<quality key="232" color="305CCD"/>
+	<quality key="233" color="305CCD"/>
+	<quality key="234" color="305CCD"/>
+	<quality key="235" color="305CCD"/>
+	<quality key="236" color="305CCD"/>
+	<quality key="237" color="305CCD"/>
+	<quality key="238" color="305CCD"/>
+	<quality key="239" color="305CCD"/>
+	<quality key="240" color="305CCD"/>
+	
+	<!-- Set 6 : Legendary	purple   A42ACC -->
+	<!-- Set 6 : Legendary 	purple   A329CB -->
+
+	<quality key="241" color="A42ACC"/>
+	<quality key="242" color="A42ACC"/>
+	<quality key="243" color="A42ACC"/>
+	<quality key="244" color="A42ACC"/>
+	<quality key="245" color="A42ACC"/>
+	<quality key="246" color="A42ACC"/>
+	<quality key="247" color="A42ACC"/>
+	<quality key="248" color="A42ACC"/>
+	<quality key="249" color="A42ACC"/>
+	<quality key="250" color="A42ACC"/>
+
+	<quality key="251" color="A329CB"/>
+	<quality key="252" color="A329CB"/>
+	<quality key="253" color="A329CB"/>
+	<quality key="254" color="A329CB"/>
+	<quality key="255" color="A329CB"/>
+
+	<!-- end -->
+	
+	</append>
+</configs>

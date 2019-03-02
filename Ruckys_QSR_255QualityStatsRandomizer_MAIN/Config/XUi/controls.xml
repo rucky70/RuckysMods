@@ -1,0 +1,25 @@
+<configs>
+
+	<remove xpath="/controls/item_stack/rect/label[@name='stackValue']" />
+	<append xpath="/controls/item_stack/rect"><label depth="9" name="stackValue" pos="67,-59" size="60,28" text="{itemcount}" font_size="24" effect="outline" pivot="right"/></append>
+
+	<remove xpath="/controls/backpack_item_stack/rect/label[@name='stackValue']" />
+	<append xpath="/controls/backpack_item_stack/rect"><label depth="9" name="stackValue" pos="61,-53" size="60,28" text="{itemcount}" font_size="24" effect="outline" pivot="right"/></append>
+	
+	<remove xpath="/controls/required_item_stack/rect/label[@name='stackValue']" />
+	<append xpath="/controls/required_item_stack/rect"><label depth="9" name="stackValue" pos="61,-53" size="60,28" text="{itemcount}" font_size="24" effect="outline" pivot="right"/></append>
+
+	<remove xpath="/controls/creative_stack/rect/label[@name='stackValue']" />
+	<append xpath="/controls/creative_stack/rect"><label depth="9" name="stackValue" pos="67,-59" size="60,28" text="{itemcount}" font_size="24" effect="outline" pivot="right"/></append>
+
+	<remove xpath="/controls/equipment_stack/rect/label[@name='stackValue']" />
+	<append xpath="/controls/equipment_stack/rect"><label depth="9" name="stackValue" pos="61,-53" size="60,28" text="{itemcount}" font_size="24" effect="outline" pivot="right"/></append>
+
+	<remove xpath="/controls/drag_item_stack/rect/label[@name='stackValue']" />
+	<append xpath="/controls/drag_item_stack/rect"><label depth="9" name="stackValue" pos="61,-53" size="60,28" text="{itemcount}" font_size="24" effect="outline" pivot="right"/></append>
+
+	<set xpath="/controls/quest_turnin_entry/rect/label[@name='durabilityValue']/@font_size">24</set>
+
+	<set xpath="/controls/trader_item/rect/label[@name='durabilityValue']/@font_size">28</set>
+
+</configs>

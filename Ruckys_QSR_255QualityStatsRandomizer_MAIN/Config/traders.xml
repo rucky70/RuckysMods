@@ -1,0 +1,83 @@
+<configs>
+
+	<!-- there seems to be another hardcoded setting in the Assembly-CSharp.dll I haven't found yet 
+	     which sets the prize depending of the quality, but it's still hardcoded to only 6 quality levels 
+	     therefore I set the quality_mod constant and change the prize at the item themselfs -->
+	
+	<!-- TODO see BZ_Additions! -->
+	
+	<set xpath="/traders/@quality_mod">1,1</set> <!-- 0.4,8 BZ: 2,2 -->
+
+	<!-- Vanilla changes -->
+
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3']/@quality">121,160</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='3,6']/@quality">121,255</set>
+	<set xpath="/traders/trader_info/trader_items/item[@quality='3']/@quality">121,160</set>
+	<set xpath="/traders/trader_info/tier_items/item[@quality='4']/@quality">161,200</set>
+	<set xpath="/traders/trader_info/tier_items/item[@quality='5']/@quality">201,240</set>
+	<set xpath="/traders/trader_info/tier_items/item[@quality='6']/@quality">241,255</set>
+	<set xpath="/traders/trader_info/tier_items/item[@quality='3,6']/@quality">121,255</set>
+	
+	<!-- demo items for demo trader -->
+	
+	<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='modMeleeT1']">
+	<trader_item_group name="QSR_Demotrading" count="all">
+		<item name="gunPistol" quality="161,161"/>
+		<item name="gunPistol" quality="164,164"/>
+		<item name="gunPistol" quality="167,167"/>
+		<item name="gunPistol" quality="169,169"/>
+		<item name="gunPistol" quality="171,171"/>
+		<item name="gunPistol" quality="173,173"/>
+		<item name="gunPistol" quality="176,176"/>
+		<item name="gunPistol" quality="179,179"/>
+		<item name="gunPistol" quality="181,181"/>
+		<item name="gunPistol" quality="184,184"/>
+		<item name="gunPistol" quality="187,187"/>
+		<item name="gunPistol" quality="189,189"/>
+		<item name="gunPistol" quality="191,191"/>
+		<item name="gunPistol" quality="193,193"/>
+		<item name="gunPistol" quality="196,196"/>
+		<item name="gunPistol" quality="199,199"/>
+		<item name="gunPistol" quality="210,210"/>
+		<item name="gunPistol" quality="230,230"/>
+		<item name="gunPistol" quality="245,245"/>
+		<item name="gunPistol" quality="255,255"/>
+		<item name="gunPistol" quality="255,255"/>
+		<item name="modGunBarrelExtender" quality="70,70"/>
+		<item name="modGunBarrelExtender" quality="110,110"/>
+		<item name="modGunBarrelExtender" quality="150,150"/>
+		<item name="modGunBarrelExtender" quality="161,161"/>
+		<item name="modGunBarrelExtender" quality="165,165"/>
+		<item name="modGunBarrelExtender" quality="175,175"/>
+		<item name="modGunBarrelExtender" quality="180,180"/>
+		<item name="modGunBarrelExtender" quality="185,185"/>
+		<item name="modGunBarrelExtender" quality="190,190"/>
+		<item name="modGunBarrelExtender" quality="195,195"/>
+		<item name="modGunBarrelExtender" quality="200,200"/>
+		<item name="modGunBarrelExtender" quality="230,230"/>
+		<item name="modGunRodAndSpring" quality="70,70"/>
+		<item name="modGunRodAndSpring" quality="110,110"/>
+		<item name="modGunRodAndSpring" quality="150,150"/>
+		<item name="modGunRodAndSpring" quality="161,161"/>
+		<item name="modGunRodAndSpring" quality="165,165"/>
+		<item name="modGunRodAndSpring" quality="175,175"/>
+		<item name="modGunRodAndSpring" quality="180,180"/>
+		<item name="modGunRodAndSpring" quality="185,185"/>
+		<item name="modGunRodAndSpring" quality="190,190"/>
+		<item name="modGunRodAndSpring" quality="195,195"/>
+		<item name="modGunRodAndSpring" quality="200,200"/>
+		<item name="modGunRodAndSpring" quality="230,230"/>
+		<item name="resourceRepairKit" count="25" />
+		<item name="ammo9mmBullet" count="300" />
+	</trader_item_group>
+	</insertBefore>
+
+	<insertBefore xpath="/traders/trader_info[@id='3']">
+	<trader_info id="2" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="40" max_inventory="60" min_items_swapped="15" max_items_swapped="20">
+		<trader_items count="40">
+			<item group="QSR_Demotrading" />
+		</trader_items>
+	</trader_info>
+	</insertBefore>
+
+</configs>

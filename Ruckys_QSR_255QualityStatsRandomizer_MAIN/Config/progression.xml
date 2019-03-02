@@ -1,0 +1,6 @@
+<configs>
+
+	<set xpath="/progression/attributes/attribute[@name='attIntellect']/effect_group/passive_effect[@name='CraftingTier' and @level='2,10']/@value">1,254</set>
+	<set xpath="/progression/attributes/attribute[@name='attIntellect']/effect_group/passive_effect[@name='CraftingTier' and @level='11,20']/@value">254</set>
+	
+</configs>
