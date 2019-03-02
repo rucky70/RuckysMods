@@ -1,0 +1,7 @@
+<configs>
+
+	<!-- Hide quality level	in itemInfoPanel -->
+	
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/label[@name='durabilityValue']/@font_size">0</set>
+	
+</configs>

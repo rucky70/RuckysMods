@@ -1,0 +1,23 @@
+<configs>
+
+	<!-- Hiding ItemQualityNumber : Move it to the very very left out of the Screenspace! -->
+
+	<set xpath="/controls/item_stack/rect/label[@name='stackValue']/@size">99999,28</set>
+	<set xpath="/controls/backpack_item_stack/rect/label[@name='stackValue']/@size">99999,28</set>
+	<set xpath="/controls/required_item_stack/rect/label[@name='stackValue']/@size">99999,28</set>
+	<set xpath="/controls/creative_stack/rect/label[@name='stackValue']/@size">99999,28</set>
+	<set xpath="/controls/equipment_stack/rect/label[@name='stackValue']/@size">99999,28</set>
+	<set xpath="/controls/drag_item_stack/rect/label[@name='stackValue']/@size">99999,28</set>
+
+	<!-- Remove it from Quests and Trader lists too -->
+
+	<set xpath="/controls/quest_turnin_entry/rect/label[@name='durabilityValue']/@font_size">0</set>
+	<set xpath="/controls/trader_item/rect/label[@name='durabilityValue']/@font_size">0</set>
+
+	<set xpath="/controls/trader_item/rect/sprite[@name='durabilityBackground']/@height">0</set>
+	<set xpath="/controls/trader_item/rect/sprite[@name='durabilityBackground']/@width">0</set>	
+	<set xpath="/controls/trader_item/rect/sprite[@name='durabilityBar']/@height">44</set> <!-- 6 -->
+	<set xpath="/controls/trader_item/rect/sprite[@name='durabilityBar']/@width">540</set> <!-- 50 -->
+	<set xpath="/controls/trader_item/rect/sprite[@name='durabilityBar']/@pos">0,0</set> <!-- 455, -36 -->
+
+</configs>
