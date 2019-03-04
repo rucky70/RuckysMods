@@ -1,0 +1,141 @@
+<configs>
+
+	<!-- PART I : Moving all Windows up -->
+	
+	<setattribute xpath="/windows/window[@name='emptyInfoPanel']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/@pos">0,50</set>
+
+	<setattribute xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/@pos">0,50</set>
+
+	<setattribute xpath="/windows/window[@name='craftingInfoPanel']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/@pos">0,50</set>
+
+	<setattribute xpath="/windows/window[@name='windowCreative']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowCreative']/@width">979</set> <!-- 604 75x -->
+	<set xpath="/windows/window[@name='windowCreative']/sprite[@pos='2,-49']/@width">974</set>
+	<set xpath="/windows/window[@name='windowCreative']/sprite[@pos='2,-49']/@pos">2,47</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/@pos">3,47</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/@width">972</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/sprite[@name='backgroundMain']/@width">978</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/button[@name='simplepickup']/@pos">269,-22</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/button[@name='devblocks']/@pos">312,-22</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/button[@name='favorites']/@pos">368,-22</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/panel[@width='200']/@pos">505,0</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/panel[@width='200']/@width">350</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='searchControls']/panel[@width='104']/@pos">870,0</set>
+	<set xpath="/windows/window[@name='windowCreative']/sprite[@pos='2,-97']/@width">974</set>
+	<set xpath="/windows/window[@name='windowCreative']/sprite[@pos='2,-97']/@pos">2,-1</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='filterRow']/@pos">3,-1</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='filterRow']/@width">972</set>
+	<set xpath="/windows/window[@name='windowCreative']/rect[@name='filterRow']/sprite[@pos='-3,3']/@width">978</set>
+	<set xpath="/windows/window[@name='windowCreative']/grid[@name='queue']/@pos">3,-49</set>
+	<set xpath="/windows/window[@name='windowCreative']/grid[@name='queue']/@rows">13</set> <!-- 8 -->
+	<set xpath="/windows/window[@name='windowCreative']/grid[@name='queue']/@cols">13</set> <!-- 8 -->
+	<set xpath="/windows/window[@name='windowCreative']/sprite[@pos='0,-145']/@width">978</set>
+	<set xpath="/windows/window[@name='windowCreative']/sprite[@pos='0,-145']/@pos">0,-49</set>
+
+	<setattribute xpath="/windows/window[@name='windowLooting']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowLooting']/sprite[@name='gridBackground']/@pos">0,96</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/@pos">3,47</set>
+
+	<setattribute xpath="/windows/window[@name='windowCraftingList']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowCraftingList']/@height">956</set>                                              <!-- 688 -->
+	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/@pos">0,53</set>
+	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/grid[@name='recipes']/@height">920</set> <!-- 552 46x -->
+	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/grid[@name='recipes']/@rows">20</set>    <!-- 12 -->
+	
+	<setattribute xpath="/windows/window[@name='windowBackpack']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@pos">0,50</set>
+
+	<setattribute xpath="/windows/window[@name='windowVehicle']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowVehicle']/panel[@name='header']/@pos">3,96</set>
+	<set xpath="/windows/window[@name='windowVehicle']/panel[@name='content']/@pos">0,53</set>
+
+	<setattribute xpath="/windows/window[@name='windowVehicleStorage']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='inventory']/@pos">3,50</set>
+
+	<set xpath="/windows/window[@name='windowAssemble']/panel[@name='header']/@pos">3,96</set>
+	<set xpath="/windows/window[@name='windowAssemble']/panel[@name='content']/@pos">0,53</set>
+
+	<setattribute xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/rect[@name='searchControls']/@pos">0,50</set>
+	<setattribute xpath="/windows/window[@name='CharacterFrameWindow']/rect[@visible='{showcharacter}']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/rect[@visible='{showstats}']/@pos">0,10</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/rect[@visible='{showcore}']/@pos">0,10</set>
+	
+	<setattribute xpath="/windows/window[@name='PlayerStatsWindow']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='PlayerStatsWindow']/rect[@name='content']/@pos">0,50</set>
+
+	<setattribute xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='content']/@pos">0,50</set>
+
+	<setattribute xpath="/windows/window[@name='buffInfoPanel']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/@pos">0,50</set>
+
+
+	<!--
+	<set xpath="/windows/window[@name='windowSkillList']/@height">830</set>  730 
+	<setattribute xpath="/windows/window[@name='windowSkillList']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/@pos">-3,53</set>  -3,-43 
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/@height">769</set>  669 
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/grid[@name='skills']/@cell_height">54</set>  46 
+
+	<set xpath="/windows/window[@name='windowSkillInfo']/@height">830</set>  730 
+	<setattribute xpath="/windows/window[@name='windowSkillInfo']/panel[@name='header']" name="pos">0,96</setattribute>
+
+	<set xpath="/windows/window[@name='windowSkillAttributeInfo']/@height">830</set>  730 
+	<setattribute xpath="/windows/window[@name='windowSkillAttributeInfo']/panel[@name='header']" name="pos">0,96</setattribute>
+	<set xpath="/windows/window[@name='windowSkillList']/rect[@name='content']/@pos">0,50</set>  0,-46 
+	<set xpath="/windows/window[@name='windowSkillList']/rect[@name='content']/@height">769</set>  669 
+	-->
+
+
+
+
+	<!-- PART II : changing storage container and player backpack sizes -->
+	
+	<!-- we set max 25x15 for 21:9 resolutions, standard 16:9 can only have 13x15 -->
+		
+	<!-- Looting window : here the MAX allowed is set --> <!-- vanilla:                                10 9 -->
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">25</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>
+	
+	<!-- Vehicle Storage window : here the MAX allowed is set --> <!-- vanilla:             10 9 -->
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='inventory']/@rows">25</set>
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='inventory']/@cols">15</set>
+	
+	<!-- Player backpack window --> <!--                   67x per slot -->
+	<set xpath="/windows/window[@name='windowBackpack']/@width">1343</set>
+	<set xpath="/windows/window[@name='windowBackpack']/@height">620</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@height">504</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@width">1343</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@height">604</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows">10</set>  <!-- 5 -->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cols">20</set> <!-- 9 -->
+	
+	
+	
+	<!-- PART III : readd Combine feature -->
+	
+	<!-- Combine Window, its just commented out in xml -->
+	<append xpath="/windows">
+	<window name="windowCombine" width="228" height="224" panel="Right" cursor_area="true" > 
+		<panel style="header.panel"> 
+			<sprite style="header.icon" sprite="ui_game_symbol_add"/> 
+			<label style="header.name" text="COMBINE" text_key="xuiCombine"/> 
+		</panel> 
+		<rect pos="0, -46" height="230" width="228" controller="CombineGrid"> 
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="0,1" width="228" height="230" color="[black]" type="sliced" fillcenter="false" /> 
+		<sprite name="background" color="[darkGrey]" pos="0,1" type="sliced"/> 
+		<grid name="parts" rows="3" cols="1" pos="3,-2" cell_width="150" cell_height="76" repeat_content="true" > 
+			<required_item_stack /> 
+		</grid> 
+			<label depth="3" pos="90,-25" text="Item A" text_key="xuiCombineItemA" /> 
+			<label depth="3" pos="90,-100" text="Item B" text_key="xuiCombineItemB"/>
+			<label depth="3" pos="90,-175" text="Result" text_key="xuiResult"/> 
+		</rect> 
+	</window> 
+	</append>
+	
+</configs>

@@ -1,0 +1,11 @@
+<configs>
+	<!-- adjusting Storage Pocket Mods -->
+	
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/effect_group/passive_effect/@value">3</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/effect_group/display_value/@value">3</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/effect_group/passive_effect/@value">6</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/effect_group/display_value/@value">6</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/effect_group/passive_effect/@value">9</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/effect_group/display_value/@value">9</set>
+
+</configs>

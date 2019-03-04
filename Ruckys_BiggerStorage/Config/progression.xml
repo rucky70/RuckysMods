@@ -1,0 +1,10 @@
+<configs>
+	<!-- adjusting Perk PackMule -->
+
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@level='1']/@value">20</set>  <!-- Vanilla:  4    BZ: 10 -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@level='2']/@value">40</set>  <!-- Vanilla:  9    BZ: 20 -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@level='3']/@value">60</set>  <!-- Vanilla: 15    BZ: 30 -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@level='4']/@value">80</set>  <!-- Vanilla: 21    BZ: 40 -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@level='5']/@value">100</set> <!-- Vanilla: 27    BZ: 50 -->
+
+</configs>

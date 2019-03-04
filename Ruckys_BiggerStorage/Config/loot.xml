@@ -1,0 +1,38 @@
+<configs>
+
+	<!-- empty, storage containers the player crafts --> 
+	<!--                                  vanilla:             8,9    (72) -->
+	<!--                                  1920x1080 (16:9):   13,14  (182) -->
+	<!--                                               max:   14,15  (210) -->
+	<!--                                  2560x1080 (21:9):   24,14  (336) -->
+	<!--                                               max:   24,15  (360) -->
+
+	<set xpath="/lootcontainers/lootcontainer[@id='1']/@size">13,14</set>
+	
+	<!-- Player dropped backpack -->  <!-- vanilla             7,10  -->
+	<!-- note, that this needs to be max size to hold ALL Inventory and Toolbelt of the player!! Player max: 208, dropped bag now: 210 -->
+
+	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">14,15</set>
+
+
+
+	<!-- all vehicles have the same MAX inventory -->
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='81']/@size">13,14</set>
+	<!-- -->
+
+	<!-- a more realistic sized vehicle inventory size (along with speed changes) will be set 
+	     in Ruckys_BZ_BorderlandZ_MAIN and the Ruckys_BZ_Update_for_21_9_Resolutions
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">6,4</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">12,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">12,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">12,5</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='81']/@size">13,14</set>
+	-->
+	
+</configs>

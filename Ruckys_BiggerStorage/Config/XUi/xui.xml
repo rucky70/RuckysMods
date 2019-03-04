@@ -1,0 +1,11 @@
+<configs>
+
+	<!-- Main scale of UI --> <!-- vanilla:           1.255      1.05 -->
+	<set xpath="/xui/ruleset[@name='default']/@scale">1.06</set>
+	<set xpath="/xui/ruleset[@name='default']/@stackpanel_scale">0.925</set>
+	
+	<append xpath="/xui/ruleset/window_group[@name='workstation_workbench']">
+		<window name="windowCombine" />
+	</append>
+	
+</configs>
