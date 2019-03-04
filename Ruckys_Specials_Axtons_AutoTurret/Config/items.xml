@@ -1,0 +1,54 @@
+<configs>
+	
+	<append xpath="/items">
+
+		<!-- testing for now -->
+		<item name="BZAxtonAutoTurretPlaceable">
+			<property name="CustomIcon" value="foodCanBeef"/>
+			<property name="CustomIconTint" value="40,40,40"/>
+			<property name="HoldType" value="31"/>
+			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>			
+			<property class="UMA"><property name="Overlay0Tint" value="40,40,40"/></property>
+			<property name="TintColor" value="40,40,40"/>
+			
+			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="EconomicValue" value="4000"/>
+
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Blockname" value="BZAxtonAutoTurret"/>
+				<property name="Change_item_to" value="BZAxtonAutoTurretPlaceable"/> <!-- of course we want to change this here for a timed GiveItem event! -->
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+
+		</item>
+		
+		<item name="ammoAdminTurret"> <!-- Name is hardcoded in DLL ! Do not change! -->
+			<property name="CustomIcon" value="ammo9mmBullet"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DisplayType" value="ammoBullet"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mbrass"/>
+			<property name="Stacknumber" value="500"/> <!-- STK ammo -->
+			<property name="CraftingSkillGroup" value="craftSkillGuns"/>
+			<property name="EconomicValue" value="9"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="32"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="7"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+			</effect_group>
+		</item>
+		
+	</append>
+		
+</configs>

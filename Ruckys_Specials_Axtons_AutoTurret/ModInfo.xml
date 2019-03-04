@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Ruckys Specials : Axton's AutoTurret" />
+        <Description value="Configurable Power-less AutoTurrets, additional using Admin-Ammo with optional Selfdestruction-timer!" />
+        <Author value="Rucky" />
+        <Version value="A17.2" />
+    </ModInfo>
+</xml>
