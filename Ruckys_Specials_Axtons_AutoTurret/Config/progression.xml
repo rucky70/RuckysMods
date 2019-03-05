@@ -1,0 +1,71 @@
+<configs>
+
+	<insertAfter xpath="/progression/attributes/attribute[@name='attIntellect']">	
+	<attribute name="attActionSkill" name_key="attActionSkillName" desc_key="attActionSkillDesc" icon="ui_game_symbol_character">
+		<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints04"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints05"/></level_requirements>
+
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="ranged"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.0,0.7" level="1,20"/>
+
+			<effect_description level="1" desc_key="attActionSkillRank1Desc"/>
+			<effect_description level="2" desc_key="attActionSkillRank2Desc"/>
+			<effect_description level="3" desc_key="attActionSkillRank3Desc"/>
+			<effect_description level="4" desc_key="attActionSkillRank4Desc"/>
+			<effect_description level="5" desc_key="attActionSkillRank5Desc"/>
+			<effect_description level="6" desc_key="attActionSkillRank6Desc"/>
+			<effect_description level="7" desc_key="attActionSkillRank7Desc"/>
+			<effect_description level="8" desc_key="attActionSkillRank8Desc"/>
+			<effect_description level="9" desc_key="attActionSkillRank9Desc"/>
+			<effect_description level="10" desc_key="attActionSkillRank10Desc"/>
+		</effect_group>
+	</attribute>	
+	</insertAfter>
+
+	<append xpath="/progression/skills">
+		<skill name="skillAxton" parent="attActionSkill" name_key="skillAxtonName" desc_key="skillAxtonDesc" icon="ui_game_symbol_explosion"><effect_group/></skill>
+	
+	</append>
+
+	<insertBefore xpath="/progression/perks/perk[@name='perkGunslinger']">	
+	<perk name="perkAxtonTurret" parent="skillAxton" max_level="5" name_key="perkAxtonTurretName" desc_key="perkAxtonTurretDesc" icon="ui_game_symbol_explosion">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attActionSkill" operation="GTE" value="1" desc_key="reqActionSkill01-1"/>
+								<requirement name="CVarCompare" target="self" cvar="$CVarAxton" operation="GTE" value="1"/>
+								<requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attActionSkill" operation="GTE" value="3" desc_key="reqActionSkill03-20"/>
+								<requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attActionSkill" operation="GTE" value="5" desc_key="reqActionSkill05-70"/>
+								<requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attActionSkill" operation="GTE" value="7" desc_key="reqActionSkill07-150"/>
+								<requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attActionSkill" operation="GTE" value="10" desc_key="reqActionSkill10-250"/>
+								<requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqAttributeLevelDummy"/></level_requirements>
+	
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1" tags="BZAxtonAutoTurretPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2" tags="BZAxtonAutoTurretIIPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3" tags="BZAxtonAutoTurretIIIPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4" tags="BZAxtonAutoTurretIVPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5" tags="BZAxtonAutoTurretVPlaceable"/>
+			<effect_description level="1" desc_key="perkAxtonTurretRank1Desc"/>
+			<effect_description level="2" desc_key="perkAxtonTurretRank2Desc"/>
+			<effect_description level="3" desc_key="perkAxtonTurretRank3Desc"/>
+			<effect_description level="4" desc_key="perkAxtonTurretRank4Desc"/>
+			<effect_description level="5" desc_key="perkAxtonTurretRank5Desc"/>
+		</effect_group>
+	
+	</perk>
+	
+	</insertBefore>
+
+
+</configs>

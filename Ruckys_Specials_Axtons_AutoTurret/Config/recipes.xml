@@ -1,0 +1,25 @@
+<configs>
+
+	<append xpath="/recipes" >
+
+	<recipe name="BZActionSkillAxton" count="1" craft_time="1">
+		<ingredient name="BZchooseActionSkill" count="1"/>
+	</recipe>
+	<recipe name="BZAxtonAutoTurretPlaceable" count="1" tags="learnable" craft_time="600"> <!-- 600 -->
+		<ingredient name="BZAxtonAutoTurretEmpty" count="1"/>
+	</recipe>
+	<recipe name="BZAxtonAutoTurretIIPlaceable" count="1" tags="learnable" craft_time="660"> <!-- 660 -->
+		<ingredient name="BZAxtonAutoTurretEmpty" count="1"/>
+	</recipe>
+	<recipe name="BZAxtonAutoTurretIIIPlaceable" count="1" tags="learnable" craft_time="780"> <!-- 780 -->
+		<ingredient name="BZAxtonAutoTurretEmpty" count="1"/>
+	</recipe>
+	<recipe name="BZAxtonAutoTurretIVPlaceable" count="1" tags="learnable" craft_time="960"> <!-- 960 -->
+		<ingredient name="BZAxtonAutoTurretEmpty" count="1"/>
+	</recipe>
+	<recipe name="BZAxtonAutoTurretVPlaceable" count="1" tags="learnable" craft_time="1200"> <!-- 1200 -->
+		<ingredient name="BZAxtonAutoTurretEmpty" count="1"/>
+	</recipe>
+
+	</append>
+</configs>

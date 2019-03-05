@@ -1,0 +1,20 @@
+<configs>
+
+	<append xpath="/quests" >
+	<quest id="quest_ActionSkill">
+		<property name="group_name" value="ActionSkill" />
+		<property name="offer_key" value="quest_ActionSkill_offer" />
+		<property name="name_key" value="quest_ActionSkill_name" />
+		<property name="subtitle_key" value="quest_ActionSkill_subtitle" />
+		<property name="description_key" value="quest_ActionSkill_description" />
+		<property name="icon" value="ui_game_symbol_character" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false" />
+		<property name="repeatable" value="false" />
+	
+  		<reward type="Item" id="BZchooseActionSkill" value="1" />
+	</quest>
+	
+	</append>
+</configs>

@@ -1,0 +1,5 @@
+quest_ActionSkill,,Quest Info,KgNone,Action Skill,,,,
+quest_ActionSkill_offer,,Quest Info,KgNone,"Welcome Agent!\n\nNow choose your Action Skill! But choose wisely, you will need to progress a good amount to get a chance for another one!\n\nAxton's Auto Turret - A time limited Bullet sprayer!\nWho needs Friends when you have an deployable Auto Turret?!",,,,
+quest_ActionSkill_name,,Quest Info,KgNone,Action Skill,,,,
+quest_ActionSkill_description,,Quest Info,KgNone,"Welcome Agent!\n\nNow choose your Action Skill! But choose wisely, you will need to progress a good amount to get a chance for another one!\n\nAxton's Auto Turret - A time limited Bullet sprayer!\nWho needs Friends when you have an deployable Auto Turret?!",,,,
+quest_ActionSkill_subtitle,,Quest Info,KgNone,Choose Your special Ability,,,,

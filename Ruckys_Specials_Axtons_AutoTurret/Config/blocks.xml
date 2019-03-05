@@ -1,10 +1,10 @@
 <configs>
 
-	<!-- Axton's Special ActionSkill -->
+	<!-- Axtons Special ActionSkill -->
 
 	<append xpath="/blocks">
 
-	<!-- still in WiP ! -->
+	<!-- still in WiP! -->
 	<block name="BZAxtonAutoTurret">
 		<property name="CustomIcon" value="autoTurret"/>
 		<property name="Class" value="Ranged"/>
@@ -18,45 +18,41 @@
 		<property name="OnlySimpleRotations" value="true"/> 
 		<property name="Place" value="TowardsPlacer"/> 
 		<property name="PlaceEverywhere" value="true"/>
-		<property name="TurnSpeed" value="35"/>
-		<property name="MaxDistance" value="50"/>
-		<property name="EntityDamage" value="45"/>
 		<property name="BlockDamage" value="1"/>
 		<property name="RaySpread" value="1.1"/>
-
-		<property name="BustRoundCount" value="10"/>
-		<property name="BurstFireRate" value="0.05"/>
 		<property name="CooldownTime" value="0.3"/>
 		<property name="OvershootTime" value="0.3"/>
-		<property name="FallAsleepTime" value="5"/>
-		<property name="WakeUpTime" value="0.2"/>
-
+		<property name="FallAsleepTime" value="1"/>
+		<property name="WakeUpTime" value="0.1"/>
 		<property name="YawRange" value="360"/>
 		<property name="PitchRange" value="360"/>
-
 		<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
 		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
-
 		<property name="DamageBonus.head" value="3"/>
 		<property name="DamageBonus.glass" value="1"/>
 		<property name="DamageBonus.wood" value="2"/>
 		<property name="DamageBonus.earth" value="0.2"/>
 		<property name="DamageBonus.stone" value="0.2"/>
 		<property name="DamageBonus.metal" value="0.2"/>
-
 		<property name="TargetingSound" value="turret_retarget_lp"/>
 		<property name="OverheatSound" value="turret_overheat_lp"/>
 		<property name="WakeUpSound" value="turret_windup"/>
 		<property name="FireSound" value="Pistol_Fire"/>
+
+		<property name="TurnSpeed" value="35"/>
+		<property name="MaxDistance" value="45"/>
+		<property name="EntityDamage" value="30"/>
+		<property name="BustRoundCount" value="10"/>
+		<property name="BurstFireRate" value="0.05"/>
 		
-		<property name="MaxDamage" value="1000"/> <!-- balance this value for your needs -->
+		<property name="MaxDamage" value="2000"/> <!-- balance this value for your needs -->
 		
 		<!--<property name="AmmoItem" value="ammo9mmBullet"/> this would setup an standard AutoTurret behavior -->
 		
-		<property name="AmmoItem" value="ammoAdminTurret,500,100,5"/> <!-- using ammoAdminTurret sets the AdminTurret behavior!!, 
-										500 is the ammo-amount (auto-added!), 
-										100 is self-damage every 2sec (optional) : so here max livetime is 20sec!
-										5   is self-damage while shooting (optional) -->
+		<property name="AmmoItem" value="ammoAdminTurret,50000,100,1"/> <!-- using ammoAdminTurret sets the AdminTurret behavior!!, 
+										50000 is the ammo-amount (auto-added!), 
+										100   is self-damage every 2sec (optional) : so here max livetime is 40sec!
+										1     is self-damage while shooting (optional) -->
 		<property name="RequiredPower" value="0"/> <!-- 0 means : there is NO power supply needed!! -->
 		
 		<!--<property name="TakeDelay" value="1"/> if you activate this you will also get ammoAdminTurrets back, you won't want this do you?! -->
@@ -68,6 +64,227 @@
 			<property name="resourceElectricParts" value="2"/>
 		</property>
 		-->
+		<drop event="Destroy" count="0"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="EconomicValue" value="30000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="PickupJournalEntry" value="cameraTip"/>
+		<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+		<property name="SortOrder1" value="70a0"/>		
+	</block>
+
+	<block name="BZAxtonAutoTurretII">
+		<property name="CustomIcon" value="autoTurret"/>
+		<property name="Class" value="Ranged"/>		
+		<property name="CreativeMode" value="Dev"/>
+		<property name="DisplayType" value="blockElectricalHardened" />
+		<property name="Material" value="Mmetal_medium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+		<property name="OnlySimpleRotations" value="true"/> 
+		<property name="Place" value="TowardsPlacer"/> 
+		<property name="PlaceEverywhere" value="true"/>
+		<property name="BlockDamage" value="1"/>
+		<property name="RaySpread" value="1.1"/>
+		<property name="CooldownTime" value="0.3"/>
+		<property name="OvershootTime" value="0.3"/>
+		<property name="FallAsleepTime" value="1"/>
+		<property name="WakeUpTime" value="0.1"/>
+		<property name="YawRange" value="360"/>
+		<property name="PitchRange" value="360"/>
+		<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+		<property name="DamageBonus.head" value="3"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.wood" value="2"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.stone" value="0.2"/>
+		<property name="DamageBonus.metal" value="0.2"/>
+		<property name="TargetingSound" value="turret_retarget_lp"/>
+		<property name="OverheatSound" value="turret_overheat_lp"/>
+		<property name="WakeUpSound" value="turret_windup"/>
+		<property name="FireSound" value="Pistol_Fire"/>
+
+		<property name="TurnSpeed" value="37"/>
+		<property name="MaxDistance" value="47"/>
+		<property name="EntityDamage" value="33"/>
+		<property name="BustRoundCount" value="15"/>
+		<property name="BurstFireRate" value="0.048"/>
+		
+		<property name="MaxDamage" value="2500"/>
+		
+		<property name="AmmoItem" value="ammoAdminTurret,50000,100,1"/>
+		<property name="RequiredPower" value="0"/>	
+
+		<drop event="Destroy" count="0"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="EconomicValue" value="30000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="PickupJournalEntry" value="cameraTip"/>
+		<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+		<property name="SortOrder1" value="70a0"/>		
+	</block>
+
+	<block name="BZAxtonAutoTurretIII">
+		<property name="CustomIcon" value="autoTurret"/>
+		<property name="Class" value="Ranged"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="DisplayType" value="blockElectricalHardened" />
+		<property name="Material" value="Mmetal_medium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+		<property name="OnlySimpleRotations" value="true"/> 
+		<property name="Place" value="TowardsPlacer"/> 
+		<property name="PlaceEverywhere" value="true"/>
+		<property name="BlockDamage" value="1"/>
+		<property name="RaySpread" value="1.1"/>
+		<property name="CooldownTime" value="0.3"/>
+		<property name="OvershootTime" value="0.3"/>
+		<property name="FallAsleepTime" value="1"/>
+		<property name="WakeUpTime" value="0.1"/>
+		<property name="YawRange" value="360"/>
+		<property name="PitchRange" value="360"/>
+		<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+		<property name="DamageBonus.head" value="3"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.wood" value="2"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.stone" value="0.2"/>
+		<property name="DamageBonus.metal" value="0.2"/>
+		<property name="TargetingSound" value="turret_retarget_lp"/>
+		<property name="OverheatSound" value="turret_overheat_lp"/>
+		<property name="WakeUpSound" value="turret_windup"/>
+		<property name="FireSound" value="Pistol_Fire"/>
+
+		<property name="TurnSpeed" value="40"/>
+		<property name="MaxDistance" value="50"/>
+		<property name="EntityDamage" value="36"/>
+		<property name="BustRoundCount" value="20"/>
+		<property name="BurstFireRate" value="0.046"/>		
+		<property name="MaxDamage" value="3000"/>
+		
+		<property name="AmmoItem" value="ammoAdminTurret,50000,100,1"/>
+		<property name="RequiredPower" value="0"/>	
+
+		<drop event="Destroy" count="0"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="EconomicValue" value="30000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="PickupJournalEntry" value="cameraTip"/>
+		<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+		<property name="SortOrder1" value="70a0"/>		
+	</block>
+
+	<block name="BZAxtonAutoTurretIV">
+		<property name="CustomIcon" value="autoTurret"/>
+		<property name="Class" value="Ranged"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="DisplayType" value="blockElectricalHardened" />
+		<property name="Material" value="Mmetal_medium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+		<property name="OnlySimpleRotations" value="true"/> 
+		<property name="Place" value="TowardsPlacer"/> 
+		<property name="PlaceEverywhere" value="true"/>
+		<property name="BlockDamage" value="1"/>
+		<property name="RaySpread" value="1.1"/>
+		<property name="CooldownTime" value="0.3"/>
+		<property name="OvershootTime" value="0.3"/>
+		<property name="FallAsleepTime" value="1"/>
+		<property name="WakeUpTime" value="0.1"/>
+		<property name="YawRange" value="360"/>
+		<property name="PitchRange" value="360"/>
+		<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+		<property name="DamageBonus.head" value="3"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.wood" value="2"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.stone" value="0.2"/>
+		<property name="DamageBonus.metal" value="0.2"/>
+		<property name="TargetingSound" value="turret_retarget_lp"/>
+		<property name="OverheatSound" value="turret_overheat_lp"/>
+		<property name="WakeUpSound" value="turret_windup"/>
+		<property name="FireSound" value="Pistol_Fire"/>
+
+		<property name="TurnSpeed" value="43"/>
+		<property name="MaxDistance" value="55"/>
+		<property name="EntityDamage" value="38"/>
+		<property name="BustRoundCount" value="25"/>
+		<property name="BurstFireRate" value="0.043"/>		
+		<property name="MaxDamage" value="3500"/>
+		
+		<property name="AmmoItem" value="ammoAdminTurret,50000,100,1"/>
+		<property name="RequiredPower" value="0"/>	
+
+		<drop event="Destroy" count="0"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="EconomicValue" value="30000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="PickupJournalEntry" value="cameraTip"/>
+		<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+		<property name="SortOrder1" value="70a0"/>		
+	</block>
+
+	<block name="BZAxtonAutoTurretV">
+		<property name="CustomIcon" value="autoTurret"/>
+		<property name="Class" value="Ranged"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="DisplayType" value="blockElectricalHardened" />
+		<property name="Material" value="Mmetal_medium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+		<property name="OnlySimpleRotations" value="true"/> 
+		<property name="Place" value="TowardsPlacer"/> 
+		<property name="PlaceEverywhere" value="true"/>
+		<property name="BlockDamage" value="1"/>
+		<property name="RaySpread" value="1.1"/>
+		<property name="CooldownTime" value="0.3"/>
+		<property name="OvershootTime" value="0.3"/>
+		<property name="FallAsleepTime" value="1"/>
+		<property name="WakeUpTime" value="0.1"/>
+		<property name="YawRange" value="360"/>
+		<property name="PitchRange" value="360"/>
+		<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+		<property name="DamageBonus.head" value="3"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.wood" value="2"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.stone" value="0.2"/>
+		<property name="DamageBonus.metal" value="0.2"/>
+		<property name="TargetingSound" value="turret_retarget_lp"/>
+		<property name="OverheatSound" value="turret_overheat_lp"/>
+		<property name="WakeUpSound" value="turret_windup"/>
+		<property name="FireSound" value="Pistol_Fire"/>
+
+		<property name="TurnSpeed" value="45"/>
+		<property name="MaxDistance" value="60"/>
+		<property name="EntityDamage" value="40"/>
+		<property name="BustRoundCount" value="30"/>
+		<property name="BurstFireRate" value="0.04"/>		
+		<property name="MaxDamage" value="4000"/>
+		
+		<property name="AmmoItem" value="ammoAdminTurret,50000,100,1"/>
+		<property name="RequiredPower" value="0"/>
+
 		<drop event="Destroy" count="0"/>
 		<property name="Stacknumber" value="1"/>
 		<property name="EconomicValue" value="30000"/>
