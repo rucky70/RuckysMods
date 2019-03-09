@@ -1,0 +1,17 @@
+<configs>
+
+	<set xpath="/windows/window[@name='windowTip']/@width">1203</set> <!-- 603 -->
+	<set xpath="/windows/window[@name='windowTip']/@height">863</set> <!-- 363 -->
+	<set xpath="/windows/window[@name='windowTip']/@pos">-600,500</set> <!-- -300, 150 -->
+	<set xpath="/windows/window[@name='windowTip']/panel[@name='header']/label/@width">1150</set> <!-- 550 -->
+	<set xpath="/windows/window[@name='windowTip']/rect[@name='content']/@height">819</set> <!-- 319 -->
+	<set xpath="/windows/window[@name='windowTip']/rect[@name='content']/sprite[@name='backgroundMain']/@width">1203</set> <!-- 603 -->
+	<set xpath="/windows/window[@name='windowTip']/rect[@name='content']/label[@name='descriptionText']/@width">1190</set> <!-- 590 -->
+	<set xpath="/windows/window[@name='windowTip']/rect[@name='content']/label[@name='descriptionText']/@font_size">28</set> <!-- 30 -->
+	<set xpath="/windows/window[@name='windowTip']/rect[@name='content']/rect[@name='btnContinue']/@pos">0,-777</set> <!-- 0, -277 -->
+
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/@rows">7</set> <!-- 5 -->
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/@cell_height">57</set> <!-- 80 -->
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/skill_perk_level/@height">57</set> <!-- 80 -->
+
+</configs>

@@ -1,0 +1,88 @@
+<configs>
+
+	<!-- higher max level but doubled xp needed to level up -->
+	
+	<set xpath="/progression/level/@max_level">999</set> <!-- 300 -->
+	<set xpath="/progression/level/@exp_to_level">19545</set> <!-- 9545 -->
+
+	<!-- adding craftable mods to perkYeahScience -->
+
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='2,5' and contains(@tags,'modMeleeClubBurningShaft')]/@tags">,modGunAdvancedBarrel</append>
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='3,5' and contains(@tags,'modGunScopeLarge')]/@tags">,modGunAdvancedBarrelII,modGunBarrelExtenderII,modGunMagazineExtenderII,modGunMagazineExtenderMagnum,modGunMagazineExtenderHR,modGunMagazineExtenderSG,modArmorShield</append>
+
+	<!-- adding additional blocks to perkHammerForge -->
+
+	<append xpath="/progression/perks/perk[@name='perkHammerForge']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='4,5']/@tags">,BZIronBars,BZIronBarsCentered</append>
+
+	<!-- adding 2 more levels to perkHeadshot and perkRunAndGun, more will follow -->
+	
+	<setattribute xpath="/progression/perks/perk[@name='perkHeadshot']" name="max_level">7</setattribute>
+	<set xpath="/progression/perks/perk[@name='perkHeadshot']/level_requirements[@level='5']/requirement/@value">8</set>
+	<set xpath="/progression/perks/perk[@name='perkHeadshot']/level_requirements[@level='5']/requirement/@desc_key">reqPerceptionLevel08</set>
+	<append xpath="/progression/perks/perk[@name='perkHeadshot']">
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="9" desc_key="reqPerceptionLevel09"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+	</append>
+	<set xpath="/progression/perks/perk[@name='perkHeadshot']/effect_group/passive_effect[@name='DamageModifier']/@value">0.2,1.4</set>
+	<set xpath="/progression/perks/perk[@name='perkHeadshot']/effect_group/passive_effect[@name='DamageModifier']/@level">1,7</set>
+	<set xpath="/progression/perks/perk[@name='perkHeadshot']/effect_group/passive_effect[@name='DismemberChance']/@value">0.05,0.35</set>
+	<set xpath="/progression/perks/perk[@name='perkHeadshot']/effect_group/passive_effect[@name='DismemberChance']/@level">1,7</set>
+	<append xpath="/progression/perks/perk[@name='perkHeadshot']/effect_group">
+		<effect_description level="6" desc_key="perkHeadshotRank6Desc"/>
+		<effect_description level="7" desc_key="perkHeadshotRank7Desc"/>
+	</append>
+
+	<setattribute xpath="/progression/perks/perk[@name='perkRunAndGun']" name="max_level">7</setattribute>
+	<set xpath="/progression/perks/perk[@name='perkRunAndGun']/level_requirements[@level='5']/requirement/@value">8</set>
+	<set xpath="/progression/perks/perk[@name='perkRunAndGun']/level_requirements[@level='5']/requirement/@desc_key">reqPerceptionLevel08</set>
+	<append xpath="/progression/perks/perk[@name='perkRunAndGun']">
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="9" desc_key="reqPerceptionLevel09"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+	</append>
+	<set xpath="/progression/perks/perk[@name='perkRunAndGun']/effect_group/passive_effect[@name='SpreadMultiplierHip']/@value">-0.05,-0.35</set>
+	<set xpath="/progression/perks/perk[@name='perkRunAndGun']/effect_group/passive_effect[@name='SpreadMultiplierHip']/@level">1,7</set>
+	<append xpath="/progression/perks/perk[@name='perkRunAndGun']/effect_group">
+		<effect_description level="6" desc_key="perkRunAndGunRank6Desc"/>
+		<effect_description level="7" desc_key="perkRunAndGunRank7Desc"/>
+	</append>
+
+	<!-- and more additional levels -->
+	
+	<setattribute xpath="/progression/perks/perk[@name='perkPackMule']" name="max_level">7</setattribute>
+	<append xpath="/progression/perks/perk[@name='perkPackMule']">
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="9" desc_key="reqStrengthLevel09"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+	</append>
+	<append xpath="/progression/perks/perk[@name='perkPackMule']/effect_group">
+		<passive_effect name="CarryCapacity" operation="base_add" value="60" level="6"/>
+		<passive_effect name="CarryCapacity" operation="base_add" value="70" level="7"/>
+	</append>
+	<append xpath="/progression/perks/perk[@name='perkPackMule']/effect_group">
+		<effect_description level="6" desc_key="perkPackMuleRank6Desc"/>
+		<effect_description level="7" desc_key="perkPackMuleRank7Desc"/>
+	</append>
+
+	<!-- fix the perkSelfMedicated as seen in commented out -->
+	
+ 	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='1']/requirement[@name='ProgressionLevel']/@value">1</set>
+ 	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='1']/requirement[@name='ProgressionLevel']/@desc_key">reqFortitudeLevel01</set>
+	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='2']/requirement[@name='ProgressionLevel']/@value">3</set>
+ 	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='1']/requirement[@name='ProgressionLevel']/@desc_key">reqFortitudeLevel03</set>
+	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='3']/requirement[@name='ProgressionLevel']/@value">5</set>
+ 	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='1']/requirement[@name='ProgressionLevel']/@desc_key">reqFortitudeLevel05</set>
+	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='4']/requirement[@name='ProgressionLevel']/@value">7</set>
+ 	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='1']/requirement[@name='ProgressionLevel']/@desc_key">reqFortitudeLevel07</set>
+	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='5']/requirement[@name='ProgressionLevel']/@value">10</set>  	
+ 	<set xpath="/progression/perks/perk[@name='perkSelfMedicated']/level_requirements[@level='1']/requirement[@name='ProgressionLevel']/@desc_key">reqFortitudeLevel10</set>
+
+
+
+	
+	<setattribute xpath="/progression/perks/perk[@name='perkIntrinsicImmunity']" name="max_level">5</setattribute>
+	<!-- Achtung: auch Buffs hier! -->
+
+	<setattribute xpath="/progression/perks/perk[@name='perkPainTolerance']" name="max_level">5</setattribute>
+	
+	<setattribute xpath="/progression/perks/perk[@name='perkHealingFactor']" name="max_level">5</setattribute>
+
+</configs>

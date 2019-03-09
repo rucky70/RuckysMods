@@ -1,0 +1,811 @@
+<configs>
+
+	<append xpath="/item_modifiers/item_modifier">
+			<effect_group tiered="false">
+				<passive_effect name="EconomicValue" operation="perc_add" value="1" />
+			</effect_group>
+	</append>
+
+	<append xpath="/item_modifiers">
+	
+		<item_modifier name="modGunConverterCamoDigital" installable_tags="ranged" blocked_tags="perkArchery,manufacturer" modifier_tags="converter" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			
+			<item_property_overrides name="gunPistol">
+				<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPISTOLCamoDigital"/>
+				<property name="CustomIcon" value="HDHQPistolCamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunPumpShotgun">
+				<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPUMPSHOTGUNCamoDigital"/>
+				<property name="CustomIcon" value="HDHQPumpShotgunCamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunPumpShotgunSawedOff">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSAWEDOFFCamoDigital"/>
+				<property name="CustomIcon" value="HDHQPumpShotgunCamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunAK47">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQAK47CamoDigital"/>
+				<property name="CustomIcon" value="HDHQAK47CamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunHuntingRifle">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQHUNTINGRIFLECamoDigital"/>
+				<property name="CustomIcon" value="HDHQHuntingRifleCamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gun44Magnum">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQ44MAGNUMCamoDigital"/>
+				<property name="CustomIcon" value="HDHQ44MagnumCamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunSMG5">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQMP5CamoDigital"/>
+				<property name="CustomIcon" value="HDHQSMG5CamoDigital"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunMR10">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSNIPERCamoDigital"/>
+				<property name="CustomIcon" value="HDHQMR10CamoDigital"/>
+			</item_property_overrides>
+			
+			<effect_group tiered="false">
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.15"/>
+				<passive_effect name="KickDegreesVertical" operation="perc_add" value="-0.15"/>
+				<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="-0.15"/>
+
+				<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="-0.15"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="-0.15"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-0.15"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-0.15"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-0.15"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="-0.15"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-0.15"/>
+			
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="-0.1"/>
+			
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.1"/>
+
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.01"/>
+
+				<passive_effect name="MaxRange" operation="perc_add" value="0.1"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.05"/>
+
+				<passive_effect name="EntityDamage" operation="perc_add" value="-0.15"/>
+
+				<passive_effect name="PerkLevel" tags="perkRunAndGun" operation="base_add" value="1"/>
+
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="toolAndDieSet"/>
+			<property name="CustomIconTint" value="888888"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunConverterArmorJungle" installable_tags="ranged" blocked_tags="perkArchery,manufacturer" modifier_tags="converter" type="attachment">
+			<property name="Stacknumber" value="1"/>
+
+			<item_property_overrides name="gunPistol">
+				<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPISTOLArmorJungle"/>
+				<property name="CustomIcon" value="HDHQPistolArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunPumpShotgun">
+				<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPUMPSHOTGUNArmorJungle"/>
+				<property name="CustomIcon" value="HDHQPumpShotgunArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunPumpShotgunSawedOff">
+				<property name="Meshfile" value="#@modfolder:Resources/HDHQGuns.unity3d?HDHQSAWEDOFFArmorJungle"/>
+				<property name="CustomIcon" value="HDHQPumpShotgunArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunAK47">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQAK47ArmorJungle"/>
+				<property name="CustomIcon" value="HDHQAK47ArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunHuntingRifle">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQHUNTINGRIFLEArmorJungle"/>
+				<property name="CustomIcon" value="HDHQHuntingRifleArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gun44Magnum">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQ44MAGNUMArmorJungle"/>
+				<property name="CustomIcon" value="HDHQ44MagnumArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunSMG5">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQMP5ArmorJungle"/>
+				<property name="CustomIcon" value="HDHQSMG5ArmorJungle"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunMR10">
+				<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSNIPERArmorJungle"/>
+				<property name="CustomIcon" value="HDHQMR10ArmorJungle"/>
+			</item_property_overrides>
+			
+			<effect_group tiered="false">
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-0.15"/>
+				<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.15"/>
+				<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.15"/>
+
+				<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.15"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.15"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.15"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.15"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.15"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.15"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.15"/>
+			
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.1"/>
+
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.1"/>
+
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.01"/>
+
+				<passive_effect name="MaxRange" operation="perc_add" value="0.05"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.1"/>
+
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+
+				<passive_effect name="PerkLevel" tags="perkHeadshot" operation="base_add" value="1"/>
+
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="toolAndDieSet"/>
+			<property name="CustomIconTint" value="888888"/>
+		</item_modifier>
+
+
+	<item_modifier name="modGunConverterArmorWinter" installable_tags="ranged" blocked_tags="perkArchery,manufacturer" modifier_tags="converter" type="attachment">
+		<property name="Stacknumber" value="1"/>
+
+		<item_property_overrides name="gunPistol">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPISTOLArmorWinter"/>
+			<property name="CustomIcon" value="HDHQPistolArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgun">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPUMPSHOTGUNArmorWinter"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgunSawedOff">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSAWEDOFFArmorWinter"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunAK47">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQAK47ArmorWinter"/>
+			<property name="CustomIcon" value="HDHQAK47ArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHuntingRifle">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQHUNTINGRIFLEArmorWinter"/>
+			<property name="CustomIcon" value="HDHQHuntingRifleArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gun44Magnum">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQ44MAGNUMArmorWinter"/>
+			<property name="CustomIcon" value="HDHQ44MagnumArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunSMG5">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQMP5ArmorWinter"/>
+			<property name="CustomIcon" value="HDHQSMG5ArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMR10">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSNIPERArmorWinter"/>
+			<property name="CustomIcon" value="HDHQMR10ArmorWinter"/>
+		</item_property_overrides>
+
+		<effect_group tiered="false">
+			<passive_effect name="WeaponHandling" operation="perc_add" value="-0.07"/>
+			<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.07"/>
+			<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.07"/>
+
+			<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.07"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.07"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.07"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.07"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.07"/>
+			<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.07"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.07"/>
+			
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.05"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="0.15"/>
+
+			<passive_effect name="MagazineSize" operation="perc_add" value="0.3"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.01"/>
+
+			<passive_effect name="MaxRange" operation="perc_add" value="-0.1"/>
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.05"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" value="-0.1"/>
+			<passive_effect name="DegradationMax" operation="perc_add" value="-0.15"/>
+
+			<passive_effect name="PerkLevel" tags="perkAutomaticWeapons" operation="base_add" value="1"/>
+
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		<property name="CustomIcon" value="toolAndDieSet"/>
+		<property name="CustomIconTint" value="888888"/>
+	</item_modifier>
+
+
+	<item_modifier name="modGunConverterTotalCamoDigital" installable_tags="ranged" blocked_tags="perkArchery,manufacturer" modifier_tags="converter" type="mod">
+		<property name="Stacknumber" value="1"/>
+
+		<item_property_overrides name="gunPistol">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPISTOLCamoDigital"/>
+			<property name="CustomIcon" value="HDHQPistolCamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgun">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPUMPSHOTGUNCamoDigital"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunCamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgunSawedOff">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSAWEDOFFCamoDigital"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunCamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunAK47">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQAK47CamoDigital"/>
+			<property name="CustomIcon" value="HDHQAK47CamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHuntingRifle">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQHUNTINGRIFLECamoDigital"/>
+			<property name="CustomIcon" value="HDHQHuntingRifleCamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gun44Magnum">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQ44MAGNUMCamoDigital"/>
+			<property name="CustomIcon" value="HDHQ44MagnumCamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunSMG5">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQMP5CamoDigital"/>
+			<property name="CustomIcon" value="HDHQSMG5CamoDigital"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMR10">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSNIPERCamoDigital"/>
+			<property name="CustomIcon" value="HDHQMR10CamoDigital"/>
+		</item_property_overrides>
+		
+		<effect_group tiered="false">
+			<passive_effect name="WeaponHandling" operation="perc_add" value="0.25"/>
+			<passive_effect name="KickDegreesVertical" operation="perc_add" value="-0.25"/>
+			<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="-0.25"/>
+
+			<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="-0.25"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="-0.25"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-0.25"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-0.25"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-0.25"/>
+			<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="-0.25"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-0.25"/>
+					
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="-0.15"/>
+			
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.15"/>
+
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+			<passive_effect name="MaxRange" operation="perc_add" value="0.2"/>
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.1"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" value="-0.1"/>
+
+			<passive_effect name="PerkLevel" tags="perkRunAndGun" operation="base_add" value="2"/>
+
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		<property name="CustomIcon" value="toolAndDieSet"/>
+		<property name="CustomIconTint" value="676767"/>
+	</item_modifier>
+
+
+	<item_modifier name="modGunConverterTotalArmorJungle" installable_tags="ranged" blocked_tags="perkArchery,manufacturer" modifier_tags="converter" type="mod">
+		<property name="Stacknumber" value="1"/>
+
+		<item_property_overrides name="gunPistol">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPISTOLArmorJungle"/>
+			<property name="CustomIcon" value="HDHQPistolArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgun">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPUMPSHOTGUNArmorJungle"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgunSawedOff">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSAWEDOFFArmorJungle"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunAK47">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQAK47ArmorJungle"/>
+			<property name="CustomIcon" value="HDHQAK47ArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHuntingRifle">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQHUNTINGRIFLEArmorJungle"/>
+			<property name="CustomIcon" value="HDHQHuntingRifleArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gun44Magnum">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQ44MAGNUMArmorJungle"/>
+			<property name="CustomIcon" value="HDHQ44MagnumArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunSMG5">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQMP5ArmorJungle"/>
+			<property name="CustomIcon" value="HDHQSMG5ArmorJungle"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMR10">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSNIPERArmorJungle"/>
+			<property name="CustomIcon" value="HDHQMR10ArmorJungle"/>
+		</item_property_overrides>
+
+		<effect_group tiered="false">
+			<passive_effect name="WeaponHandling" operation="perc_add" value="-0.25"/>
+			<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.25"/>
+			<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.25"/>
+
+			<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.25"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.25"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.25"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.25"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.25"/>
+			<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.25"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.25"/>
+				
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.15"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.15"/>
+
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+			<passive_effect name="MaxRange" operation="perc_add" value="0.1"/>
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.2"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.35"/>
+
+			<passive_effect name="PerkLevel" tags="perkHeadshot" operation="base_add" value="2"/>
+
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		<property name="CustomIcon" value="toolAndDieSet"/>
+		<property name="CustomIconTint" value="676767"/>
+	</item_modifier>
+
+
+	<item_modifier name="modGunConverterTotalArmorWinter" installable_tags="ranged" blocked_tags="perkArchery,manufacturer" modifier_tags="converter" type="attachment">
+		<property name="Stacknumber" value="1"/>
+
+		<item_property_overrides name="gunPistol">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPISTOLArmorWinter"/>
+			<property name="CustomIcon" value="HDHQPistolArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgun">
+			<property name="HandMeshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQPUMPSHOTGUNArmorWinter"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgunSawedOff">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSAWEDOFFArmorWinter"/>
+			<property name="CustomIcon" value="HDHQPumpShotgunArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunAK47">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQAK47ArmorWinter"/>
+			<property name="CustomIcon" value="HDHQAK47ArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHuntingRifle">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQHUNTINGRIFLEArmorWinter"/>
+			<property name="CustomIcon" value="HDHQHuntingRifleArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gun44Magnum">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQ44MAGNUMArmorWinter"/>
+			<property name="CustomIcon" value="HDHQ44MagnumArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunSMG5">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQMP5ArmorWinter"/>
+			<property name="CustomIcon" value="HDHQSMG5ArmorWinter"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMR10">
+			<property name="Meshfile" value="#@modfolder(HDHQGuns):Resources/HDHQGuns.unity3d?HDHQSNIPERArmorWinter"/>
+			<property name="CustomIcon" value="HDHQMR10ArmorWinter"/>
+		</item_property_overrides>
+
+		<effect_group tiered="false">
+			<passive_effect name="WeaponHandling" operation="perc_add" value="-0.10"/>
+			<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.10"/>
+			<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.10"/>
+
+			<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.10"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.10"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.10"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.10"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.10"/>
+			<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.10"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.10"/>
+			
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.05"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="0.35"/>
+
+			<passive_effect name="MagazineSize" operation="perc_add" value="0.5"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+			<passive_effect name="MaxRange" operation="perc_add" value="-0.2"/>
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.1"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" value="-0.1"/>
+			<passive_effect name="DegradationMax" operation="perc_add" value="-0.2"/>
+
+			<passive_effect name="PerkLevel" tags="perkAutomaticWeapons" operation="base_add" value="2"/>
+
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		<property name="CustomIcon" value="toolAndDieSet"/>
+		<property name="CustomIconTint" value="676767"/>
+	</item_modifier>
+
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterCamoDigital']/effect_group">
+		<passive_effect name="EconomicValue" operation="base_set" value="2955"/>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorJungle']/effect_group">
+		<passive_effect name="EconomicValue" operation="base_set" value="2955"/>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorWinter']/effect_group">
+		<passive_effect name="EconomicValue" operation="base_set" value="2955"/>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalCamoDigital']/effect_group">
+		<passive_effect name="EconomicValue" operation="base_set" value="3955"/>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorJungle']/effect_group">
+		<passive_effect name="EconomicValue" operation="base_set" value="3955"/>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorWinter']/effect_group">
+		<passive_effect name="EconomicValue" operation="base_set" value="3955"/>
+	</append>
+	
+	
+	<!-- new Mods for BorderlandZ -->
+	
+	<append xpath="/item_modifiers">
+
+		<item_modifier name="modVehicleTurboEngine" installable_tags="vehicle" modifier_tags="speed" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<!--                                      ERRORS! funktioniert nicht! man kann nur ITEMS verändern, diese Vars sind in vehicle.xml!
+			<effect_group tiered="false">
+				<passive_effect name="velocityMax" operation="perc_add" value=".5"/>
+				<passive_effect name="motorTorqueMinQ" operation="perc_add" value=".2"/>
+				<passive_effect name="motorTorqueMaxQ" operation="perc_add" value=".2"/>
+				<passive_effect name="brakeTorque" operation="perc_add" value=".2"/>
+				<passive_effect name="upAngleMax" operation="perc_add" value=".1"/>
+				<passive_effect name="fuelKmPerL" operation="perc_add" value="-.2"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="5555"/>
+			</effect_group>
+			-->
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="smallEngine"/>
+			<property name="CustomIconTint" value="cccccc"/>
+		</item_modifier>
+
+
+		<item_modifier name="modVehicleHardenedChassis" installable_tags="vehicle" modifier_tags="armor" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<!--                                      funzt auch nicht... -->
+			<effect_group tiered="false">
+				<passive_effect name="DegradationMax" operation="perc_add" value=".5"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="4255"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceForgedIron"/>
+			<property name="CustomIconTint" value="cccccc"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunAdvancedBarrel" installable_tags="ranged" blocked_tags="perkArchery" modifier_tags="damage" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.25"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-0.05"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.05"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.05"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="4195"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="pistol_barrel"/>
+			<property name="CustomIconTint" value="cccccc"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunMagazineExtenderII" installable_tags="magazineBandit" blocked_tags="launcher" modifier_tags="magazine" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="MagazineSize" operation="perc_add" value="1.2"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="1955"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="airFilter"/>
+			<property name="CustomIconTint" value="676767"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunMagazineExtenderMagnum" installable_tags="magazineMagnum" blocked_tags="launcher" modifier_tags="magazine" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="MagazineSize" operation="perc_add" value=".334"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="2155"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="44MagnumCylinder"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunMagazineExtenderHR" installable_tags="magazineHR" blocked_tags="launcher" modifier_tags="magazine" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="MagazineSize" operation="perc_add" value="4"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="2155"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="huntingRifleBolt"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunMagazineExtenderSG" installable_tags="magazineSG" blocked_tags="launcher" modifier_tags="magazine" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="MagazineSize" operation="perc_add" value=".5"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="2155"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="PumpShotgun_parts"/>
+		</item_modifier>
+		
+
+		<!-- NOT YET WORKING -->		
+		<item_modifier name="modGunMagazineAmmoChanger" installable_tags="magazine" modifier_tags="ammo" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<item_property_overrides name="*">
+				<property name="Action0.Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,ammo762mmBulletFMJ"/>
+			</item_property_overrides>
+			<effect_group tiered="false">
+				<passive_effect name="EconomicValue" operation="base_set" value="2555"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="pistol_parts"/>
+		</item_modifier>
+
+
+
+
+
+
+		<item_modifier name="modGunElementEX" installable_tags="ranged" blocked_tags="perkArchery,elemental" modifier_tags="element" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<item_property_overrides name="*">
+				<property name="DamageType" value="Explosive"/>
+				<property name="TintColor" value="220,220,0"/>
+				<property name="CustomIconTint" value="220,220,0"/>
+				<property name="UMA.Overlay0Tint" value="220,220,0"/>
+				
+				<property name="Class" value="Launcher"/>
+				<property name="Sound_start" value="m136_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_reload" value="m136_reload"/>
+				<property name="Particles_muzzle_fire" value="rocketLauncherFire"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmoke_m136"/>
+				
+				<property name="Magazine_items" value="ammoRocketHE,ammoRocketFrag"/>
+			</item_property_overrides>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.25"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".25"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".25"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.25"/>
+				
+				<!--<passive_effect name="Magazine_items" operation="base_set" value="ammoRocketHE,ammoRocketFrag"/>-->
+				<passive_effect name="EconomicValue" operation="base_set" value="9655"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceGoldNugget"/>
+			<property name="CustomIconTint" value="dcdc00"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunElementIce" installable_tags="ranged" blocked_tags="perkArchery,elemental" modifier_tags="element" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<item_property_overrides name="*">
+				<property name="DamageType" value="Cold"/>
+				<property name="TintColor" value="90,135,255"/>
+				<property name="CustomIconTint" value="90,135,255"/>
+				<property name="UMA.Overlay0Tint" value="90,135,255"/>
+			</item_property_overrides>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.15"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".05"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".05"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.05"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="7055"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffStunnedX"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceSilverNugget"/>
+			<property name="CustomIconTint" value="5a87ff"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunElementElec" installable_tags="ranged" blocked_tags="perkArchery,elemental" modifier_tags="element" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<item_property_overrides name="*">
+				<property name="DamageType" value="Electrical"/>
+				<property name="TintColor" value="150,215,255"/>
+				<property name="CustomIconTint" value="150,215,255"/>
+				<property name="UMA.Overlay0Tint" value="150,215,255"/>
+			</item_property_overrides>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.15"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".05"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".05"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.05"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="9555"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShockedX"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceSilverNugget"/>
+			<property name="CustomIconTint" value="96d7ff"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunElementFire" installable_tags="ranged" blocked_tags="perkArchery,elemental" modifier_tags="element" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group name="Fire Proc" tiered="false">
+				<requirements compare_type="or">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
+					<requirement name="HasBuff" target="other" buff="buffBurningElementX"/>
+				</requirements>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement,buffBurningElementX"/>
+			</effect_group>
+			<item_property_overrides name="*">
+				<property name="DamageType" value="Heat"/>
+				<property name="TintColor" value="172,33,50"/>
+				<property name="CustomIconTint" value="172,33,50"/>
+				<property name="UMA.Overlay0Tint" value="172,33,50"/>
+			</item_property_overrides>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.2"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".15"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".15"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.15"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="11555"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceSilverNugget"/>
+			<property name="CustomIconTint" value="ac2132"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunElementIntense" installable_tags="elemental" blocked_tags="perkArchery,launcher" modifier_tags="element" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".08"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.03"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".02"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".02"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.02"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="9555"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="99"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffIntensifierX"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceRawDiamond"/>
+		</item_modifier>
+
+
+		<item_modifier name="modGunElementTEST" installable_tags="ranged" blocked_tags="perkArchery,elemental" modifier_tags="element" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<effect_group name="Fire Proc" tiered="false">
+				<requirements compare_type="or">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="99"/>
+					<requirement name="HasBuff" target="other" buff="buffBurningElementX"/>
+				</requirements>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement,buffBurningElementX"/>
+			</effect_group>
+			<item_property_overrides name="*">
+				<!--<property name="Damage_type" value="Piercing"/>  Piercing Slashing Bashing          Radiation Toxic Heat ?? -->
+				<property name="DamageType" value="Heat"/> <!-- Electrical Heat Cold    siehe ammoArrowFlaming   keiner : ammoCrossbowBoltExploding -->
+				<property name="TintColor" value="255,0,0"/>
+				<property name="CustomIconTint" value="172,33,50"/>
+				<property name="UMA.Overlay0Tint" value="172,33,50"/>
+			</item_property_overrides>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.15"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".15"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".15"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.15"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="11955"/>
+			</effect_group>
+			<!-- buffInjuryBleeding buffInjuryStunned1 buffArmorShredding onSelfDamagedOther
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="99"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned1"/>
+			</effect_group> -->
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="resourceSilverNugget"/> <!-- resourceRawDiamond resourceSilverNugget resourceGoldNugget -->
+			<property name="CustomIconTint" value="ac2132"/>
+		</item_modifier>
+
+
+		<!-- Armor Mods -->
+		
+		<item_modifier name="modArmorShield" installable_tags="armorChest" modifier_tags="resistance" type="attachment" rarity="0.5">
+			<property name="Stacknumber" value="1"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.2" tags="buffIllInfection0,buffIllPneumonia0,buffInjuryBleeding"/>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="0"/>
+				<passive_effect name="PerkLevel" tags="perkPainTolerance" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkHealingFactor" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkIntrinsicImmunity" operation="base_add" value="0"/>
+				<passive_effect name="PerkLevel" tags="perkPackMule" operation="base_add" value="0"/>
+				<passive_effect name="EconomicValue" operation="base_set" value="7055"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			<property name="CustomIcon" value="modArmorPlasticPlating"/>
+			<property name="CustomIconTint" value="ffcccc"/>
+		</item_modifier>
+		
+
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLiner']/@installable_tags">,clothing</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorCoolingMesh']/@installable_tags">,clothing</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorImprovedFittings']/@installable_tags">,clothing</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorCustomizedFittings']/@installable_tags">,clothing</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/@installable_tags">,clothing</append>
+	
+	<setattribute xpath="/item_modifiers/item_modifier[starts-with(@name,'modDye')]" name="blocked_tags">ranged,launcher</setattribute>
+	<append xpath="/item_modifiers/item_modifier[@name='modShotgunSawedOffBarrel']/@blocked_tags">,converter</append> <!-- geht leider nicht -->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/@blocked_tags">,launcher</append> <!-- geht leider nicht -->
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunFlashSuppressor']" name="blocked_tags">launcher</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMuzzleBrake']" name="blocked_tags">launcher</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier[starts-with(@name,'modGunTriggerGroup')]" name="blocked_tags">launcher</setattribute>
+
+</configs>

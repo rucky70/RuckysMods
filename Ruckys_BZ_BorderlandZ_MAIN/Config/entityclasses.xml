@@ -1,0 +1,12 @@
+<configs>
+
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value"  >cntACMELuggageLocked,cntACMEVBoxLocked,cntACMETBagLocked,cntACMEGSuitcaseLocked,cntACMEMBagLocked,cntACMEFCoolerLocked</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">cntACMELuggageLocked,cntACMEVBoxLocked,cntACMETBagLocked,cntACMEGSuitcaseLocked,cntACMEMBagLocked,cntACMEFCoolerLocked</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">cntACMELuggageLocked,cntACMEVBoxLocked,cntACMETBagLocked,cntACMEGSuitcaseLocked,cntACMEMBagLocked,cntACMEFCoolerLocked</set> 
+
+	<set xpath="/entity_classes/entity_class[contains(@name,'zombie')]/property[@name='LootDropProb' and @value='0.02']/@value">0.10</set> <!-- normal Zed -->
+	<set xpath="/entity_classes/entity_class[contains(@name,'zombie')]/property[@name='LootDropProb' and @value='.03']/@value" >0.12</set> <!-- feral or radiated Zed -->
+	
+	<set xpath="/entity_classes/entity_class[contains(@name,'EntityLoot')]/property[@name='TimeStayAfterDeath']/@value">3600</set> <!-- 300 -->
+
+</configs>

@@ -1,0 +1,193 @@
+<configs>
+
+	<append xpath="/buffs">
+
+	<!-- Elemental crystals buffs -->
+
+	<buff name="buffBurningElementX" hidden="true">
+		<damage_type value="heat"/>
+		<stack_type value="replace"/>
+		<duration value="10"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFire"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,3" value="1,1"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="3,6" value="1,3"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="6,10" value="3,5"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="-200"/>
+		</effect_group>
+	</buff>		
+	<buff name="buffBurningElementX2" hidden="true">
+		<damage_type value="heat"/>
+		<stack_type value="replace"/>
+		<duration value="12"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFire"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,3" value="1,3"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="3,6" value="3,7"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="6,12" value="7,15"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="-200"/>
+		</effect_group>
+	</buff>		
+
+	<buff name="buffShockedX" hidden="true">
+		<damage_type value="electrical"/>
+		<stack_type value="replace"/>
+		<duration value="5"/>
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-6"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="electric_fence_impact" />
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" target="self" sound="electric_fence_impact" />
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" target="self" sound="electric_fence_impact" />
+		</effect_group>
+	</buff>
+	<buff name="buffShockedX2" hidden="true">
+		<damage_type value="electrical"/>
+		<stack_type value="replace"/>
+		<duration value="6"/>
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-9"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="electric_fence_impact" />
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" target="self" sound="electric_fence_impact" />
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" target="self" sound="electric_fence_impact" />
+		</effect_group>
+	</buff>
+		
+	<buff name="buffStunnedX" hidden="true">
+		<damage_type value="stun"/>
+		<stack_type value="replace"/>
+		<duration value="8"/>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-1"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.99"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.99"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.99"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.99"/>
+		</effect_group>
+	</buff>
+	<buff name="buffStunnedX2" hidden="true">
+		<damage_type value="stun"/>
+		<stack_type value="replace"/>
+		<duration value="8"/>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-2"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.99"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.99"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.99"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.99"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffToxicX" hidden="true">
+		<damage_type value="radiation"/>
+		<stack_type value="replace"/>
+		<duration value="4"/>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-5"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.4"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.4"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.4"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.4"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="RadiatedParticlesOnMesh" local_offset="0,-0.15,0"/>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+		</effect_group>
+	</buff>
+	<buff name="buffToxicX2" hidden="true">
+		<damage_type value="radiation"/> <!-- toxic ? -->
+		<stack_type value="replace"/>
+		<duration value="4"/>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-10"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.5"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.5"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.5"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.5"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="RadiatedParticlesOnMesh" local_offset="0,-0.15,0"/>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh" />
+		</effect_group>
+	</buff>
+	<buff name="buffIntensifierX" hidden="true">
+		<damage_type value="radiation"/>
+		<stack_type value="replace"/>
+		<duration value="4"/>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-3"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.2"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.2"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.2"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.2"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_hotembersZombie" local_offset="0,0.75,0"/>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_hotembersZombie" />
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_hotembersZombie" />
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_hotembersZombie" />
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_hotembersZombie" />
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_hotembersZombie" />
+		</effect_group>
+	</buff>
+
+	<!-- sleeping buff bonus -->
+
+	<buff name="buffSleepingBonus" name_key="buffSleepingBonusName" description_key="buffSleepingBonusDesc" tooltip_key="buffSleepingBonusTooltip" icon="ui_game_symbol_map_bed" icon_color="255,128,0" tags="drug">
+		<stack_type value="ignore"/> <!-- stack? -->
+		<duration value="1"/>
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="0.25"/>
+			<passive_effect name="StaminaChangeOT" operation="base_add" value="2"/>
+		</effect_group>
+	</buff>
+		
+	</append>
+</configs>

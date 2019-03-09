@@ -1,0 +1,47 @@
+<configs>
+
+<!-- New Values Vehicles:
+
+Vehicle			velocityMax	fuelKmPerL	capacity	Storage
+
+Bicycle			8, 12		/		/		9x1
+Minibike		10, 15		10		5		9x4
+Motorcycle		20, 30		2		20		9x3
+4x4Truck		15, 20		0.6		100		9x10
+Gyrocopter		10, 15		5		12		9x2
+
+HP4x4Truck		17, 25		0.4		120		9x10
+Quad			15, 20		4		15		9x4
+HellGoatBike		30, 38		1		15		9x1
+RoadHog			25, 33		1.5		20		9x3
+CicadaCar		10, 15		3		50		9x4
+MonsterBeetle		18, 23		0.3		150		10x9
+HelicopterOH58		30, 40		0.25		160		10x9
+JetPack			10, 15		2		5		9x1
+PedalGyro		7, 10		/		/		9x2
+MonoHog			18, 25		1.5		12		9x3
+
+-->
+
+	<!-- Changes: VANILLA VEHICLES: Motorcycle: way faster, needs more Fuel, but less Storage than Minibike -->
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">10, 15</set> <!-- 7, 10 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='engine']/property[@name='fuelKmPerL']/@value">5</set> <!-- 1 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='fuelTank']/property[@name='capacity']/@value">12</set> <!-- 8 -->
+
+	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">8, 12</set> <!-- 5, 10 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@class='pedals']/property[@name='staminaDrain']/@value">1, 10</set> <!-- 1.5, 15 -->
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">10, 15</set> <!-- 7, 10 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='engine']/property[@name='fuelKmPerL']/@value">10</set> <!-- 1 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='fuelTank']/property[@name='capacity']/@value">5</set> <!-- 4 -->
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">20, 30</set> <!-- 9, 14 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='engine']/property[@name='fuelKmPerL']/@value">2</set> <!-- 1 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='fuelTank']/property[@name='capacity']/@value">20</set> <!-- 12 -->
+	
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">15, 20</set> <!-- 9, 13 -->
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.6</set> <!-- 1 -->
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='fuelTank']/property[@name='capacity']/@value">100</set> <!-- 40 -->
+
+</configs>

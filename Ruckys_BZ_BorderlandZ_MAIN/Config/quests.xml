@@ -1,0 +1,86 @@
+<config>
+
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival2']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival3']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival4']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival5']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival6']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival7']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival8']" />
+
+	<insertBefore xpath="/quests/quest[@id='quest_whiteRiverCitizen1']" >		
+	<quest id="quest_BasicSurvival1">
+		<property name="group_name_key" value="quest_BasicSurvival" />
+		<property name="name_key" value="quest_BasicSurvival1" />
+		<property name="subtitle" value="Craft a Stone Axe" />
+		<property name="subtitle_key" value="quest_BasicSurvival2_subtitle" />
+		<property name="description_key" value="quest_BasicSurvival2_description" />
+		<property name="icon" value="ui_game_symbol_hammer" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_BasicSurvival_offer" />
+		<property name="shareable" value="false" />
+
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="2" phase="1" />
+		<objective type="FetchKeep" id="resourceWood" value="2" phase="1" />
+		<objective type="FetchKeep" id="resourceRockSmall" value="4" phase="1" />
+
+		<objective type="Craft">
+			<property name="phase" value="2" />
+			<property name="item" value="meleeToolStoneAxe" />
+			<property name="count" value="1" />
+		</objective>
+
+		<reward type="SkillPoints" value="31" chainreward="true" /> <!-- in sum 80 to start -->
+		<reward type="Exp" value="1440000" /> <!-- level 50 and therefore +49 skillpoints -->
+		<reward type="Quest" id="quest_whiteRiverCitizen1"><property name="chainquest" value="false" /></reward>
+	</quest>	
+	</insertBefore>
+
+	<set xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/property[@name='description_key']/@value">quest_WhiteRiverCitizen1_description2</set>
+	<remove xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']" />
+	<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
+		<reward type="SkillPoints" value="5" chainreward="true" />
+		<reward type="Item" id="cntACMECrateTechPackageLocked" value="1" chainreward="true" />
+		<reward type="Quest" id="quest_killSomeZeds1"><property name="chainquest" value="false" /></reward>
+		<reward type="Exp" value="100" />
+	</append>
+
+	<insertAfter xpath="/quests/quest[@id='quest_whiteRiverCitizen1']" >		
+	<quest id="quest_killSomeZeds1">
+		<property name="group_name_key" value="quest_killSomeZeds" />
+		<property name="name_key" value="quest_killSomeZeds1" />
+		<property name="subtitle_key" value="quest_killSomeZeds1_subtitle" />
+		<property name="description_key" value="quest_killSomeZeds1_description2" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="medium" />
+		<property name="shareable" value="false" />
+
+		<action type="ShowTip" value="quest_killSomeZeds1_description"><property name="delay" value="3" /></action>
+		<objective type="ZombieKill" value="100" phase="1" /> <!-- without id="zombiexxx" is any zombietype -->
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="100" />
+	</quest>
+	<quest id="quest_TraderAdvert">
+		<property name="group_name" value="quest_TraderAdvertisement" />
+		<property name="offer_key" value="quest_TraderAdvert_offer" />
+		<property name="name_key" value="quest_TraderAdvert_name" />
+		<property name="subtitle_key" value="quest_TraderAdvert_subtitle" />
+		<property name="description_key" value="quest_TraderAdvert_description" />
+		<property name="icon" value="ui_game_symbol_map_trader" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="easy" />
+		<property name="shareable" value="false" />
+		<property name="repeatable" value="true" />
+	
+		<objective type="Goto" id="trader" value="5" />
+		
+ 		<!--<reward type="Exp" value="1" />-->
+	</quest>
+	</insertAfter>
+	
+</config>

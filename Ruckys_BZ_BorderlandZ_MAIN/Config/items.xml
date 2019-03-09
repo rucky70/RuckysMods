@@ -1,0 +1,809 @@
+<configs>
+
+	<!-- we add these Dummy-Vehicles and -Items as they get referenced in loot.xml -->
+	<!-- that will produce a WRN message if manux_vehicles are installed though, but that can be ignored! -->
+
+	<append xpath="/items[not(item/@name='manux_vehicleHP4x4TruckPlaceable')]">
+	
+	<item name="manux_vehicleHP4x4TruckPlaceable">
+		<property name="Extends" value="vehicle4x4TruckPlaceable"/>
+		<property name="CustomIcon" value="vehicle4x4TruckPlaceable"/>
+		<property name="DescriptionKey" value="manux_vehicleHP4x4TruckDescAlt"/>
+		<property class="Action1">
+			<property name="Vehicle" value="vehicle4x4Truck"/>
+			<property name="VehicleSize" value="2.5, 2.1, 5"/>
+		</property>
+		<effect_group name="Base Effects">
+			<passive_effect name="DegradationMax" operation="base_set" value="3500,7500" tier="1,6"/>
+		</effect_group>		
+	</item>
+	<item name="manux_vehicleRoadHogPlaceable">
+		<property name="Extends" value="vehicleMotorcyclePlaceable"/>
+		<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
+		<property name="DescriptionKey" value="manux_vehicleRoadHogDescAlt"/>
+		<property class="Action1">
+			<property name="Vehicle" value="vehicleMotorcycle"/>
+			<property name="VehicleSize" value="1.3, 1.9, 3"/>
+		</property>
+		<effect_group name="Base Effects">
+			<passive_effect name="DegradationMax" operation="base_set" value="3000,6000" tier="1,6"/>
+		</effect_group>
+	</item>
+	<item name="manux_vehicleJetPackPlaceable">
+		<property name="Extends" value="drinkJarBeer"/>
+		<property name="CustomIcon" value="drinkJarBeer"/>
+		<property name="DescriptionKey" value="manux_vehicleJetPackDescAlt"/>
+	</item>
+	
+	</append>
+
+	<!-- HP x5, so we can get a bit more damage -->
+	
+	<set xpath="/items/item[@name='vehicleMinibikePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500,15000</set>
+	<set xpath="/items/item[@name='vehicleBicyclePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">3500,7500</set>
+	<set xpath="/items/item[@name='vehicleMotorcyclePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">15000,30000</set>
+	<set xpath="/items/item[@name='vehicle4x4TruckPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">17500,37500</set>
+	<set xpath="/items/item[@name='vehicleGyrocopterPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500,15000</set>
+
+	<!-- making the parts way more expensive -->
+	
+	<append xpath="/items/item[@name='smallEngine']"><property name="EconomicValue" value="4500"/></append>
+	<append xpath="/items/item[@name='vehicleWheels']"><property name="EconomicValue" value="2000"/></append>
+	<append xpath="/items/item[@name='vehicleMinibikeChassis']"><property name="EconomicValue" value="6000"/></append>
+	<append xpath="/items/item[@name='vehicleMinibikeHandlebars']"><property name="EconomicValue" value="4000"/></append>
+	<append xpath="/items/item[@name='vehicleBicycleChassis']"><property name="EconomicValue" value="3000"/></append>
+	<append xpath="/items/item[@name='vehicleBicycleHandlebars']"><property name="EconomicValue" value="3000"/></append>
+	<append xpath="/items/item[@name='vehicleGyroCopterChassis']"><property name="EconomicValue" value="15000"/></append>
+	<append xpath="/items/item[@name='vehicleGyroCopterAccessories']"><property name="EconomicValue" value="8000"/></append>
+	<append xpath="/items/item[@name='vehicle4x4TruckChassis']"><property name="EconomicValue" value="22000"/></append>
+	<append xpath="/items/item[@name='vehicle4x4TruckAccessories']"><property name="EconomicValue" value="16000"/></append>
+	<append xpath="/items/item[@name='vehicleMotorcycleChassis']"><property name="EconomicValue" value="16000"/></append>
+	<append xpath="/items/item[@name='vehicleMotorcycleHandlebars']"><property name="EconomicValue" value="9000"/></append>
+
+
+	<!-- Removing some FoodPoisoning -->
+	
+	<remove xpath="/items/item[@name='foodCanBeef']/effect_group[@tiered='false']/triggered_effect[@buff='buffIllFoodPoisoning0']" />
+	<remove xpath="/items/item[@name='foodCanBeef']/effect_group[@tiered='false']/display_value[@name='FoodPoisoningRisk']" />
+	<remove xpath="/items/item[@name='foodCanChicken']/effect_group[@tiered='false']/triggered_effect[@buff='buffIllFoodPoisoning0']" />
+	<remove xpath="/items/item[@name='foodCanChicken']/effect_group[@tiered='false']/display_value[@name='FoodPoisoningRisk']" />
+	<remove xpath="/items/item[@name='foodCanLamb']/effect_group[@tiered='false']/triggered_effect[@buff='buffIllFoodPoisoning0']" />
+	<!--<remove xpath="/items/item[@name='foodCanLamb']/effect_group[@tiered='false']/display_value[@name='FoodPoisoningRisk']" />-->
+
+	<!-- We want some dark BADASS Clothing to start with! -->
+	
+	<set xpath="/items/item[@name='armyPants']/property[@class='UMA']/property[@name='Overlay0Tint']/@value">120,120,120</set>
+	<append xpath="/items/item[@name='armyPants']"><property name="CustomIconTint" value="80,80,80"/></append>
+	<set xpath="/items/item[@name='armyPants']/effect_group[@tiered='false']/passive_effect[@name='ModSlots']/@value">2</set>
+	<append xpath="/items/item[@name='armyShirt']/property[@class='UMA']"><property name="Overlay0Tint" value="80,80,80"/></append>
+	<append xpath="/items/item[@name='armyShirt']"><property name="CustomIconTint" value="80,80,80"/></append>
+	<set xpath="/items/item[@name='armyShirt']/effect_group[@tiered='false']/passive_effect[@name='ModSlots']/@value">2</set>
+	<append xpath="/items/item[@name='jacketWhite']/property[@class='UMA']"><property name="Overlay0Tint" value="50,50,50"/></append>
+	<append xpath="/items/item[@name='jacketWhite']"><property name="CustomIconTint" value="80,80,80"/></append>
+	<set xpath="/items/item[@name='jacketWhite']/effect_group[@tiered='false']/passive_effect[@name='ModSlots']/@value">2</set>
+	<append xpath="/items/item[@name='bandana']/property[@class='UMA']"><property name="Overlay0Tint" value="80,80,80"/></append>
+	<append xpath="/items/item[@name='bandana']"><property name="CustomIconTint" value="80,80,80"/></append>
+	<set xpath="/items/item[@name='bandana']/effect_group[@tiered='false']/passive_effect[@name='ModSlots']/@value">2</set>
+	<set xpath="/items/item[@name='bandana']/effect_group[@tiered='false']/passive_effect[@name='HypothermalResist']/@value">6</set>
+	<set xpath="/items/item[@name='bandana']/effect_group[@tiered='false']/passive_effect[@name='HyperthermalResist']/@value">5</set>
+	<append xpath="/items/item[@name='armorMilitaryMaster']"><property name="CustomIconTint" value="80,80,80"/></append>
+	<append xpath="/items/item[@name='armorMilitaryHelmet']/property[@class='UMA']"><property name="Overlay0Tint" value="0,0,0"/></append>
+	<append xpath="/items/item[@name='armorMilitaryVest']/property[@class='UMA']"><property name="Overlay0Tint" value="0,0,0"/></append>
+	<append xpath="/items/item[@name='armorMilitaryGloves']/property[@class='UMA']"><property name="Overlay0Tint" value="0,0,0"/></append>
+	<append xpath="/items/item[@name='armorMilitaryLegs']/property[@class='UMA']"><property name="Overlay0Tint" value="0,0,0"/></append>
+	<append xpath="/items/item[@name='armorMilitaryBoots']/property[@class='UMA']"><property name="Overlay0Tint" value="0,0,0"/></append>
+	<set xpath="/items/item[@name='cigar']/effect_group[@tiered='false']/passive_effect[@name='BarteringBuying']/@value">0.25</set>
+	<set xpath="/items/item[@name='cigar']/effect_group[@tiered='false']/passive_effect[@name='BarteringSelling']/@value">0.25</set>
+	
+	<append xpath="/items">
+	<item name="shadesACME">
+		<property name="Extends" value="shades"/>
+		<property name="Tags" value="head,clothing"/>
+		<property name="CustomIcon" value="shades"/>
+		<property name="CustomIconTint" value="80,80,80"/>
+		<property class="UMA">
+			<property name="Mesh" value="gear_shades"/>
+			<property name="Overlay0" value="gear_shades"/>
+			<property name="Overlay0Tint" value="80,80,80"/>
+		</property>
+		<property name="EconomicValue" value="1000"/>
+		<effect_group tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+			<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>
+			<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+			<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+			<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+			<passive_effect name="CraftingTier" operation="base_add" value="1"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.1" />
+			<display_value name="dCraftingTier" value="1"/>
+			<display_value name="dCraftingTime" value="-.1"/>
+			<display_value name="dPlayerExpGain" value=".1"/>
+			<passive_effect name="PerkLevel" tags="perkPainTolerance" operation="base_add" value="1"/>
+			<passive_effect name="PerkLevel" tags="perkHealingFactor" operation="base_add" value="1"/>
+		</effect_group>
+	</item>		
+	</append>
+	
+	<!-- not sure if we hardcode some Stacknumber increasement or generally increase OVERALL Stacknumers... so I leave both for the moment -->
+	
+	<set xpath="/items/item/property[@name='Stacknumber' and not(@value='1')]/@value">30000</set>
+	
+	<!--
+	<set xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']/@value">150</set>
+	<set xpath="/items/item[@name='medicalBandage']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">15</set>
+	<set xpath="/items/item[@name='medicalSplint']/property[@name='Stacknumber']/@value">20</set>
+	<set xpath="/items/item[@name='medicalSnowberryExtract']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='drugVitamins']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[@name='drugPainkillers']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[@name='drugHerbalAntibiotics']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[@name='drugAntibiotics']/property[@name='Stacknumber']/@value">250</set>
+	
+	<set xpath="/items/item[@name='foodHoney']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='foodMoldyBread']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[@name='foodShamSandwich']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">2500</set>
+	<set xpath="/items/item[@name='drinkCanRiverWater']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarYuccaJuice']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarGoldenRodTea']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarRedTea']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarCoffee']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarGrainAlcohol']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarGrandpasMoonshine']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='Stacknumber']/@value">50</set>
+	
+	<set xpath="/items/item[@name='resourceRepairKit']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='Stacknumber']/@value">15000</set>
+	<set xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']/@value">15000</set>
+	<set xpath="/items/item[@name='resourceIronFragment']/property[@name='Stacknumber']/@value">5000</set>
+	<set xpath="/items/item[@name='resourceScrapIron']/property[@name='Stacknumber']/@value">15000</set>
+	<set xpath="/items/item[@name='resourceFeather']/property[@name='Stacknumber']/@value">2500</set>
+	<set xpath="/items/item[@name='resourceLeather']/property[@name='Stacknumber']/@value">2500</set>
+	<set xpath="/items/item[@name='resourceOil']/property[@name='Stacknumber']/@value">500</set>
+	and more to find -->
+	
+	<!-- some which vanilla were only 1 -->
+
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='bucketEmpty']/property[@name='Stacknumber']/@value">5</set>
+
+	<!-- Changes to melee tools and weapons -->
+	
+	<set xpath="/items/item[@name='meleeToolStoneAxe']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']/@value">31</set> <!-- 21 -->
+	<set xpath="/items/item[@name='meleeToolStoneAxe']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss']/@value">7</set> <!-- 9.9 -->
+	<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange']/@value">2.5</set> <!-- 2.0 -->
+	<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">20</set> <!-- 13 -->
+	<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss']/@value">9</set> <!-- 12.3 -->
+	<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange']/@value">3.0</set> <!-- 2.4 -->
+	<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">25</set> <!-- 20 -->
+	<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss']/@value">11</set> <!-- 15.8 -->
+
+	<!-- other changes -->
+	
+	<set xpath="/items/item[@name='solarCell']/property[@class='Attributes']/property[@name='DegradationMax']/@value">6000,6000</set>
+	<set xpath="/items/item[@name='solarCell']/effect_group/passive_effect[@name='DegradationMax']/@value">6000,6000</set>
+	<append xpath="/items/item[@name='solarCell']"><property name="RepairTools" value="resourceRepairKit"/></append>
+
+	<!-- changes for Dust2Deaths HDHQGuns Modlet -->
+	
+	<append xpath="/items/item[contains(@name,'CamoDigital')]/property[@name='Tags']/@value">,camoDigital,manufacturer</append>
+	<append xpath="/items/item[contains(@name,'ArmorJungle')]/property[@name='Tags']/@value">,armorJungle,manufacturer</append>
+	<append xpath="/items/item[contains(@name,'ArmorWinter')]/property[@name='Tags']/@value">,armorWinter,manufacturer</append>
+	<append xpath="/items/item[contains(@name,'CamoDesert')]/property[@name='Tags']/@value">,camoDesert,manufacturer,elemental,reloadPenalty,launcher,perkExplosiveWeapons</append>
+	<append xpath="/items/item[contains(@name,'AnoBlue')]/property[@name='Tags']/@value">,anoBlue,manufacturer,elemental</append>
+	<append xpath="/items/item[contains(@name,'AnoCyan')]/property[@name='Tags']/@value">,anoCyan,manufacturer,elemental</append>
+	<append xpath="/items/item[contains(@name,'AnoRed')]/property[@name='Tags']/@value">,anoRed,manufacturer,elemental</append>
+	<append xpath="/items/item[contains(@name,'Jade')]/property[@name='Tags']/@value">,jade,manufacturer,elemental</append>
+
+	<append xpath="/items/item[contains(@name,'CamoDigital')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'ArmorJungle')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'ArmorWinter')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'CamoDesert')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'AnoBlue')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'AnoCyan')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'AnoRed')]"><effect_group name="Addon Effects"></effect_group></append>
+	<append xpath="/items/item[contains(@name,'Jade')]"><effect_group name="Addon Effects"></effect_group></append>
+
+	<!-- DAHL -->
+	<append xpath="/items/item[contains(@name,'CamoDigital')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="0.30"/>
+		<passive_effect name="KickDegreesVertical" operation="perc_add" value="-0.30"/>
+		<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="-0.30"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="-0.30"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="-0.30"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-0.30"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-0.30"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-0.30"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="-0.30"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-0.30"/>
+				
+		<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="-0.20"/>
+				
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.15"/>
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="0.2"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.1"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="PerkLevel" tags="perkRunAndGun" operation="base_add" value="2"/>
+	</append>
+
+	<!-- JACOBS -->
+	<append xpath="/items/item[contains(@name,'ArmorJungle')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.20"/>
+		<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.20"/>
+		<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.20"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.20"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.20"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.20"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.20"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.20"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.20"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.20"/>
+				
+		<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.15"/>
+
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.15"/>
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="0.1"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.2"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0.35"/>
+
+		<passive_effect name="PerkLevel" tags="perkHeadshot" operation="base_add" value="2"/>
+	</append>
+	
+	<!-- BANDIT -->
+	<append xpath="/items/item[contains(@name,'ArmorWinter')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.10"/>
+		<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.10"/>
+		<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.10"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.10"/>
+				
+		<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.05"/>
+
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0.35"/>
+
+		<passive_effect name="MagazineSize" operation="perc_add" value="0.5"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="-0.2"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-0.05"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-0.2"/>
+
+		<passive_effect name="PerkLevel" tags="perkAutomaticWeapons" operation="base_add" value="2"/>
+	</append>
+	
+	<!-- MALIWAN ICE -->
+	<append xpath="/items/item[contains(@name,'AnoBlue')]">
+		<property name="DamageType" value="Cold"/>
+		<property name="Damage_type" value="Cold"/>
+	</append>
+
+	<append xpath="/items/item[contains(@name,'AnoBlue')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.1"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.1"/>
+				
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.05"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="-0.2"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-0.15"/>
+
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffStunnedX2"/>
+	</append>
+	
+	<!-- MALIWAN ELECTRO -->
+	<append xpath="/items/item[contains(@name,'AnoCyan')]">
+		<property name="DamageType" value="Electrical"/>
+		<property name="Damage_type" value="Electrical"/>
+	</append>
+
+	<append xpath="/items/item[contains(@name,'AnoCyan')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.1"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.1"/>
+				
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.05"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="-0.2"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-0.15"/>
+
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShockedX2"/>
+	</append>
+	
+	<!-- MALIWAN FIRE -->
+	<append xpath="/items/item[contains(@name,'AnoRed')]">
+		<property name="DamageType" value="Heat"/>
+		<property name="Damage_type" value="Heat"/>
+		<effect_group name="Fire Proc" tiered="false">
+			<requirements compare_type="or">
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="99"/>
+				<requirement name="HasBuff" target="other" buff="buffBurningElementX2"/>
+			</requirements>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement,buffBurningElementX2"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/items/item[contains(@name,'AnoRed')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.15"/>
+
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.15"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.15"/>
+				
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.05"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="-0.2"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.1"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-0.20"/>
+	</append>
+	
+	<!-- MALIWAN TOXIC -->
+	<append xpath="/items/item[contains(@name,'Jade')]">
+		<property name="DamageType" value="Toxic"/>
+		<property name="Damage_type" value="Toxic"/>
+	</append>
+
+	<append xpath="/items/item[contains(@name,'Jade')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.15"/>
+
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.15"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.15"/>
+				
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.15"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="-0.3"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-0.15"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="-0.25"/>
+
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffToxicX2"/>
+	</append>
+
+	<!-- TORGUE -->
+	<append xpath="/items/item[contains(@name,'CamoDesert')]/effect_group[@name='Addon Effects']">
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-0.35"/>
+		<passive_effect name="KickDegreesVertical" operation="perc_add" value="0.35"/>
+		<passive_effect name="KickDegreesHorizontal" operation="perc_add" value="0.35"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="0.35"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="0.35"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0.10"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0.10"/>
+				
+		<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="0.35"/>
+
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-0.75"/>
+
+		<passive_effect name="RoundRayCount" operation="base_set" value="8"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.02"/>
+
+		<passive_effect name="MaxRange" operation="perc_add" value="0.25"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.25"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="20"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="500"/>
+		<passive_effect name="DegradationMax" operation="perc_add" value="0.2"/>
+
+		<passive_effect name="PerkLevel" tags="perkExplosiveWeapons" operation="base_add" value="2"/>
+		
+		<passive_effect name="DegradationPerUse" operation="base_set" value="2"/>
+	</append>
+	<append xpath="/items/item[contains(@name,'CamoDesert')]">
+		<property name="TintColor" value="255,255,0"/>
+		<property name="CustomIconTint" value="255,255,0"/>
+		<property name="UMA.Overlay0Tint" value="255,255,0"/>
+	</append>
+	<set xpath="/items/item[contains(@name,'CamoDesert')]/property[@name='DisplayType']/@value">rangedLauncher</set>
+	
+	<set xpath="/items/item[contains(@name,'CamoDesert')]/property[@class='Action0']/property[@name='Class']/@value">Launcher</set>
+	<set xpath="/items/item[contains(@name,'CamoDesert')]/property[@class='Action0']/property[@name='Sound_start']/@value">m136_fire</set>
+	<set xpath="/items/item[contains(@name,'CamoDesert')]/property[@class='Action0']/property[@name='Sound_reload']/@value">m136_reload</set>
+	<set xpath="/items/item[contains(@name,'CamoDesert')]/property[@class='Action0']/property[@name='Particles_muzzle_fire']/@value">rocketLauncherFire</set>
+	<set xpath="/items/item[contains(@name,'CamoDesert')]/property[@class='Action0']/property[@name='Particles_muzzle_smoke']/@value">nozzlesmoke_m136</set>
+
+	
+	<!-- Hiding (NOT removing) all not used Variants -->
+	
+	<append xpath="/items/item[contains(@name,'SawedOffShotgun')]"><property name="CreativeMode" value="Dev"/></append>
+
+	<!--<append xpath="/items/item[contains(@name,'AnoBlue')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<!--<append xpath="/items/item[contains(@name,'AnoCyan')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<append xpath="/items/item[contains(@name,'AnoGreen')]"><property name="CreativeMode" value="Dev"/></append>
+	<append xpath="/items/item[contains(@name,'AnoMagenta')]"><property name="CreativeMode" value="Dev"/></append>
+	<!--<append xpath="/items/item[contains(@name,'AnoRed')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<append xpath="/items/item[contains(@name,'Gold')]"><property name="CreativeMode" value="Dev"/></append>
+	<append xpath="/items/item[contains(@name,'Silver')]"><property name="CreativeMode" value="Dev"/></append>
+	<!--<append xpath="/items/item[contains(@name,'Jade')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<!--<append xpath="/items/item[contains(@name,'CamoDigital')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<!--<append xpath="/items/item[contains(@name,'CamoDesert')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<!--<append xpath="/items/item[contains(@name,'ArmorJungle')]"><property name="CreativeMode" value="Dev"/></append>-->
+	<!--<append xpath="/items/item[contains(@name,'ArmorWinter')]"><property name="CreativeMode" value="Dev"/></append>-->
+
+	
+	<append xpath="/items/item[contains(@name,'CamoDigital')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.4" /></append>
+	<append xpath="/items/item[contains(@name,'ArmorJungle')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.3" /></append>
+	<append xpath="/items/item[contains(@name,'ArmorWinter')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="0.9" /></append>
+	<append xpath="/items/item[contains(@name,'CamoDesert')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.5" /></append>
+	
+	<append xpath="/items/item[contains(@name,'AnoBlue')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.6" /></append>
+	<append xpath="/items/item[contains(@name,'AnoCyan')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.8" /></append>
+	<append xpath="/items/item[contains(@name,'AnoRed')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.7" /></append>
+	<append xpath="/items/item[contains(@name,'Jade')]/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1.7" /></append>
+
+	
+	<!-- general Changes -->
+	
+	<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='0,5']/@value">1,6</set>
+
+	<set xpath="/items/item[@name='resourceRepairKit']/property[@name='RepairAmount']/@value">7500</set> <!-- 2500 -->
+
+	<!-- the following stats changes will be re-changed in the QSR QualityStatsChanger Modlet! -->
+
+	<set xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"             >12,17</set> <!-- 15 -->
+	<setattribute xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']/@value"                 >45,70</set> <!-- 50 -->
+	<setattribute xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']/@value"       >20,30</set> <!-- 18 -->
+	<setattribute xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"           >0.9,1.2</set> <!-- 0.95 -->
+	<setattribute xpath="/items/item[contains(@name,'Pistol')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<append xpath="/items/item[contains(@name,'44Magnum')]/property[@name='Tags']/@value">,magazineMagnum</append>
+	<set xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"            >4,9</set> <!-- 6 -->
+	<setattribute xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']/@value"               >55,80</set> <!-- 60 -->
+	<setattribute xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']/@value"     >25,35</set> <!-- 20 -->
+	<setattribute xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"         >0.5,0.8</set> <!-- 0.6 -->
+	<setattribute xpath="/items/item[contains(@name,'44Magnum')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<set xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"               >20,45</set> <!-- 30 -->
+	<setattribute xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']/@value"                   >60,85</set> <!-- 65 -->
+	<setattribute xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']/@value"         >30,40</set> <!-- 30 -->
+	<setattribute xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"             >0.7,1.0</set> <!-- 0.8 -->
+	<setattribute xpath="/items/item[contains(@name,'SMG5')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<set xpath="/items/item[contains(@name,'PumpShotgun')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"         >6,11</set> <!-- 8 -->
+	<setattribute xpath="/items/item[contains(@name,'PumpShotgun')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'PumpShotgun')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"      >1.5,1.8</set> <!-- 1.7 -->
+	<setattribute xpath="/items/item[contains(@name,'PumpShotgun')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<set xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"                >3,8</set> <!-- 5 -->
+	<setattribute xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']/@value"                   >140,190</set> <!-- 150 -->
+	<setattribute xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']/@value"         >60,110</set> <!-- 70 -->
+	<setattribute xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"             >0.6,0.9</set> <!-- 0.7 -->
+	<setattribute xpath="/items/item[contains(@name,'MR10')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<set xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"              >20,50</set> <!-- 30 -->
+	<setattribute xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']/@value"                  >85,110</set> <!-- 90 -->
+	<setattribute xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']/@value"        >45,65</set> <!-- 50 -->
+	<setattribute xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"            >0.6,0.9</set> <!-- 0.7 -->
+	<setattribute xpath="/items/item[contains(@name,'AK47')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<set xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value"       >1</set> <!-- 1 -->
+	<set xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']/@value"          >140,190</set> <!-- 150 -->
+	<setattribute xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='MaxRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']/@value">70,95</set> <!-- 60 -->
+	<setattribute xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange' and @operation='base_set']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']/@value"    >0.55,0.85</set> <!-- 0.65 -->
+	<setattribute xpath="/items/item[contains(@name,'HuntingRifle')]/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling' and @operation='base_set']" name="tier">1,6</setattribute>
+
+	<append xpath="/items/item[@name='gunPistol']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gun44Magnum']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gunPumpShotgun']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="1" /></append>
+	<append xpath="/items/item[@name='gunRocketLauncher']/effect_group[@name='Base Effects']"><passive_effect name="EconomicValue" operation="perc_add" value="2" /></append>
+
+	<!-- ende -->
+
+	<set xpath="/items/item[@name='gunToolNailgun']/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">30</set> <!-- 10 -->
+	
+	<append xpath="/items/item[contains(@name,'PumpShotgun')]/property[@name='Tags']/@value">,magazineSG</append>
+	<append xpath="/items/item[contains(@name,'AK47')]/property[@name='Tags']/@value">,magazineX</append>
+	<append xpath="/items/item[contains(@name,'HuntingRifle')]/property[@name='Tags']/@value">,magazineHR</append>
+	<append xpath="/items/item[contains(@name,'SMG5')]/property[@name='Tags']/@value">,stock</append>
+	<append xpath="/items/item[contains(@name,'ArmorWinter')]/property[@name='Tags']/@value">,magazineBandit</append>
+
+	<set xpath="/items/item[@name='ammo9mmBullet']/property[@name='Stacknumber']/@value">5000</set> <!-- 500 -->
+	<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']/@value">2500</set> <!-- 250 -->
+	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']/@value">1280</set> <!-- 128 -->
+	
+	
+	<!-- this is not yet optimal working!   TODO   -->
+	
+	<set xpath="/items/item[@name='ammo9mmBullet']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>
+	<append xpath="/items/item[@name='ammo9mmBullet']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+	
+	<append xpath="/items/item[@name='ammo9mmBullet']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammo9mmBullet']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/> <!-- which Prefab/particle is used 4 -->
+		<property name="Explosion.RadiusBlocks" value="5"/> <!-- damage radius for blocks -->
+		<property name="Explosion.BlockDamage" value="500"/> <!-- damage for blocks in the center of the explosion -->
+		<property name="Explosion.RadiusEntities" value="5"/> <!-- damage radius for entities -->
+		<property name="Explosion.EntityDamage" value="550"/> <!-- damage for entities in the center of the explosion. Zombies take 2x this damage. -->
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<!--<set xpath="/items/item[@name='ammo9mmBulletSteel']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>-->
+	<append xpath="/items/item[@name='ammo9mmBulletSteel']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammo9mmBulletSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammo9mmBulletSteel']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="4"/>
+		<property name="Explosion.BlockDamage" value="300"/>
+		<property name="Explosion.RadiusEntities" value="4"/>
+		<property name="Explosion.EntityDamage" value="350"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<!--<set xpath="/items/item[@name='ammo44MagnumBullet']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>-->
+	<append xpath="/items/item[@name='ammo44MagnumBullet']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammo44MagnumBullet']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammo44MagnumBullet']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="5"/>
+		<property name="Explosion.BlockDamage" value="1300"/>
+		<property name="Explosion.RadiusEntities" value="5"/>
+		<property name="Explosion.EntityDamage" value="1350"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<!--<set xpath="/items/item[@name='ammo44MagnumBulletSteel']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>-->
+	<append xpath="/items/item[@name='ammo44MagnumBulletSteel']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammo44MagnumBulletSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammo44MagnumBulletSteel']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="4"/>
+		<property name="Explosion.BlockDamage" value="800"/>
+		<property name="Explosion.RadiusEntities" value="4"/>
+		<property name="Explosion.EntityDamage" value="850"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<!--<set xpath="/items/item[@name='ammo762mmBulletFMJ']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>-->
+	<append xpath="/items/item[@name='ammo762mmBulletFMJ']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammo762mmBulletFMJ']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammo762mmBulletFMJ']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="5"/>
+		<property name="Explosion.BlockDamage" value="700"/>
+		<property name="Explosion.RadiusEntities" value="5"/>
+		<property name="Explosion.EntityDamage" value="850"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<!--<set xpath="/items/item[@name='ammo762mmBulletFMJSteel']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>-->
+	<append xpath="/items/item[@name='ammo762mmBulletFMJSteel']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammo762mmBulletFMJSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammo762mmBulletFMJSteel']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="4"/>
+		<property name="Explosion.BlockDamage" value="600"/>
+		<property name="Explosion.RadiusEntities" value="4"/>
+		<property name="Explosion.EntityDamage" value="750"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>
+	<append xpath="/items/item[@name='ammoShotgunShell']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammoShotgunShell']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammoShotgunShell']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="5"/>
+		<property name="Explosion.BlockDamage" value="500"/>
+		<property name="Explosion.RadiusEntities" value="5"/>
+		<property name="Explosion.EntityDamage" value="550"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Meshfile']/@value">ParticleEffects/light_bullet_impact</set>
+	<append xpath="/items/item[@name='ammoShotgunSlug']"><property name="HandMeshfile" value="Items/Misc/sackPrefab"/></append>
+
+	<append xpath="/items/item[@name='ammoShotgunSlug']/effect_group[@name='Base Effects']">
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+		<display_value name="ExRadius" value="5" />
+	</append>
+	<append xpath="/items/item[@name='ammoShotgunSlug']">
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="4"/>
+		<property name="Explosion.RadiusBlocks" value="4"/>
+		<property name="Explosion.BlockDamage" value="800"/>
+		<property name="Explosion.RadiusEntities" value="4"/>
+		<property name="Explosion.EntityDamage" value="850"/>
+
+		<property name="Explosion.DamageBonus.water" value="0"/>
+
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="10"/>
+	</property>
+	</append>
+
+
+
+		
+	<append xpath="/items/item[@name='unlockBookMaster']">
+		<property name="Stacknumber" value="500"/>
+	</append>
+
+	<append xpath="/items">
+
+	<item name="modGunAdvancedBarrelSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="modGunBarrelExtenderSchematic"/>
+		<property name="CustomIconTint" value="cccccc"/>
+	</item>
+
+	<item name="modGunMagazineExtenderMagnumSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="modGunMagazineExtenderSchematic"/>
+		<property name="CustomIconTint" value="cccccc"/>
+	</item>
+
+	<item name="modGunMagazineExtenderHRSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="modGunMagazineExtenderSchematic"/>
+		<property name="CustomIconTint" value="cccccc"/>
+	</item>
+
+	<item name="modGunMagazineExtenderSGSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="modGunMagazineExtenderSchematic"/>
+		<property name="CustomIconTint" value="cccccc"/>
+	</item>
+
+	<item name="modArmorShieldSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="CustomIcon" value="modArmorPlasticPlatingSchematic"/>
+		<property name="CustomIconTint" value="ffcccc"/>
+	</item>
+
+	<item name="questTraderAdvertisement">
+		<property name="Extends" value="questMaster"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_TraderAdvert"/>
+		</property>
+	</item>
+	
+	</append>
+	
+</configs>

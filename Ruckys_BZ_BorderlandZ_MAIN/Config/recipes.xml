@@ -1,0 +1,96 @@
+<configs>
+	<append xpath="/recipes">
+	
+	<!-- new Mods -->
+	
+	<recipe name="modGunAdvancedBarrel" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGunAdvancedBarrelSchematic" count="1"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceOil" count="2"/>
+		<ingredient name="resourceMechanicalParts" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+	</recipe>
+
+	<recipe name="modGunMagazineExtenderMagnum" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGunMagazineExtenderMagnumSchematic" count="1"/>
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceGlue" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="5"/>
+		<ingredient name="resourceSpring" count="10"/>
+	</recipe>
+
+	<recipe name="modGunMagazineExtenderHR" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGunMagazineExtenderHRSchematic" count="1"/>
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceGlue" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="5"/>
+		<ingredient name="resourceSpring" count="10"/>
+	</recipe>
+
+	<recipe name="modGunMagazineExtenderSG" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modGunMagazineExtenderSGSchematic" count="1"/>
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceGlue" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="5"/>
+		<ingredient name="resourceSpring" count="10"/>
+	</recipe>
+
+	<recipe name="modArmorShield" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="modArmorShieldSchematic" count="1"/>
+		<ingredient name="resourceMilitaryFiber" count="25"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceMechanicalParts" count="5"/>
+	</recipe>
+		
+	<recipe name="questTraderAdvertisement" count="1" craft_area="laptop" craft_time="1">
+		<ingredient name="casinoCoin" count="1"/>
+	</recipe>
+
+	<recipe name="cntACMECBoxLocked" count="1" craft_time="30">
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="CCTVLarge0-3" count="1"/>
+		<ingredient name="CCTVLarge4-7" count="1"/>
+		<ingredient name="meleeToolWireTool" count="1"/>
+		<ingredient name="CamPanSm0" count="1"/>
+		<ingredient name="CamPanSm1" count="1"/>
+		<ingredient name="CamPanSm2" count="1"/>
+		<ingredient name="CamPanSm3" count="1"/>
+		<ingredient name="CamPanSm4" count="1"/>
+		<ingredient name="CamPanSm5" count="1"/>
+		<ingredient name="CamPanSm6" count="1"/>
+		<ingredient name="CamPanSm7" count="1"/>
+	</recipe>
+
+	<recipe name="BZIronBars" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="ironBars" count="1"/>
+		<ingredient name="resourceMechanicalParts" count="4"/>
+	</recipe>
+
+	<recipe name="BZIronBarsCentered" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="ironBarsCentered" count="1"/>
+		<ingredient name="resourceMechanicalParts" count="4"/>
+	</recipe>
+
+	<!-- AMMOZON Packages -->
+		
+	<recipe name="cntAmmozonPackage01Locked" count="1" craft_area="laptop" craft_time="14400"> 
+		<ingredient name="casinoCoin" count="4000"/>
+	</recipe>
+		
+	<recipe name="cntAmmozonPackage02Locked" count="1" craft_area="laptop" craft_time="14400"> 
+		<ingredient name="casinoCoin" count="7600"/>
+	</recipe>
+		
+	<recipe name="cntAmmozonPackage03Locked" count="1" craft_area="laptop" craft_time="14400"> <!-- 14400 : 240 min (4h) -->
+		<ingredient name="casinoCoin" count="11000"/>
+	</recipe>
+		
+	<recipe name="cntAmmozonPackage04Locked" count="1" craft_area="laptop" craft_time="14400"> <!-- 86400 : 1440 min (24h) -->
+		<ingredient name="casinoCoin" count="20000"/>
+	</recipe>
+		
+		
+	</append>
+		
+</configs>

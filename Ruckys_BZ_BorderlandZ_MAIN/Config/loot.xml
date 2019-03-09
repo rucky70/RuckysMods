@@ -1,0 +1,538 @@
+<configs>
+
+	<!-- changed sizes in loot.xml                                  -->
+	<!--       new 16:9      new 21:9      old         used vanilla -->
+	<!-- 76 :  6,4  =  24    7,4  =  28   (9,1 / 9)    bicycle      -->
+	<!-- 77 : 12,9  = 108   15,9  = 135   (9,3 / 27)   minibike     -->
+	<!-- 78 : 12,7  =  84   15,7  = 105   (9,4 / 36)   motorcycle   -->
+	<!-- 79 : 13,14 = 182   24,14 = 336   (9,7 / 63)   4x4Truck     -->
+	<!-- 80 : 12,5  =  60   15,5  =  75   (9,5 / 45)   gyrocopter   -->
+	<!-- 81 : 13,14 = 182   24,14 = 336   (9,8 / 72)   helicopter   -->
+
+
+	<!-- 1920x1080 (16x9) Set -->
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">6,4</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">12,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">12,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">12,5</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='81']/@size">13,14</set>
+	<!-- -->
+
+	<!-- 2560x1080 (21x9) Set : set in Ruckys_BZ_Update_for_21_9_Resolutions
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">7,4</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">15,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">15,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">24,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">15,5</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='81']/@size">24,14</set>
+	-->
+	
+
+	<!-- new mods                   NOTE: do the same for the traders.xml !! -->
+
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT1']">
+		<item name="modGunElementIce" prob="0.3"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT2']">
+		<item name="modGunAdvancedBarrel"/>
+		<item name="modGunMagazineExtenderMagnum"/>
+		<item name="modGunMagazineExtenderHR"/>
+		<item name="modGunMagazineExtenderSG"/>
+		<item name="modGunElementFire" prob="0.2"/>
+		<item name="modGunElementElec" prob="0.2"/>
+		<item name="modGunConverterCamoDigital" prob="0.3"/>
+		<item name="modGunConverterArmorJungle" prob="0.3"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT3']">
+		<item name="modArmorShield" prob="0.1"/>
+		<item name="modGunConverterTotalCamoDigital" prob="0.3"/>
+		<item name="modGunConverterTotalArmorJungle" prob="0.3"/>
+	</append>
+	
+	<!-- end (Schematics won't be sold at the traders anymore (Vanilla)) -->
+	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='commonBooks']">
+		<item name="modGunAdvancedBarrelSchematic"/>
+		<item name="modGunMagazineExtenderMagnumSchematic"/>
+		<item name="modGunMagazineExtenderHRSchematic"/>
+		<item name="modGunMagazineExtenderSGSchematic"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='rareBooks']">
+		<item name="modArmorShieldSchematic"/>
+	</append>
+	
+		
+	<!-- increase Zed Loot -->
+	
+	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='oldCash']/@count">100,160</set> <!-- 1,6 -->
+	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='casinoCoin']/@count">100,150</set> <!-- 1,5 -->
+	<set xpath="/lootcontainers/lootgroup[@name='prefabQuestLoot']/item[@name='casinoCoin']/@count">11000,20000</set> <!-- 7000,10000 -->
+
+	<insertAfter xpath="/lootcontainers/lootgroup[@name='ammoSteel']">
+		<lootgroup name="ammoExt" count="2">
+			<item name="ammoShotgunShell" count="20,50"/>
+			<item name="ammo9mmBullet" count="50,70" prob="1.5"/>
+			<item name="ammo762mmBulletFMJ" count="20,50"/>
+			<item name="ammo44MagnumBullet" count="20,30" prob="0.2"/>
+		</lootgroup>
+
+		<lootgroup name="ammoSteelExt" count="2">
+			<item name="ammoShotgunShell" count="30,60"/>
+			<item name="ammo9mmBulletSteel" count="60,90" prob="1.5"/>
+			<item name="ammo762mmBulletFMJSteel" count="30,60"/>
+			<item name="ammo44MagnumBulletSteel" count="25,40" prob="0.2"/>
+		</lootgroup>
+
+	</insertAfter>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']"><item name="ammo9mmBullet" count="30,60"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']"><item name="ammo44MagnumBullet" count="20,40"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']"><item name="ammoShotgunShell" count="20,40"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']"><item name="ammo9mmBullet" count="50,100"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']"><item name="ammo762mmBulletFMJ" count="50,100"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']"><item name="ammo762mmBulletFMJ" count="30,50"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']"><item name="ammo762mmBulletFMJ" count="30,50"/></append>
+	
+	<set xpath="/lootcontainers/lootcontainer/item[@group='ammo']/@group">ammoExt</set>
+	<set xpath="/lootcontainers/lootcontainer/item[@group='ammoSteel']/@group">ammoSteelExt</set>
+
+	<set xpath="/lootcontainers/lootcontainer[@id='55']/@count">2,3</set> <!-- 1,5 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='55']/item[@name='oldCash']/@count">120,160</set> <!-- 5,60 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='55']/item[@name='casinoCoin']/@count">100,160</set> <!-- 1,60 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='56']/item[@name='oldCash']/@count">120,1450</set> <!-- 12,450 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='56']/item[@name='casinoCoin']/@count">100,1500</set> <!-- 10,500 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='61']/item[@name='oldCash']/@count">500,1250</set> <!-- 50,250 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='61']/item[@name='casinoCoin']/@count">13000,18000</set> <!-- 3000,8000 -->
+	
+	<set xpath="/lootcontainers/lootcontainer[@id='108']/@count">2,3</set> <!-- 1 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='109']/@count">3,4</set> <!-- 2 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='110']/@count">6,7</set> <!-- 3,4 -->
+
+	<set xpath="/lootcontainers/lootcontainer[@id='19']/@count">2,3</set> <!-- 1 -->
+	<append xpath="/lootcontainers/lootcontainer[@id='19']">
+		<item group="ammoExt" count="1,2" prob="30"/>
+		<item group="ammoSteelExt" count="1,2" prob="20"/>
+		<item name="resourceRepairKit" count="7,9" prob="16"/>
+		<item name="casinoCoin" count="500,1710" prob="2"/>
+		<item name="oldCash" count="350,1900" prob="3"/>
+		<item group="modGunT1" count="1" prob="0.7"/>
+		<item group="modGunT2" count="1" prob="0.4"/>
+		<item group="modGunT3" count="1" prob="0.2"/>
+		<item name="medicalFirstAidKit" count="1,2" prob="0.5"/>
+		<item name="medicalFirstAidBandage" count="2,5" prob="8"/>
+		<item name="resourceForgedIron" count="5,7" prob="2"/>
+		<item name="resourceForgedSteel" count="5,7" prob="1"/>
+		<item group="weaponsShotgun+ammo" prob="2"/>
+	</append>
+	
+	<set xpath="/lootcontainers/lootcontainer[@id='70']/@size">7,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">3,4</set> <!-- 1,3 -->
+	<append xpath="/lootcontainers/lootcontainer[@id='70']">
+		<item group="ammoExt" count="2,3" prob="30"/>
+		<item group="ammoSteelExt" count="2,3" prob="20"/>
+		<item group="weaponsPistol+ammo" prob="9"/>
+		<item group="weaponsShotgun+ammo" prob="7"/>
+		<item group="weaponsHuntingRifle+ammo" prob="5"/>
+		<item group="weaponsMagnum+ammo" loot_prob_template="3"/>
+		<item group="weaponsMilitaryGuns+ammo" loot_prob_template="5"/>
+		<item name="resourceRepairKit" count="5,7" prob="6"/>
+		<item name="casinoCoin" count="200,410" prob="2"/>
+		<item name="oldCash" count="150,500" prob="3"/>
+		<item group="modGunT1" count="1" prob="0.5"/>
+		<item group="modGunT2" count="1" prob="0.3"/>
+		<item group="modGunT3" count="1" prob="0.1"/>
+	</append>
+	
+	<set xpath="/lootcontainers/lootcontainer[@id='71']/@size">7,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='71']/@count">4,5</set> <!-- 2,3 -->
+	<append xpath="/lootcontainers/lootcontainer[@id='71']">
+		<item group="ammoExt" count="2,3" prob="30"/>
+		<item group="ammoSteelExt" count="2,3" prob="20"/>
+		<item group="weaponsPistol+ammo" prob="9"/>
+		<item group="weaponsShotgun+ammo" prob="7"/>
+		<item group="weaponsHuntingRifle+ammo" prob="5"/>
+		<item group="weaponsMagnum+ammo" loot_prob_template="3"/>
+		<item group="weaponsMilitaryGuns+ammo" loot_prob_template="5"/>
+		<item name="resourceRepairKit" count="20,35" prob="5"/>
+		<item name="casinoCoin" count="200,1410" prob="2"/>
+		<item name="oldCash" count="150,1500" prob="3"/>
+		<item group="modGunT1" count="1" prob="2.5"/>
+		<item group="modGunT2" count="1" prob="1.7"/>
+		<item group="modGunT3" count="1" prob="1.1"/>
+	</append>
+
+
+	<!-- as the SawedOff-Mod and the Converter-Mods are NOT compatible, we remove the SawedOff from the Lootlists -->
+	
+	<remove xpath="/lootcontainers/lootgroup[@name='modGunT1']/item[@name='modShotgunSawedOffBarrel']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='commonBooks']/item[@name='modShotgunSawedOffBarrelSchematic']"/>
+
+	<!-- for the moment we don't keep all Sets -->
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolAnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolAnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolAnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolAnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolAnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolGold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolSilver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolJade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolCamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolCamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']/item[@name='HDHQPistolArmorWinter']/@prob">0.035</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumAnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumAnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumAnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumAnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumAnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumGold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumSilver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumJade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumCamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumCamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']/item[@name='HDHQ44MagnumArmorWinter']/@prob">0.035</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunAnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunAnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunAnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunAnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunAnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunGold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunSilver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunJade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunCamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunCamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']/item[@name='HDHQPumpShotgunArmorWinter']/@prob">0.035</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5AnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5AnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5AnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5AnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5AnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5Gold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5Silver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5Jade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5CamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5CamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5ArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']/item[@name='HDHQSMG5ArmorWinter']/@prob">0.035</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47AnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47AnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47AnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47AnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47AnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47Gold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47Silver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47Jade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47CamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47CamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47ArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']/item[@name='HDHQAK47ArmorWinter']/@prob">0.035</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleAnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleAnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleAnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleAnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleAnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleGold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleSilver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleJade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleCamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleCamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']/item[@name='HDHQHuntingRifleArmorWinter']/@prob">0.035</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10AnoBlue']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10AnoCyan']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10AnoGreen']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10AnoMagenta']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10AnoRed']/@prob">0.015</set>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10Gold']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10Silver']"/>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10Jade']/@prob">0.015</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10CamoDigital']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10CamoDesert']/@prob">0.025</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10ArmorJungle']/@prob">0.05</set>
+	<set xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']/item[@name='HDHQMR10ArmorWinter']/@prob">0.035</set>
+	
+
+	<!-- ACME Equipment container -->
+	
+	<insertBefore xpath="/lootcontainers/lootcontainer[@id='1']" >
+	<lootgroup name="BZ_ACME_Vehicles" count="all">
+		<item name="vehicleBicyclePlaceable" count="1" quality="3,3" />
+		<item name="manux_vehicleRoadHogPlaceable" count="1" quality="3,3" />
+		<item name="manux_vehicleJetPackPlaceable" count="1" quality="3,3" />
+		<!--<item name="manux_vehicleHP4x4TruckPlaceable" count="1" quality="3,3" />-->
+		<item name="resourceRepairKit" count="50" />
+		<item name="ammoGasCan" count="1000" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_ClothesAndArmor" count="all">
+		<item name="cigar" />
+		<item name="shadesACME" />
+		<item name="nightvisionGoggles" />
+		<item name="armyPants" />
+		<item name="armyShirt" />
+		<item name="jacketWhite" />
+		<item name="bandana" />
+		<item name="armorMilitaryHelmet" quality="2,2" />
+		<item name="armorMilitaryVest" quality="2,2" />
+		<item name="armorMilitaryGloves" quality="2,2" />
+		<item name="armorMilitaryLegs" quality="2,2" />
+		<item name="armorMilitaryBoots" quality="2,2" />
+		<item name="modArmorBandolier" count="1" />
+		<item name="modArmorInsulatedLiner" count="1" />
+		<item name="modArmorInsulatedLiner" count="1" />
+		<item name="modArmorCoolingMesh" count="1" />
+		<item name="modArmorCoolingMesh" count="1" />
+		<item name="modArmorCoolingMesh" count="1" />
+		<item name="modArmorImprovedFittings" count="1" />
+		<item name="modArmorCustomizedFittings" count="1" />
+		<item name="modArmorReinforcedPadding" count="1" />
+		<item name="modArmorPlasticPlating" count="1" />
+		<item name="modArmorMilitaryPlating" count="1" />
+		<item name="modArmorShield" count="1" />
+		<item name="modArmorStoragePocket" count="1" />
+		<item name="modArmorStoragePocket" count="1" />
+		<item name="modArmorDoubleStoragePocket" count="1" />
+		<item name="modArmorTripleStoragePocket" count="1" />
+		<item name="modArmorWaterPurifier" count="1" />
+		<item name="modArmorHelmetLight" count="1" />
+		<item name="resourceCloth" count="30" />
+		<item name="resourceMilitaryFiber" count="10" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_GunsAndAmmo" count="all">
+		<item name="meleeToolHuntingKnife" mods="knife,melee,light,weapon,meleeWeapon" mod_chance="1" count="1" quality="4,4"/>
+		<item name="meleeToolMachete" mods="knife,melee,light,weapon,meleeWeapon" mod_chance="1" count="1" quality="3,3"/>
+		<item name="gunPistol" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" mod_chance="1" count="1" quality="4,4"/>
+		<item name="HDHQPistolArmorJungle" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" mod_chance="1" count="1" quality="3,3"/>
+		<item name="HDHQPumpShotgunArmorJungle" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,shotgun" mod_chance="1" count="1" quality="3,3"/>
+		<item name="HDHQSMG5CamoDigital" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1" mod_chance="1" quality="3,3"/>
+		<item name="HDHQMR10CamoDigital" mods="barrelAttachments,sideAttachments,smallTopAttachments,scope,trigger" count="1" mod_chance="1" quality="3,3"/>	
+		<item name="modGunBarrelExtender" count="1" />
+		<item name="modGunAdvancedBarrel" count="1" />
+		<item name="modGunRodAndSpring" count="1" />
+		<item name="modGunLaserSight" count="1" />
+		<item name="modGunScopeLarge" count="1" />
+		<item name="modGunTriggerGroupAutomatic" count="1" />
+		<item name="modGunForegrip" count="1" />
+		<item name="modGunForegrip" count="1" />
+		<item name="modGunRetractingStock" count="1" />
+		<item name="modGunChoke" count="1" />
+		<item name="modGunMagazineExtender" count="1" />
+		<item name="modMeleeTemperedBlade" count="1" />
+		<item name="modMeleeErgonomicGrip" count="1" />
+		<item name="modMeleeFortifyingGrip" count="1" />
+		<item name="resourceRepairKit" count="20" />
+		<item name="resourceForgedIron" count="10" />
+		<item name="resourceForgedSteel" count="5" />
+		<item name="ammo9mmBullet" count="300" />
+		<item name="ammo9mmBulletSteel" count="500" />
+		<item name="ammo762mmBulletFMJ" count="200" />
+		<item name="ammo762mmBulletFMJSteel" count="250" />
+		<item name="ammoShotgunShell" count="150" />
+	</lootgroup>
+	<lootgroup name="BZ_ACMEDemo_GunsAndAmmo" count="all">
+		<item name="modGunElementEX" count="1" />
+		<item name="modGunElementFire" count="1" />
+		<item name="modGunElementElec" count="1" />
+		<item name="modGunElementIce" count="1" />
+		<!--<item name="modGunConverterCamoDigital" count="1" />-->
+		<!--<item name="modGunConverterArmorJungle" count="1" />-->
+	</lootgroup>
+	<lootgroup name="BZ_ACME_GunsAndAmmo_NOTUSED" count="all">
+		<item name="modGunBarrelExtender" count="1" />
+		<item name="modGunMagazineExtender" count="1" />
+		<item name="modGunMuzzleBrake" count="1" />
+		<item name="modGunFlashSuppressor" count="1" />
+		<item name="modGunSoundSuppressorSilencer" count="1" />
+		<item name="modGunLaserSight" count="1" />
+		<item name="modGunFlashlight" count="1" />
+		<item name="modGunReflexSight" count="1" />
+		<item name="modGunScopeSmall" count="1" />
+		<item name="modGunScopeMedium" count="1" />
+		<item name="modGunTriggerGroupSemi" count="1" />
+		<item name="modGunTriggerGroupBurst" count="1" />
+		<item name="modGunBipod" count="1" />
+		<item name="modGunMagazineExtender" count="1" />
+		<item name="modMeleeClubBurningShaft" count="1" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_FoodAndDrinks" count="all">
+		<item name="drinkJarBoiledWater" count="15" />
+		<item name="drinkJarRedTea" count="10" />
+		<item name="drinkJarGoldenRodTea" count="10"/>
+		<item name="drinkJarCoffee" count="5" />
+		<item name="drinkJarBeer" count="5" />
+		<item name="foodHoney" count="5" />
+		<item name="foodCanBeef" count="6" />
+		<item name="foodCanChicken" count="6" />
+		<item name="foodCanLamb" count="6" />
+		<item name="foodBaconAndEggs" count="6" />
+		<item name="foodMeatStew" count="2" />
+		<item name="foodBlueberryPie" count="2" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_Medics" count="all">
+		<item name="medicalBandage" count="10"/>		
+		<item name="medicalFirstAidBandage" count="5"/>		
+		<item name="medicalFirstAidKit" count="2"/>
+		<item name="medicalSplint" count="3" />
+		<item name="medicalPlasterCast" count="3" />
+		<item name="drugVitamins" count="3" />
+		<item name="drugPainkillers" count="20" />
+		<item name="drugHerbalAntibiotics" count="3" />
+		<item name="drugAntibiotics" count="1" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_Tools_Small" count="all">
+		<item name="casinoCoin" count="1000"/>
+		<item name="meleeToolStoneAxe" count="1" quality="4,4" />
+		<item name="meleeToolWrench" count="1" quality="4,4" />
+		<item name="resourceScrapIron" count="100" />
+		<item name="resourceForgedIron" count="30" />
+		<item name="resourceForgedSteel" count="10" />
+		<item name="resourceCloth" count="20" />
+		<item name="resourceMilitaryFiber" count="10" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_ToolsAndRessources" count="all">
+		<item name="resourceRockSmall" count="500" />
+		<item name="resourceWood" count="2000" />
+		<item name="resourceYuccaFibers" count="250" />
+		<item name="resourceIronFragment" count="250" />
+		<item name="resourceScrapIron" count="500" />
+		<item name="resourceForgedIron" count="100" />
+		<item name="resourceForgedSteel" count="25" />
+		<item name="resourceClayLump" count="350" />
+		<item name="resourceCloth" count="50" />
+		<item name="resourceLeather" count="30" />
+		<item name="resourceMilitaryFiber" count="20" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_Tools_NOTUSED" count="all">
+		<item name="chemistryStation" count="1" />
+		<item name="bedroll" count="1" />
+		<item name="campfire" count="1" />
+		<item name="workbench" count="1" />
+		<item name="bucketEmpty" count="1"/>
+		<item name="keystoneBlock" count="1"/>
+		<item name="forge" count="1" />
+		<item name="workbench" count="1" />
+		<item name="solarbank" count="1" />
+		<item name="batterybank" count="1" />
+		<item name="carBattery" count="1" quality="4,4" />
+		<item name="autoTurret" count="2" />
+		<item name="shotgunTurret" count="1" />
+		<item name="electricwirerelay" count="4" />
+		<item name="switch" count="1" />
+		<item name="meleeToolWireTool" count="1" />
+		<item name="solarCell" count="1" quality="4,4" />
+		<item name="solarCell" count="1" quality="4,4" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_TechPackage" count="all">
+		<item name="cntACMECBoxLocked" count="1" />
+		<item name="cntACMETCrate2Locked" count="1" />
+		<item name="laptop" count="1" />
+	</lootgroup>
+	<lootgroup name="BZ_ACME_Security" count="all">
+		<item name="CCTVLarge0-3" count="1" />
+		<item name="CCTVLarge4-7" count="1" />
+		<item name="CamPanSm0" count="1" />
+		<item name="CamPanSm1" count="1" />
+		<item name="CamPanSm2" count="1" />
+		<item name="CamPanSm3" count="1" />
+		<item name="CamPanSm4" count="1" />
+		<item name="CamPanSm5" count="1" />
+		<item name="CamPanSm6" count="1" />
+		<item name="CamPanSm7" count="1" />
+		<item name="meleeToolWireTool" count="1" />
+	</lootgroup>
+	<lootgroup name="BZ_AMMOZON_Package_01" count="all">
+		<item name="ammo9mmBullet" count="500" />
+		<item name="ammo762mmBulletFMJ" count="200" />
+		<item name="ammoShotgunShell" count="200" />
+		<item group="junk" count="1,2" />
+	</lootgroup>
+	<lootgroup name="BZ_AMMOZON_Package_02" count="all">
+		<item name="ammo9mmBullet" count="1000" />
+		<item name="ammo762mmBulletFMJ" count="400" />
+		<item name="ammoShotgunShell" count="400" />
+		<item group="modGunT1" count="1" />
+		<item group="junk" count="1,2" />
+	</lootgroup>
+	<lootgroup name="BZ_AMMOZON_Package_03" count="all">
+		<item name="ammo9mmBullet" count="1500" />
+		<item name="ammo762mmBulletFMJ" count="600" />
+		<item name="ammoShotgunShell" count="600" />
+		<item group="modGunT2" count="1" />
+		<item group="junk" count="2,3" />
+	</lootgroup>
+	<lootgroup name="BZ_AMMOZON_Package_04" count="all">
+		<item name="ammo9mmBullet" count="3000" />
+		<item name="ammo762mmBulletFMJ" count="1200" />
+		<item name="ammoShotgunShell" count="1200" />
+		<item group="modGunT3" count="1" />
+		<item group="junk" count="3,4" />
+	</lootgroup>
+	</insertBefore>
+	
+	<insertAfter xpath="/lootcontainers/lootcontainer[@id='116']" >
+
+	<!-- new lootcontainers: AMMOZON boxes -->
+	
+	<lootcontainer id="131" count="1" size="4,4" destroy_on_close="false" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1.5" >
+		<item group="BZ_AMMOZON_Package_01" />
+	</lootcontainer>
+	<lootcontainer id="132" count="1" size="4,4" destroy_on_close="false" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1.5" >
+		<item group="BZ_AMMOZON_Package_02" />
+	</lootcontainer>
+	<lootcontainer id="133" count="1" size="4,4" destroy_on_close="false" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1.5" >
+		<item group="BZ_AMMOZON_Package_03" />
+	</lootcontainer>
+	<lootcontainer id="134" count="1" size="4,4" destroy_on_close="false" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1.5" >
+		<item group="BZ_AMMOZON_Package_04" />
+	</lootcontainer>
+
+	<!-- new lootcontainers: ACME Equipment boxes -->
+
+	<lootcontainer id="241" count="1" size="5,3" destroy_on_close="false" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1.5" >
+		<item group="BZ_ACME_Vehicles" />
+	</lootcontainer>
+	<lootcontainer id="242" count="1" size="7,6" destroy_on_close="false" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" open_time="1.5" >
+		<item group="BZ_ACME_ClothesAndArmor" />
+	</lootcontainer>
+	<lootcontainer id="243" count="1" size="7,5" destroy_on_close="false" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" open_time="1.5" >
+		<item group="BZ_ACME_GunsAndAmmo" />
+	</lootcontainer>
+	<lootcontainer id="244" count="1" size="5,3" destroy_on_close="false" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" open_time="1.5" >
+		<item group="BZ_ACME_FoodAndDrinks" />
+	</lootcontainer>
+	<lootcontainer id="245" count="1" size="5,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" >
+		<item group="BZ_ACME_Medics" />
+	</lootcontainer>
+	<lootcontainer id="246" count="1" size="4,5" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" >
+		<item group="BZ_ACME_Tools_Small" />
+	</lootcontainer>
+	<lootcontainer id="247" count="1" size="12,9" destroy_on_close="false" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" open_time="1.5" >
+		<item group="BZ_ACME_GunsAndAmmo" />
+	</lootcontainer>
+	<lootcontainer id="248" count="1" size="4,3" destroy_on_close="false" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" open_time="1.5" >
+		<item group="BZ_ACME_TechPackage" />
+	</lootcontainer>
+	<lootcontainer id="249" count="1" size="7,5" destroy_on_close="false" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" open_time="1.5" >
+		<item group="BZ_ACMEDemo_GunsAndAmmo" />
+	</lootcontainer>
+	<!-- 250 reserved for testcase QualityRandomizer! -->
+	<lootcontainer id="251" count="1" size="4,3" destroy_on_close="false" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1.5" >
+		<item group="BZ_ACME_Security" />
+	</lootcontainer>
+	<lootcontainer id="252" count="1" size="4,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" >
+		<item group="BZ_ACME_ToolsAndRessources" />
+	</lootcontainer>
+	
+	</insertAfter>
+	
+</configs>
