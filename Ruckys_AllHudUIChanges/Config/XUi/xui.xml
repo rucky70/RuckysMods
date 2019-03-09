@@ -6,6 +6,12 @@
 		<window name="ActiveBuffsWindow2" anchor="LeftBottom" />
 	</append>
 
+	<!-- from S420_SimpleUI-Toolbelt -->
+	
+	<insertBefore xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']/window[@name='windowToolbelt']">
+		<window name="XpBar" anchor="CenterBottom" />
+	</insertBefore>
+
 	<!-- new -->
 	
 	<append xpath="/xui/ruleset[@name='default']/window_group[@name='map']" >
