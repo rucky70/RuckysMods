@@ -40,10 +40,17 @@
 	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/@pos">3,47</set>
 
 	<setattribute xpath="/windows/window[@name='windowCraftingList']/panel[@name='header']" name="pos">0,96</setattribute>
-	<set xpath="/windows/window[@name='windowCraftingList']/@height">956</set>                                              <!-- 688 -->
+	<set xpath="/windows/window[@name='windowCraftingList']/@height">946</set>                                              <!-- 688 -->
 	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/@pos">0,53</set>
-	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/grid[@name='recipes']/@height">920</set> <!-- 552 46x -->
-	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/grid[@name='recipes']/@rows">20</set>    <!-- 12 -->
+	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/grid[@name='recipes']/@height">910</set> <!-- 552 46x -->
+	<set xpath="/windows/window[@name='windowCraftingList']/panel[@name='content']/grid[@name='recipes']/@rows">19</set>    <!-- 12 -->
+
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/@pos">19,18</set> <!-- (this code block is a copy from the UI Mod!) -->
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/@width">378</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@cols">5</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@rows">2</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@cell_width">71</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@cell_height">71</set>
 	
 	<setattribute xpath="/windows/window[@name='windowBackpack']/panel[@name='header']" name="pos">0,96</setattribute>
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@pos">0,50</set>
