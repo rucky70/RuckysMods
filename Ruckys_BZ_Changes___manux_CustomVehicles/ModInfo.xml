@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="BORDERLANDZ Changes for Manux CustomVehicles" />
+        <Description value="This modlet changes Storage size, Speed, Fuel usage and tank capacity." />
+        <Author value="Rucky" />
+        <Version value="1.1 (A17.2)" />
+    </ModInfo>
+</xml>

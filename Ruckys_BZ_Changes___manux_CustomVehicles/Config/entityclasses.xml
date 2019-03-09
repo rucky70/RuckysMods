@@ -1,0 +1,23 @@
+<configs>
+
+	<!-- changed sizes in loot.xml                                  -->
+	<!--       new 16:9      new 21:9      old         used vanilla -->
+	<!-- 76 :  6,4  =  24    7,4  =  28   (9,1 / 9)    bicycle      -->
+	<!-- 77 : 12,9  = 108   15,9  = 135   (9,3 / 27)   minibike     -->
+	<!-- 78 : 12,7  =  84   15,7  = 105   (9,4 / 36)   motorcycle   -->
+	<!-- 79 : 13,14 = 182   24,14 = 336   (9,7 / 63)   4x4Truck     -->
+	<!-- 80 : 12,5  =  60   15,5  =  75   (9,5 / 45)   gyrocopter   -->
+	<!-- 81 : 13,14 = 182   24,14 = 336   (9,8 / 72)   helicopter   -->
+
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleHP4x4Truck']/property[@name='LootListAlive']/@value"    >79</set> <!-- 79 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleQuad']/property[@name='LootListAlive']/@value"          >77</set> <!-- 80 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleHellGoatBike']/property[@name='LootListAlive']/@value"  >76</set> <!-- 80 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleRoadHog']/property[@name='LootListAlive']/@value"       >78</set> <!-- 78 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleCicadaCar']/property[@name='LootListAlive']/@value"     >77</set> <!-- 81 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleMonsterBeetle']/property[@name='LootListAlive']/@value" >79</set> <!-- 81 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleHelicopterOH58']/property[@name='LootListAlive']/@value">81</set> <!-- 81 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleJetPack']/property[@name='LootListAlive']/@value"       >76</set> <!-- 76 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehiclePedalGyro']/property[@name='LootListAlive']/@value"     >80</set> <!-- 80 -->
+	<set xpath="/entity_classes/entity_class[@name='manux_vehicleMonoHog']/property[@name='LootListAlive']/@value"       >78</set> <!-- 78 -->
+
+</configs>

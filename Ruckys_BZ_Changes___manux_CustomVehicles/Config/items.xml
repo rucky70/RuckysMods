@@ -1,0 +1,26 @@
+<configs>
+
+	<!-- HP x5, so we can get a bit more damage -->
+	
+	<set xpath="/items/item[@name='manux_vehicleHP4x4TruckPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">17500,37500</set>
+	<set xpath="/items/item[@name='manux_vehicleQuadPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">15000,30000</set>
+	<set xpath="/items/item[@name='manux_vehicleHellGoatBikePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">15000,30000</set>
+	<set xpath="/items/item[@name='manux_vehicleRoadHogPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">15000,30000</set>
+	<set xpath="/items/item[@name='manux_vehicleCicadaCarPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10000,20000</set>
+	<set xpath="/items/item[@name='manux_vehicleMonsterBeetlePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">25000,50000</set>
+	<set xpath="/items/item[@name='manux_vehicleHelicopterOH58Placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">17500,37500</set>
+	<set xpath="/items/item[@name='manux_vehicleJetPackPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500,15000</set>
+	<set xpath="/items/item[@name='manux_vehiclePedalGyroPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500,15000</set>
+	<set xpath="/items/item[@name='manux_vehicleMonoHogPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">15000,30000</set>	
+
+	<!-- making the parts way more expensive -->
+	
+	<append xpath="/items/item[@name='manux_bigEngine']"><property name="EconomicValue" value="7000"/></append>
+	<append xpath="/items/item[@name='manux_vehicleCarChassis']"><property name="EconomicValue" value="16000"/></append>
+	<append xpath="/items/item[@name='manux_vehicleCarAccessories']"><property name="EconomicValue" value="8500"/></append>
+	<append xpath="/items/item[@name='manux_vehicleBigWheels']"><property name="EconomicValue" value="4000"/></append>
+	<append xpath="/items/item[@name='manux_vehicleHelicopterChassis']"><property name="EconomicValue" value="35000"/></append>
+	<append xpath="/items/item[@name='manux_vehicleHelicopterRotor']"><property name="EconomicValue" value="6000"/></append>
+
+
+</configs>
