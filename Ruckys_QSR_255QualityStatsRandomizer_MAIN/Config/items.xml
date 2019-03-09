@@ -183,7 +183,7 @@
 	<!-- additional Values : EconomicValue : as the trader info isn't working   TODO  -->
 
 	<append xpath="/items/item[contains(@name,'Pistol') or contains(@name,'44Magnum') or contains(@name,'SMG5') or contains(@name,'PumpShotgun') or contains(@name,'HuntingRifle') or contains(@name,'MR10') or contains(@name,'AK47')]/effect_group[@name='Base Effects' and not(@tiered='false')]">
-		<passive_effect name="EconomicValue" operation="perc_add" value="4,12" tier='1,255'/>
+		<passive_effect name="EconomicValue" operation="perc_add" value="1,3" tier='1,255'/>
 	</append>
 
 	<!-- now for all the other not yet manual changed tiers -->
