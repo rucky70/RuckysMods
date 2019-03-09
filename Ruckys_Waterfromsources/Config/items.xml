@@ -1,0 +1,48 @@
+<configs>
+
+	<append xpath="/items/item[@name='drinkCanEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="cntGraniteSink"/>
+		<property name="Focused_blockname_7" value="faucet02"/>
+		<property name="Focused_blockname_8" value="faucet04"/>
+		<property name="Focused_blockname_9" value="faucetBrass02"/>
+		<property name="Focused_blockname_10" value="faucetBrass04"/>
+		<property name="Focused_blockname_11" value="cntToilet01"/>
+		<property name="Focused_blockname_12" value="fountain"/>
+		<property name="Focused_blockname_13" value="cntCabinetOldSink"/>
+		<property name="Focused_blockname_14" value="utilitySink" />
+		<property name="Focused_blockname_15" value="wallHungSink" />
+		<property name="Focused_blockname_16" value="cntToilet02" />
+		<property name="Focused_blockname_17" value="cntToilet03" />
+	</append>
+    
+	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="cntGraniteSink"/>
+		<property name="Focused_blockname_7" value="faucet02"/>
+		<property name="Focused_blockname_8" value="faucet04"/>
+		<property name="Focused_blockname_9" value="faucetBrass02"/>
+		<property name="Focused_blockname_10" value="faucetBrass04"/>
+		<property name="Focused_blockname_11" value="cntToilet01"/>
+		<property name="Focused_blockname_12" value="fountain"/>
+		<property name="Focused_blockname_13" value="cntCabinetOldSink"/>
+		<property name="Focused_blockname_14" value="utilitySink" />
+		<property name="Focused_blockname_15" value="wallHungSink" />
+		<property name="Focused_blockname_16" value="cntToilet02" />
+		<property name="Focused_blockname_17" value="cntToilet03" />
+	</append>
+    
+	<append xpath="/items/item[@name='bucketEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="cntGraniteSink"/>
+		<property name="Focused_blockname_7" value="faucet02"/>
+		<property name="Focused_blockname_8" value="faucet04"/>
+		<property name="Focused_blockname_9" value="faucetBrass02"/>
+		<property name="Focused_blockname_10" value="faucetBrass04"/>
+		<property name="Focused_blockname_11" value="cntToilet01"/>
+		<property name="Focused_blockname_12" value="fountain"/>
+		<property name="Focused_blockname_13" value="cntCabinetOldSink"/>
+		<property name="Focused_blockname_14" value="utilitySink" />
+		<property name="Focused_blockname_15" value="wallHungSink" />
+		<property name="Focused_blockname_16" value="cntToilet02" />
+		<property name="Focused_blockname_17" value="cntToilet03" />
+	</append>
+
+</configs>
