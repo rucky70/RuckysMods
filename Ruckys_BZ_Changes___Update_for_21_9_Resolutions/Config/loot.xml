@@ -1,0 +1,42 @@
+<configs>
+
+	<!-- empty, storage containers the player crafts --> 
+	<!--                                  vanilla:             8,9    (72) -->
+	<!--                                  1920x1080 (16:9):   13,14  (182) -->
+	<!--                                               max:   14,15  (210) -->
+	<!--                                  2560x1080 (21:9):   24,14  (336) -->
+	<!--                                               max:   24,15  (360) -->
+	
+	<set xpath="/lootcontainers/lootcontainer[@id='1']/@size">24,14</set>
+
+
+	
+	<!-- changed sizes in loot.xml                                  -->
+	<!--       new 16:9      new 21:9      old         used vanilla -->
+	<!-- 76 :  6,4  =  24    7,4  =  28   (9,1 / 9)    bicycle      -->
+	<!-- 77 : 12,9  = 108   15,9  = 135   (9,3 / 27)   minibike     -->
+	<!-- 78 : 12,7  =  84   15,7  = 105   (9,4 / 36)   motorcycle   -->
+	<!-- 79 : 13,14 = 182   24,14 = 336   (9,7 / 63)   4x4Truck     -->
+	<!-- 80 : 12,5  =  60   15,5  =  75   (9,5 / 45)   gyrocopter   -->
+	<!-- 81 : 13,14 = 182   24,14 = 336   (9,8 / 72)   helicopter   -->
+
+
+	<!-- 1920x1080 (16x9) Set : set in Ruckys_BZ_changes___manux_CustomVehicles_and_Vanilla
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">6,4</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">12,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">12,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">13,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">12,5</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='81']/@size">13,14</set>
+	-->
+
+	<!-- 2560x1080 (21x9) Set -->
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">7,4</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">15,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">15,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">24,14</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">15,5</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='81']/@size">24,14</set>
+	<!-- -->
+
+</configs>
