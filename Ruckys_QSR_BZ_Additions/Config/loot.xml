@@ -1,0 +1,12 @@
+<configs>
+
+	<!-- additional BorderlandZ-Changes -->
+
+	<setattribute xpath="/lootcontainers/lootgroup[contains(@name,'BZ_ACME_')]/item[contains(@name,'mod')]" name="quality">101,180</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[contains(@name,'BZ_ACMEDemo_')]/item[contains(@name,'mod')]" name="quality">201,255</setattribute>
+
+	<set xpath="/lootcontainers/lootgroup/item[@quality='2,2']/@quality">81,120</set>
+	<set xpath="/lootcontainers/lootgroup/item[@quality='3,3']/@quality">121,160</set>
+	<set xpath="/lootcontainers/lootgroup/item[@quality='4,4']/@quality">161,200</set>
+	
+</configs>

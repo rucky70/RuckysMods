@@ -1,0 +1,7 @@
+<configs>
+
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@quality='1,4']/@quality">1,200</set>
+
+	<set xpath="/traders/@quality_mod">2,5</set> <!-- 0.4,8 -->
+
+</configs>
