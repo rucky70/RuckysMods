@@ -1,0 +1,21 @@
+<configs>
+
+	<!-- from S420_SimpleUI-LeftHUD-BuffTimers -->
+
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']">
+		<window name="ActiveBuffsWindow2" anchor="LeftBottom" />
+	</append>
+
+	<!-- new -->
+	
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='map']" >
+		<window name="windowMenuStatsHUD" />  
+	</append>
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='players']" >
+		<window name="windowMenuStatsHUD" />  
+	</append>
+	<append xpath="/xui/ruleset[@name='default']/window_group[@controller]" >
+		<window name="windowMenuStatsHUD" />  
+	</append>
+	
+</configs>

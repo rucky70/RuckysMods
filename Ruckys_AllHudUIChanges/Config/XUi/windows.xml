@@ -1,0 +1,226 @@
+<configs>
+
+	<!-- from S420_SimpleUI-LeftHUD-BuffTimers -->
+
+	<setattribute xpath="/windows/window[@name='HUDLeftStatBars']/rect[@pos='9,147']/rect[@stat_type='Stealth']" name="pos">0,94</setattribute>
+	<insertAfter xpath="/windows/window[@name='HUDLeftStatBars']/rect[@pos='9,147']/rect[@stat_type='Stealth']">
+		<rect width="171" height="43" pos="0,47" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+			<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
+			<sprite depth="2" pos="3,-3"  name="background" height="37" width="169" color="64,64,64,100" type="sliced" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="32,32" pos="8,-6" foregroundlayer="true"/>
+			<label depth="6" name="TextContent" pos="0,-10" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playercoretemp}" height="30" controller="PlayerStatsWindow" effect="outline" />
+		</rect>
+	</insertAfter>
+	<set xpath="/windows/window[@name='HUDLeftStatBars']/rect[@pos='9,147']/rect[@pos='0,-47']/@pos">0,0</set>
+	<set xpath="/windows/window[@name='HUDLeftStatBars']/rect[@pos='9,147']/rect[@pos='0,-94']/@pos">0,-47</set>
+	<insertAfter xpath="/windows/window[@name='HUDLeftStatBars']/rect[@pos='9,147']/rect[@pos='0,-47']">
+		<rect controller="CharacterFrameWindow" >
+			<panel name="header" height="10" depth="1" pos="9999,9999" backgroundspritename="ui_game_panel_header">
+				<label depth="2" name="characterName" pos="42,-6" width="150" height="32" text="" font_size="32"/>
+				<label depth="2" name="levelNumber" pos="240,-10" width="80" height="28" text="" color="[lightGrey]"/>
+			</panel>
+			<rect visible="{showcharacter}" pos="9999,9999" >
+				<panel name="previewFrame" depth="0" pos="0,0" width="10" on_press="true" on_hover="true" disableautobackground="true" snap="false">
+					<rect>
+						<texture depth="2" name="playerPreview" material="Materials/Transparent Colored" size="8,8" globalopacity="false"/>
+					</rect>
+				</panel>
+			</rect>
+			<rect depth="2" name="searchControls" width="327" height="43" pos="185,-124">
+				<button depth="4" name="characterButton" style="icon22px, press" pos="0,0" color="[white]" sprite="ui_game_symbol_ping" pivot="center" tooltip="Default - Current Amount Only without overfill" sound="[paging_click]" selected="true"  visible="{showcore}"/>
+					
+				<button depth="4" name="statButton" style="icon22px, press" pos="0,0" color="[white]" sprite="ui_game_symbol_ping" pivot="center" tooltip="Detailed - Current And Max Amounts including overfill" sound="[paging_click]" visible="{showcharacter}" />
+					
+				<button depth="4" name="coreStatButton" style="icon22px, press" pos="0,0" color="[white]" sprite="ui_game_symbol_ping" pivot="center" tooltip="Water Bar Only" sound="[paging_click]" visible="{showstats}"/>	
+			</rect>
+
+			<rect name="rect_Default" visible="{showcharacter}">
+				<grid name="hud" pos="0,-94" rows="1" cols="2" width="171" cell_width="85" cell_height="46" repeat_content="false" side="left" >
+					<rect width="84" height="43" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+						<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
+						<sprite depth="2" pos="3,-3"  name="background" height="37" width="81" color="64,64,64,100" type="sliced" />
+						<sprite depth="3" pos="3,-3"  color="0,128,0,150" type="filled" height="37" width="79" fill="{playerfoodfill}" controller="PlayerStatsWindow" />
+						<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="4,-6" foregroundlayer="true"/>
+						<label depth="6" name="TextContent" pos="15,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerfood}" height="30" controller="PlayerStatsWindow"/>
+					</rect>
+
+					<rect width="84" height="43" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+						<sprite depth="1" name="border" color="0,0,0,100" height="43" width="84" type="sliced" />
+						<sprite depth="2" pos="3,-3"  name="background" height="37" width="81" color="64,64,64,100" type="sliced" />
+						<filledsprite depth="3" name="BarContent" pos="3,-3" color="64,164,223,150" height="37" width="79" type="filled" fill="2" />
+						<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="4,-6" foregroundlayer="true"/>
+						<label depth="6" name="TextContent" pos="15,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerwater}" height="30" controller="PlayerStatsWindow"/>
+					</rect>
+				</grid>
+			</rect>
+
+			<rect name="rect_Detailed" visible="{showstats}">
+				<grid name="hud" pos="0,-94" rows="1" cols="2" width="171" cell_width="85" cell_height="46" repeat_content="false" side="left" >
+					<rect width="84" height="43" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+						<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
+						<sprite depth="2" pos="3,-3"  name="background" height="37" width="81" color="64,64,64,100" type="sliced" />
+						<sprite depth="3" pos="3,-3"  color="0,128,0,150" type="filled" height="37" width="79" fill="{playerfoodfill}" controller="PlayerStatsWindow" />
+						<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="30,30" pos="4,-6" foregroundlayer="true"/>
+						<label depth="6" name="TextContent" pos="15,-8" font_size="20" color="[white]" justify="center" pivot="topleft" text="{playermodifiedcurrentfood}/{playerfoodmax}" height="30" />
+					</rect>
+
+					<rect width="84" height="43" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+						<sprite depth="1" name="border" color="0,0,0,100" height="43" width="84" type="sliced" />
+						<sprite depth="2" pos="3,-3"  name="background" height="37" width="81" color="64,64,64,100" type="sliced" />
+						<filledsprite depth="3" name="BarContent" pos="3,-3" color="64,164,223,150" height="37" width="79" type="filled" fill="2" />
+						<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="30,30" pos="4,-6" foregroundlayer="true"/>
+						<label depth="6" name="TextContent" pos="15,-8" font_size="20" color="[white]" justify="center" pivot="topleft" text="{playermodifiedcurrentwater}/{playerwatermax}" height="30" />
+					</rect>
+				</grid>
+			</rect>
+
+			<rect name="rect_Water" visible="{showcore}">
+				<rect width="171" height="43" pos="0,-94" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="BarContent" color="64,164,223,150" width="169" type="filled" fill="2" />
+					<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-6" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playermodifiedcurrentwater}/{playerwatermax}" height="30"/>
+				</rect>
+			</rect>
+		</rect>
+	</insertAfter>
+	<set xpath="/windows/window[@name='HUDLeftStatBars']/rect[@pos='90,124']/@pos">9999,9999</set>
+
+	<insertAfter xpath="/windows/window[@name='HUDLeftStatBars']">
+	<window name="ActiveBuffsWindow2" pos="6,283" Controller="ActiveBuffWindow" width="320" >
+		<button name="pageDown" size="1,1" pos="9999,9999" />
+		<label name="pageNumber" pos="9999,9999" width="1" height="1" />
+		<button name="pageUp" size="1,1" pos="9999,9999" />
+
+		<rect name="buffs" controller="ActiveBuffList">
+			<panel height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,45" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,90" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,135" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,180" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,225" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,270" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+
+			<panel pos="0,315" height="43" controller="ActiveBuffEntry" width="314" disableautobackground="true" >	
+				<sprite depth="0" name="background" color="[transparent]" />
+				<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" pos="9,-5"/>
+				<label depth="2" pos="49,-8" width="280" height="30" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="28" pivot="topleft" effect="outline" />
+			</panel>
+		</rect>
+	</window>
+	</insertAfter>
+	
+	<!-- from S420_SimpleUI-CraftingQueue -->
+
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/@pos">19,0</set> <!-- 19,12 when 2 rows -->
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/@width">378</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@cols">5</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@rows">1</set> <!-- 2 rows possible! -->
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@cell_width">71</set>
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect[@controller='CraftingQueue']/grid[@name='queue']/@cell_height">71</set>
+
+	<!-- from S420_SimpleUI-Toolbelt -->
+
+	<set xpath="/windows/window[@name='windowToolbelt']/@width">603</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/@height">88</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/@pos">-323, 91</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_width">75</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_height">75</set>
+	<remove xpath="/windows/window[@name='windowToolbelt']/rect/sprite[not(@name='8')]"/>
+	<append xpath="/windows/window[@name='windowToolbelt']/rect">
+			<grid depth="9" rows="1" cols="8" pos="6,-3" cell_width="75" cell_height="75" repeat_content="false">
+				<label depth="50" width="12" height="22" text="1" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="2" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="3" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="4" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="5" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="6" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="7" font_size="22" effect="outline" color="[white]" justify="center" />
+				<label depth="50" width="12" height="22" text="8" font_size="22" effect="outline" color="[white]" justify="center" />
+			</grid>
+	</append>
+	
+	<!-- from S420_SimpleUI-ForgeInput -->
+	
+	<set xpath="/windows/window[@name='windowForgeInput']/@height">279</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/sprite[@name='backgroundMain']/@height">228</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/@height">223</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/grid/@rows">3</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/@height">223</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/grid/@pos">6,-12</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/grid/@cell_height">34</set>
+
+	<!-- from S420_SimpleUI-Compass -->
+	
+	<remove xpath="/windows/window[@name='windowCompass']/sprite[@pos='240,-60']"/>
+	<append xpath="/windows/window[@name='windowCompass']">
+		<sprite depth="5" name="Icon" sprite="ui_game_symbol_map_player_arrow" size="16,16" pos="248,-7" rotation="180" color="[black]" foregroundlayer="true"/>
+		<sprite depth="6" name="Icon" sprite="ui_game_symbol_map_player_arrow" size="12,12" pos="246,-5" rotation="180" color="[white]" foregroundlayer="true"/>
+
+		<sprite depth="5" name="Icon" sprite="ui_game_symbol_map_player_arrow" size="16,16" pos="232,-37" color="[black]" foregroundlayer="true"/>
+		<sprite depth="6" name="Icon" sprite="ui_game_symbol_map_player_arrow" size="12,12" pos="234,-39" color="[white]" foregroundlayer="true"/>
+
+		<label depth="2" name="TextContent" pos="153,-66" font_size="28" color="[white]" justify="center" pivot="center" text="{daytitle}: {day|always}  {timetitle}: {time|always}" height="30" effect="outline" upper_case="true" />
+
+		<sprite depth="2" name="Icon" sprite="ui_game_symbol_temperature" size="22,22" pos="251,-55" color="[white]" />
+		<label depth="2" name="TextContent" pos="299,-66" font_size="28" color="[white]" justify="center" pivot="center" text="{maptemperature}[-]" height="30" controller="MapStats" effect="outline"/>
+
+		<sprite depth="2" name="Icon" sprite="ui_game_symbol_climb" size="22,22" pos="331,-55" color="[white]" />
+		<label depth="2" name="TextContent" pos="387,-66" font_size="28" color="[white]" globalopacitymod="1.8" justify="center" pivot="center" text="{mapelevation}[-] M" height="30" controller="MapStats" effect="outline" />
+	</append>
+	
+	<!-- the next is from me -->
+	
+	<append xpath="/windows" >
+	<window name="windowMenuStatsHUD" width="400" height="200" pos="0,-18" anchor="CenterTop">
+		<rect name="menuStats" controller="MapStats">
+
+			<label name="MenuTimeDayTime" depth="2" pos="-530,3" width="172" height="30" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="28" effect="outline" />
+
+			<sprite depth="2" name="Icon" sprite="ui_game_symbol_temperature" size="22,22" pos="351,0" color="[white]" />
+			<label depth="2" name="TextContent" pos="399,-11" font_size="28" color="[white]" justify="center" pivot="center" text="{maptemperature}[-]" height="30" controller="MapStats" effect="outline"/>
+
+			<sprite depth="2" name="Icon" sprite="ui_game_symbol_climb" size="22,22" pos="431,0" color="[white]" />
+			<label depth="2" name="TextContent" pos="487,-11" font_size="28" color="[white]" globalopacitymod="1.8" justify="center" pivot="center" text="{mapelevation}[-] M" height="30" controller="MapStats" effect="outline" />
+		
+		</rect>
+	</window>
+	</append>
+	
+	
+</configs>

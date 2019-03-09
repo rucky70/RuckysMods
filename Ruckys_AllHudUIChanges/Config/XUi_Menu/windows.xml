@@ -1,0 +1,19 @@
+<configs>
+	
+	<!-- from RELXIX_UIMENU_DropOnDeathNothing -->
+
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='Advanced']/grid/gameoption[@name='DropOnDeath']/@display_names">goAll,goToolbelt,goBackpack,goDeleteAll,goNone</set>
+	<set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='Advanced']/grid/browsergameoptioncombined[@name='DropOnDeath']/@display_names">goAll,goToolbelt,goBackpack,goDeleteAll,goNone</set>
+	<set xpath="/windows/window[@name='serverBrowser']/rect[@name='serverinfo']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='Advanced']/grid/browsergameoptioninfo[@name='DropOnDeath']/@display_names">goAll,goToolbelt,goBackpack,goDeleteAll,goNone</set>
+	
+	<!-- from RELXIX_UIMENU_More24HourLengthOptions -->
+	
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='Basic']/grid/gameoption[@name='DayNightLength']/@values">5, 10, 20, 30, 40, 50, 60, 90, 120, 150, 180, 210, 240, 270, 300</set>
+	<set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='Basic']/grid/browsergameoptioncombined[@name='DayNightLength']/@values">5, 10, 20, 30, 40, 50, 60, 90, 120, 150, 180, 210, 240, 270, 300</set>
+	
+	<!-- from RELXIX_UIMENU_MoreDayLightLengthOptions -->
+	
+	<set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='Basic']/grid/gameoption[@name='DayLightLength']/@values">2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ,22</set>
+	<set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='Basic']/grid/browsergameoptioncombined[@name='DayLightLength']/@values">2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ,22</set>
+	
+</configs>

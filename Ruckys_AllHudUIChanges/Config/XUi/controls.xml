@@ -1,0 +1,10 @@
+<configs>
+
+	<!-- new for S420_SimpleUI-CraftingQueue and me -->
+	
+	<set xpath="/controls/recipe_stack/rect[@controller='RecipeStack']/@width">70</set>
+	<set xpath="/controls/recipe_stack/rect[@controller='RecipeStack']/@height">70</set>
+	<set xpath="/controls/recipe_stack/rect[@controller='RecipeStack']/sprite[@name='backgroundMain']/@width">74</set>
+	<set xpath="/controls/recipe_stack/rect[@controller='RecipeStack']/sprite[@name='backgroundMain']/@height">74</set>
+	
+</configs>
