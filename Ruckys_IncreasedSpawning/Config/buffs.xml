@@ -1,0 +1,8 @@
+<configs>
+	<!-- change for Guppys RageZombies WHEN installed otherwise you will get a WRN message for the first one that can be ignored! -->
+	
+	<set xpath="/buffs/buff[@name='buffRage']/effect_group/triggered_effect[@buff='buffHasRage']/requirement/@value">.9</set> <!-- .5 -->
+	<set xpath="/buffs/buff[@name='pegasus']/effect_group/passive_effect[@name='WalkSpeed']/@value">1.3</set> <!-- 1.65 -->
+	<set xpath="/buffs/buff[@name='pegasus']/effect_group/passive_effect[@name='RunSpeed']/@value">2</set> <!-- 4 -->
+
+</configs>

@@ -1,0 +1,22 @@
+<configs>
+	<!-- change for Mumpfys MumTexturesDark WHEN installed otherwise you will see two WRN messages, that can be ignored then! -->
+
+	<append xpath="/entity_classes/entity_class[contains(@name,'V1')]">
+		<effect_group name="Base Effects">
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-0.6"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-0.7"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="2.5"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/entity_classes/entity_class[contains(@name,'V2')]">
+		<effect_group name="Base Effects">
+			<passive_effect name="WalkSpeed" operation="perc_add" value="6"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="7"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="-0.6"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-0.6"/>
+		</effect_group>
+	</append>
+
+</configs>

@@ -1,0 +1,57 @@
+<configs>
+	<!-- be prepared! WELL prepared! really WELL!! -->
+	<!-- for use with Mods that fasten up the beginning -->
+	
+	<set xpath="/spawning/biome/spawn[@maxcount='5' and not(@entitygroup='ZombieDogGroup') and not(@entitygroup='WanderingTraders') and not(contains(@entitygroup,'Animal'))]/@maxcount">15</set>
+	<set xpath="/spawning/biome/spawn[@maxcount='3' and not(@entitygroup='ZombieDogGroup') and not(@entitygroup='WanderingTraders') and not(contains(@entitygroup,'Animal'))]/@maxcount">10</set>
+	<set xpath="/spawning/biome/spawn[@maxcount='2' and not(@entitygroup='ZombieDogGroup') and not(@entitygroup='WanderingTraders') and not(contains(@entitygroup,'Animal'))]/@maxcount">7</set>
+	<set xpath="/spawning/biome/spawn[@maxcount='1' and not(@entitygroup='ZombieDogGroup') and not(@entitygroup='WanderingTraders') and not(contains(@entitygroup,'Animal'))]/@maxcount">5</set>
+
+	<set xpath="/spawning/biome/spawn[@respawndelay='7']/@respawndelay">2</set>
+	<set xpath="/spawning/biome/spawn[@respawndelay='4']/@respawndelay">1</set>
+
+	<set xpath="/spawning/entityspawner/day/property[@name='DaysToRespawnIfPlayerLeft' and @value='5']/@value">2</set>
+
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='25']/@value">35</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='15']/@value">25</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='12']/@value">20</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='10']/@value">18</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='9']/@value">18</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='8']/@value">17</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='7']/@value">16</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='6']/@value">14</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='5']/@value">12</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='4']/@value">10</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='3']/@value">7</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='2']/@value">5</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalAlive' and @value='1']/@value">3</set>	
+		
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='300']/@value">305</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='250']/@value">260</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='200']/@value">235</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='175']/@value">220</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='150']/@value">200</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='100']/@value">160</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='60']/@value">100</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='50']/@value">80</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='25']/@value">40</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='20']/@value">35</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='12']/@value">20</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='10']/@value">18</set>
+	<!--<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='8']/@value">17</set>-->
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='7']/@value">16</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='6']/@value">14</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='5']/@value">12</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='4']/@value">10</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='3']/@value">7</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='2']/@value">5</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='1']/@value">3</set>
+
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='15,25']/@value">25,40</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='10,20']/@value">15,30</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='5,10']/@value">12,18</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='5,8']/@value">12,17</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='4,7']/@value">10,16</set>
+	<set xpath="/spawning/entityspawner/day/property[@name='TotalPerWave' and @value='3,6']/@value">7,14</set>
+
+</configs>
