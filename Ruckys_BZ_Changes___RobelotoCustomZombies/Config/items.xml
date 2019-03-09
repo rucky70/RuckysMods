@@ -1,0 +1,41 @@
+<configs>
+
+	<!-- change for Robelotos CustomZombies WHEN installed otherwise you will see WRN messages, that can be ignored then! -->
+
+	<set xpath="/items/item[@name='meleehandZombieMaleHazmatShocker']/property[@class='Action0']/property[@name='DamageBlock']/@value">60</set>
+
+	<set xpath="/items/item[@name='ammoProjectileZombieElectricBolt']/property[@class='Action1']/property[@name='DamageBlock']/@value">120</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieElectricBolt']/property[@class='Action1']/property[@name='Explosion.BlockDamage']/@value">60</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieElectricBolt']/property[@class='Action1']/property[@name='DamageBonus.earth']/@value">60</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieElectricBolt']/property[@class='Action1']/property[@name='DamageBonus.stone']/@value">60</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieElectricBolt']/property[@class='Action1']/property[@name='DamageBonus.metal']/@value">30</set>
+
+	<set xpath="/items/item[@name='meleehandZombieBurningBoss']/property[@class='Action0']/property[@name='DamageBlock']/@value">200</set>
+
+	<set xpath="/items/item[@name='firevomitBigProjectile']/property[@class='Action1']/property[@name='DamageBlock']/@value">200</set>
+	<set xpath="/items/item[@name='firevomitBigProjectile']/property[@class='Action1']/property[@name='Explosion.BlockDamage']/@value">100</set>
+	<set xpath="/items/item[@name='firevomitBigProjectile']/property[@class='Action1']/property[@name='DamageBonus.earth']/@value">100</set>
+	<set xpath="/items/item[@name='firevomitBigProjectile']/property[@class='Action1']/property[@name='DamageBonus.stone']/@value">100</set>
+	<set xpath="/items/item[@name='firevomitBigProjectile']/property[@class='Action1']/property[@name='DamageBonus.metal']/@value">100</set>
+
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVultureBig']/property[@class='Action0']/property[@name='DamageBlock']/@value">170</set>
+
+	<set xpath="/items/item[@name='ammoProjectileVultureVomitBig']/property[@class='Action1']/property[@name='DamageBlock']/@value">180</set>
+	<set xpath="/items/item[@name='ammoProjectileVultureVomitBig']/property[@class='Action1']/property[@name='Explosion.BlockDamage']/@value">80</set>
+	<set xpath="/items/item[@name='ammoProjectileVultureVomitBig']/property[@class='Action1']/property[@name='DamageBonus.earth']/@value">80</set>
+	<set xpath="/items/item[@name='ammoProjectileVultureVomitBig']/property[@class='Action1']/property[@name='DamageBonus.stone']/@value">80</set>
+	<set xpath="/items/item[@name='ammoProjectileVultureVomitBig']/property[@class='Action1']/property[@name='DamageBonus.metal']/@value">80</set>
+
+	<set xpath="/items/item[@name='meleeHandAnimalAnaconda']/property[@class='Action0']/property[@name='DamageBlock']/@value">400</set>
+
+	<set xpath="/items/item[@name='meleeHandZombieScreamerBoss']/property[@class='Action0']/property[@name='DamageBlock']/@value">250</set>
+
+	<set xpath="/items/item[@name='ammoProjectileZombieScreamerVomit']/property[@class='Action1']/property[@name='DamageBlock']/@value">250</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieScreamerVomit']/property[@class='Action1']/property[@name='Explosion.BlockDamage']/@value">150</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieScreamerVomit']/property[@class='Action1']/property[@name='DamageBonus.earth']/@value">120</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieScreamerVomit']/property[@class='Action1']/property[@name='DamageBonus.stone']/@value">120</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieScreamerVomit']/property[@class='Action1']/property[@name='DamageBonus.metal']/@value">120</set>
+
+	<set xpath="/items/item[@name='meleeHandZombieGiant']/property[@class='Action0']/property[@name='DamageBlock']/@value">500</set>
+
+</configs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="BORDERLANDZ Changes for Robelotos CustomZombies" />
+        <Description value="This modlet decreases the block damage for Robelotos CustomZombies" />
+        <Author value="Rucky" />
+        <Version value="1.1 (A17.2)" />
+    </ModInfo>
+</xml>
