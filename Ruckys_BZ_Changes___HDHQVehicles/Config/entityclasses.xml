@@ -1,0 +1,17 @@
+<configs>
+
+	<!-- changed sizes in loot.xml                                  -->
+	<!--       new 16:9      new 21:9      old         used vanilla -->
+	<!-- 76 :  6,4  =  24    7,4  =  28   (9,1 / 9)    bicycle      -->
+	<!-- 77 : 12,9  = 108   15,9  = 135   (9,3 / 27)   minibike     -->
+	<!-- 78 : 12,7  =  84   15,7  = 105   (9,4 / 36)   motorcycle   -->
+	<!-- 79 : 13,14 = 182   24,14 = 336   (9,7 / 63)   4x4Truck     -->
+	<!-- 80 : 12,5  =  60   15,5  =  75   (9,5 / 45)   gyrocopter   -->
+	<!-- 81 : 13,14 = 182   24,14 = 336   (9,8 / 72)   helicopter   -->
+
+	<set xpath="/entity_classes/entity_class[@name='HDHQ_MonsterCar']/property[@name='LootListAlive']/@value"            >79</set> <!-- 79 -->
+	<set xpath="/entity_classes/entity_class[@name='HDHQ_MonsterUte']/property[@name='LootListAlive']/@value"            >79</set> <!-- 79 -->
+	<set xpath="/entity_classes/entity_class[@name='HDHQ_SchoolBus']/property[@name='LootListAlive']/@value"             >81</set> <!-- 79 -->
+	<set xpath="/entity_classes/entity_class[@name='HDHQ_APC']/property[@name='LootListAlive']/@value"                   >81</set> <!-- 79 -->
+
+</configs>

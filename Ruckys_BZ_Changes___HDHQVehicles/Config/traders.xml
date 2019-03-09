@@ -1,0 +1,38 @@
+<configs>
+	
+	<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='vehicleParts']" >
+		
+	<trader_item_group name="HDHQMonsterCarParts">
+		<item name="HDHQMonsterCarChassis"/>
+		<item name="HDHQMonsterCarAccessories"/>
+		<item name="vehicleWheels"/>
+	</trader_item_group>
+		
+	<trader_item_group name="HDHQMonsterUteParts">
+		<item name="HDHQMonsterUteChassis"/>
+		<item name="HDHQMonsterUteAccessories"/>
+		<item name="vehicleWheels"/>
+	</trader_item_group>
+		
+	<trader_item_group name="HDHQSchoolBusParts">
+		<item name="HDHQMonsterUteChassis"/>
+		<item name="HDHQSchoolBusAccessories"/>
+		<item name="vehicleWheels"/>
+	</trader_item_group>
+	
+	<trader_item_group name="HDHQAPCParts">
+		<item name="HDHQAPCChassis"/>
+		<item name="HDHQAPCAccessories"/>
+	</trader_item_group>
+		
+	</insertBefore>
+		
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='vehicleParts']">
+		<item group="HDHQMonsterCarParts" prob="1"/>
+		<item group="HDHQMonsterUteParts" prob="1"/>
+		<item group="HDHQSchoolBusParts" prob="0.1"/>
+		<item group="HDHQAPCParts" prob=".01"/>
+	</append>
+	
+ </configs>
