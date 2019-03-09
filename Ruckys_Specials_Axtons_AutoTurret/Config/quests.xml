@@ -14,7 +14,9 @@
 		<property name="repeatable" value="false" />
 	
   		<reward type="Item" id="BZchooseActionSkill" value="1" />
-	</quest>
-	
+	</quest>	
 	</append>
+	
+	<insertBefore xpath="/quests/quest[@id='quest_BasicSurvival1']/reward[@type='Quest']"><reward type="Item" id="questBZchooseActionSkill" value="1" chainreward="true" /></insertBefore>
+	
 </configs>

@@ -4,183 +4,178 @@
 		
 	<append xpath="/items">
 
-		<item name="BZAxtonAutoTurretPlaceable">
-			<property name="CustomIcon" value="foodCanBeef"/>
-			<property name="CustomIconTint" value="0,0,58"/>
-			<property name="HoldType" value="31"/>
-			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>			
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-			<property class="UMA"><property name="Overlay0Tint" value="0,0,58"/></property>
-			<property name="TintColor" value="0,0,58"/>
-			<property name="CreativeMode" value="Dev"/>
+	<item name="BZAxtonAutoTurretPlaceable">
+		<property name="CustomIcon" value="foodCanBeef"/>
+		<property name="CustomIconTint" value="0,0,58"/>
+		<property name="HoldType" value="31"/>
+		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>			
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property class="UMA"><property name="Overlay0Tint" value="0,0,58"/></property>
+		<property name="TintColor" value="0,0,58"/>
+		<property name="CreativeMode" value="Dev"/>
 			
-			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
-			<property name="DegradationBreaksAfter" value="false"/>
-			<property name="Stacknumber" value="1"/>
+		<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="Stacknumber" value="1"/>
 
-			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="4000"/>
-			<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons"/>
+		<property name="EconomicValue" value="4000"/>
+		<property name="SellableToTrader" value="false"/>
 
-			<property class="Action1">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value="0.1"/>
-				<property name="Blockname" value="BZAxtonAutoTurret"/>
-				<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/> <!-- we need a new way to change this here for a timed GiveItem event! -->
-				<property name="Sound_start" value="swoosh"/>
-			</property>
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock"/>
+			<property name="Delay" value="0.1"/>
+			<property name="Blockname" value="BZAxtonAutoTurret"/>
+			<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/> <!-- we need a new way to change this here for a timed GiveItem event! -->
+			<property name="Sound_start" value="swoosh"/>
+		</property>
+	</item>
 
-		</item>
+	<item name="BZAxtonAutoTurretIIPlaceable">
+		<property name="CustomIcon" value="foodCanBeef"/>
+		<property name="CustomIconTint" value="0,0,58"/>
+		<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock"/>
+			<property name="Delay" value="0.1"/>
+			<property name="Blockname" value="BZAxtonAutoTurretII"/>
+			<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
+			<property name="Sound_start" value="swoosh"/>
+		</property>
+	</item>
 
-		<item name="BZAxtonAutoTurretIIPlaceable">
-			<property name="CustomIcon" value="foodCanBeef"/>
-			<property name="CustomIconTint" value="0,0,58"/>
-			<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property class="Action1">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value="0.1"/>
-				<property name="Blockname" value="BZAxtonAutoTurretII"/>
-				<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
-				<property name="Sound_start" value="swoosh"/>
-			</property>
+	<item name="BZAxtonAutoTurretIIIPlaceable">
+		<property name="CustomIcon" value="foodCanBeef"/>
+		<property name="CustomIconTint" value="0,0,58"/>
+		<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock"/>
+			<property name="Delay" value="0.1"/>
+			<property name="Blockname" value="BZAxtonAutoTurretIII"/>
+			<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
+			<property name="Sound_start" value="swoosh"/>
+		</property>
+	</item>
 
-		</item>
+	<item name="BZAxtonAutoTurretIVPlaceable">
+		<property name="CustomIcon" value="foodCanBeef"/>
+		<property name="CustomIconTint" value="0,0,58"/>
+		<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock"/>
+			<property name="Delay" value="0.1"/>
+			<property name="Blockname" value="BZAxtonAutoTurretIV"/>
+			<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
+			<property name="Sound_start" value="swoosh"/>
+		</property>
+	</item>
 
-		<item name="BZAxtonAutoTurretIIIPlaceable">
-			<property name="CustomIcon" value="foodCanBeef"/>
-			<property name="CustomIconTint" value="0,0,58"/>
-			<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property class="Action1">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value="0.1"/>
-				<property name="Blockname" value="BZAxtonAutoTurretIII"/>
-				<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
-				<property name="Sound_start" value="swoosh"/>
-			</property>
+	<item name="BZAxtonAutoTurretVPlaceable">
+		<property name="CustomIcon" value="foodCanBeef"/>
+		<property name="CustomIconTint" value="0,0,58"/>
+		<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock"/>
+			<property name="Delay" value="0.1"/>
+			<property name="Blockname" value="BZAxtonAutoTurretV"/>
+			<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
+			<property name="Sound_start" value="swoosh"/>
+		</property>
+	</item>
 
-		</item>
-
-		<item name="BZAxtonAutoTurretIVPlaceable">
-			<property name="CustomIcon" value="foodCanBeef"/>
-			<property name="CustomIconTint" value="0,0,58"/>
-			<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property class="Action1">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value="0.1"/>
-				<property name="Blockname" value="BZAxtonAutoTurretIV"/>
-				<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
-				<property name="Sound_start" value="swoosh"/>
-			</property>
-
-		</item>
-
-		<item name="BZAxtonAutoTurretVPlaceable">
-			<property name="CustomIcon" value="foodCanBeef"/>
-			<property name="CustomIconTint" value="0,0,58"/>
-			<property name="Extends" value="BZAxtonAutoTurretPlaceable"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property class="Action1">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value="0.1"/>
-				<property name="Blockname" value="BZAxtonAutoTurretV"/>
-				<property name="Change_item_to" value="BZAxtonAutoTurretEmpty"/>
-				<property name="Sound_start" value="swoosh"/>
-			</property>
-
-		</item>
-
-		<item name="BZAxtonAutoTurretEmpty">
-			<property name="CustomIcon" value="foodCanBeef"/>
-			<property name="CustomIconTint" value="58,0,0"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property name="HoldType" value="31"/>
-			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>			
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-			<property class="UMA"><property name="Overlay0Tint" value="58,0,0"/></property>
-			<property name="TintColor" value="58,0,0"/>
+	<item name="BZAxtonAutoTurretEmpty">
+		<property name="CustomIcon" value="foodCanBeef"/>
+		<property name="CustomIconTint" value="58,0,0"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="HoldType" value="31"/>
+		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>			
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property class="UMA"><property name="Overlay0Tint" value="58,0,0"/></property>
+		<property name="TintColor" value="58,0,0"/>
 			
-			<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
-			<property name="DegradationBreaksAfter" value="false"/>
-			<property name="Stacknumber" value="1"/>
+		<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="27"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="Stacknumber" value="1"/>
 
-			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="4000"/>
-			<property name="SellableToTrader" value="false"/>
-		</item>
+		<property name="Group" value="Ammo/Weapons"/>
+		<property name="EconomicValue" value="4000"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
 
-		<item name="ammoAdminTurret"> <!-- Name is hardcoded in DLL ! Do not change! -->
-			<property name="CustomIcon" value="ammo9mmBullet"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="DisplayType" value="ammoBullet"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-			<property name="Material" value="Mbrass"/>
-			<property name="Stacknumber" value="50000"/> <!-- STK ammo -->
-			<property name="CraftingSkillGroup" value="craftSkillGuns"/>
-			<property name="EconomicValue" value="9"/>
-			<property name="SellableToTrader" value="false"/>
-			<property name="Group" value="Ammo/Weapons"/>
-			<effect_group name="Base Effects" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="32"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="7"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
-			</effect_group>
-		</item>
+	<item name="ammoAdminTurret"> <!-- Name is hardcoded in DLL ! Do not change! -->
+		<property name="CustomIcon" value="ammo9mmBullet"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="DisplayType" value="ammoBullet"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Mbrass"/>
+		<property name="Stacknumber" value="50000"/> <!-- STK ammo -->
+		<property name="CraftingSkillGroup" value="craftSkillGuns"/>
+		<property name="EconomicValue" value="9"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons"/>
+		<effect_group name="Base Effects" tiered="false">
+			<passive_effect name="EntityDamage" operation="base_set" value="32"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="7"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		</effect_group>
+	</item>
 
-		<item name="questBZchooseActionSkill">
-			<property name="Extends" value="questMaster"/>
-			<property name="Stacknumber" value="1"/>
-			<property class="Action0">
-				<property name="QuestGiven" value="quest_ActionSkill"/>
-			</property>
-		</item>
+	<item name="questBZchooseActionSkill">
+		<property name="Extends" value="questMaster"/>
+		<property name="Stacknumber" value="1"/>
+		<property class="Action0">
+			<property name="QuestGiven" value="quest_ActionSkill"/>
+		</property>
+	</item>
 
-		<item name="BZchooseActionSkill">
-			<property name="HoldType" value="16"/>
-			<property name="Meshfile" value="Items/Health/painkillersPrefab"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-			<property name="Material" value="Morganic"/>
-			<property name="CustomIcon" value="pilldose"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property name="SellableToTrader" value="false"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="ActionSkillGroup" value="Medicine"/>
-			<property name="CraftingSkillGroup" value="craftSkillScience"/>
-			<property name="Group" value="Science"/>
-		</item>
+	<item name="BZchooseActionSkill">
+		<property name="HoldType" value="16"/>
+		<property name="Meshfile" value="Items/Health/painkillersPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="CustomIcon" value="pilldose"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="ActionSkillGroup" value="Medicine"/>
+		<property name="CraftingSkillGroup" value="craftSkillScience"/>
+		<property name="Group" value="Science"/>
+	</item>
 		
-		<item name="BZActionSkillAxton">
-			<property name="HoldType" value="16"/>
-			<property name="Meshfile" value="Items/Health/painkillersPrefab"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-			<property name="Material" value="Morganic"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property name="CustomIcon" value="drugPainkillers"/> <property name="CustomIconTint" value="0,0,230"/>
-			<property class="UMA"><property name="Overlay0Tint" value="0,0,230"/></property>
-			<property name="TintColor" value="0,0,230"/>
-			<property name="SellableToTrader" value="false"/>
-			<property name="Stacknumber" value="1"/>
-			<property class="Action0">
-				<property name="Class" value="Eat"/>
-				<property name="Delay" value="1.0"/>
-				<property name="Use_time" value="..."/>
-				<property name="Sound_start" value="player_painkillers"/>
-				<!--<property name="Buff" value="buffDrugRedPill"/>-->
-				<property name="Create_item" value="BZAxtonAutoTurretEmpty"/>
-			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$CVarAxton" operation="set" value="1"/>
-				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffPerkAxtonTurret"/>-->
-			</effect_group>
-			<property name="ActionSkillGroup" value="Medicine"/>
-			<property name="CraftingSkillGroup" value="craftSkillScience"/>
-			<property name="Group" value="Science"/>
-		</item>
+	<item name="BZActionSkillAxton">
+		<property name="HoldType" value="16"/>
+		<property name="Meshfile" value="Items/Health/painkillersPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="CustomIcon" value="drugPainkillers"/> <property name="CustomIconTint" value="0,0,230"/>
+		<property class="UMA"><property name="Overlay0Tint" value="0,0,230"/></property>
+		<property name="TintColor" value="0,0,230"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Stacknumber" value="1"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_painkillers"/>
+			<!--<property name="Buff" value="buffDrugRedPill"/>-->
+			<property name="Create_item" value="BZAxtonAutoTurretEmpty"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$CVarAxton" operation="set" value="1"/>
+			<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffPerkAxtonTurret"/>-->
+		</effect_group>
+		<property name="ActionSkillGroup" value="Medicine"/>
+		<property name="CraftingSkillGroup" value="craftSkillScience"/>
+		<property name="Group" value="Science"/>
+	</item>
 	</append>
 		
 </configs>

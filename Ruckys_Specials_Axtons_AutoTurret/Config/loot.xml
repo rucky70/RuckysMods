@@ -1,0 +1,10 @@
+<configs>
+
+	<!-- this will give a WRN Message if BORDERLANDZ is not installed, but it can be ignored! -->
+	
+	<append xpath="/lootcontainers/lootgroup[@name='BZ_ACME_TechPackage']">
+		<item name="BZSPAutoTurret" count="2" />
+		<item name="BZSPShotgunTurret" count="1" />
+	</append>
+
+</configs>

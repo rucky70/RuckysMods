@@ -296,6 +296,98 @@
 		<property name="SortOrder1" value="70a0"/>		
 	</block>
 
+	<block name="BZSPAutoTurret">
+		<property name="CustomIcon" value="autoTurret"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Class" value="Ranged"/>
+		<property name="DisplayType" value="blockElectricalHardened" />
+		<property name="Material" value="Mmetal_medium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="AmmoItem" value="ammo9mmBullet"/>
+		<property name="TurnSpeed" value="20.5"/>
+		<property name="MaxDistance" value="25"/>
+		<property name="EntityDamage" value="29"/>
+		<property name="BlockDamage" value="1"/>
+		<property name="RaySpread" value="2.6"/>
+
+		<property name="BustRoundCount" value="15"/>
+		<property name="BurstFireRate" value="0.18"/>
+		<property name="CooldownTime" value="2"/>
+		<property name="OvershootTime" value="0.4"/>
+		<property name="FallAsleepTime" value="10"/>
+		<property name="WakeUpTime" value="0.5"/>
+
+		<property name="YawRange" value="90"/>
+		<property name="PitchRange" value="90"/>
+
+		<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+		<property name="DamageBonus.head" value="3"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.wood" value="2"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.stone" value="0.2"/>
+		<property name="DamageBonus.metal" value="0.2"/>
+
+		<property name="TargetingSound" value="turret_retarget_lp"/>
+		<property name="OverheatSound" value="turret_overheat_lp"/>
+		<property name="WakeUpSound" value="turret_windup"/>
+		<property name="FireSound" value="Pistol_Fire"/>
+		<property name="RequiredPower" value="0"/>
+		<property name="TakeDelay" value="1"/>
+
+		<property class="RepairItems">
+			<property name="resourceForgedIron" value="12"/>
+			<property name="resourceMechanicalParts" value="2"/>
+			<property name="resourceElectricParts" value="2"/>
+		</property>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+		<drop event="Destroy" count="0"/>
+
+		<property name="Stacknumber" value="10"/>
+		<property name="EconomicValue" value="10000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+		<property name="Group" value="Tools/Traps,Science"/>
+		<property name="PickupJournalEntry" value="cameraTip"/>
+		<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+		<property name="SortOrder1" value="70a0"/>
+	</block>
+
+	<block name="BZSPShotgunTurret">
+		<property name="CustomIcon" value="shotgunTurret"/>
+		<property name="Extends" value="autoTurret"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretShotgunPrefab"/>
+		<property name="AmmoItem" value="ammoShotgunShell"/>
+		<property name="MaxDistance" value="13"/>
+		<property name="EntityDamage" value="8"/>
+		<property name="BlockDamage" value="1"/>
+		<property name="RaySpread" value="5.3"/>
+		<property name="RayCount" value="8"/>
+		<property name="BustRoundCount" value="4"/>
+		<property name="BurstFireRate" value="0.63"/>
+		<property name="CooldownTime" value="2"/>
+		<property name="OvershootTime" value="0.8"/>
+
+		<property name="ParticlesMuzzleFire" value="nozzleflash_shotgun"/>
+		<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+		<property name="RequiredPower" value="0"/>
+		<property name="TakeDelay" value="1"/>
+
+		<property name="FireSound" value="pump_shotgun_fire"/>
+		<property name="EconomicValue" value="8000"/>
+		<property name="PickupJournalEntry" value="cameraTip"/>
+	</block>
+
 	</append>
 	
 	

@@ -21,5 +21,21 @@
 		<ingredient name="BZAxtonAutoTurretEmpty" count="1"/>
 	</recipe>
 
+	<recipe name="BZSPAutoTurret" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="autoTurret" count="1"/>
+		<ingredient name="carBattery" count="1"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+		<ingredient name="resourceMechanicalParts" count="1"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+
+	<recipe name="BZSPShotgunTurret" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="shotgunTurret" count="1"/>
+		<ingredient name="carBattery" count="1"/>
+		<ingredient name="resourceForgedSteel" count="2"/>
+		<ingredient name="resourceMechanicalParts" count="1"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+
 	</append>
 </configs>
