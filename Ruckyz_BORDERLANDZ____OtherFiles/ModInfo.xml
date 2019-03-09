@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="BORDERLANDZ - Other Files" />
+        <Description value="Here you will find latest Assembly-CSharp.dll and both Localization text files. These need to be applied manually!!!" />
+        <Author value="Rucky" />
+        <Version value="1.1 (A17.2)" />
+    </ModInfo>
+</xml>
