@@ -469,24 +469,18 @@
 
 	</append>
 	
-	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterCamoDigital']/effect_group">
-		<passive_effect name="EconomicValue" operation="base_set" value="2955"/>
-	</append>
-	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorJungle']/effect_group">
-		<passive_effect name="EconomicValue" operation="base_set" value="2955"/>
-	</append>
-	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorWinter']/effect_group">
-		<passive_effect name="EconomicValue" operation="base_set" value="2955"/>
-	</append>
-	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalCamoDigital']/effect_group">
-		<passive_effect name="EconomicValue" operation="base_set" value="3955"/>
-	</append>
-	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorJungle']/effect_group">
-		<passive_effect name="EconomicValue" operation="base_set" value="3955"/>
-	</append>
-	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorWinter']/effect_group">
-		<passive_effect name="EconomicValue" operation="base_set" value="3955"/>
-	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterCamoDigital']/effect_group"><passive_effect name="EconomicValue" operation="base_set" value="2955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterCamoDigital']"><property name="EconomicValue" value="2955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorJungle']/effect_group"><passive_effect name="EconomicValue" operation="base_set" value="2955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorJungle']"><property name="EconomicValue" value="2955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorWinter']/effect_group"><passive_effect name="EconomicValue" operation="base_set" value="2955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterArmorWinter']"><property name="EconomicValue" value="2955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalCamoDigital']/effect_group"><passive_effect name="EconomicValue" operation="base_set" value="3955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalCamoDigital']"><property name="EconomicValue" value="3955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorJungle']/effect_group"><passive_effect name="EconomicValue" operation="base_set" value="3955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorJungle']"><property name="EconomicValue" value="3955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorWinter']/effect_group"><passive_effect name="EconomicValue" operation="base_set" value="3955"/></append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunConverterTotalArmorWinter']"><property name="EconomicValue" value="3955"/></append>
 	
 	
 	<!-- new Mods for BorderlandZ -->
@@ -506,6 +500,7 @@
 				<passive_effect name="EconomicValue" operation="base_set" value="5555"/>
 			</effect_group>
 			-->
+			<property name="EconomicValue" value="5555"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="smallEngine"/>
 			<property name="CustomIconTint" value="cccccc"/>
@@ -519,6 +514,7 @@
 				<passive_effect name="DegradationMax" operation="perc_add" value=".5"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="4255"/>
 			</effect_group>
+			<property name="EconomicValue" value="4255"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceForgedIron"/>
 			<property name="CustomIconTint" value="cccccc"/>
@@ -534,6 +530,7 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0.05"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="4195"/>
 			</effect_group>
+			<property name="EconomicValue" value="4195"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="pistol_barrel"/>
 			<property name="CustomIconTint" value="cccccc"/>
@@ -546,6 +543,7 @@
 				<passive_effect name="MagazineSize" operation="perc_add" value="1.2"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="1955"/>
 			</effect_group>
+			<property name="EconomicValue" value="1955"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="airFilter"/>
 			<property name="CustomIconTint" value="676767"/>
@@ -558,6 +556,7 @@
 				<passive_effect name="MagazineSize" operation="perc_add" value=".334"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="2155"/>
 			</effect_group>
+			<property name="EconomicValue" value="2155"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="44MagnumCylinder"/>
 		</item_modifier>
@@ -569,6 +568,7 @@
 				<passive_effect name="MagazineSize" operation="perc_add" value="4"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="2155"/>
 			</effect_group>
+			<property name="EconomicValue" value="2155"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="huntingRifleBolt"/>
 		</item_modifier>
@@ -580,6 +580,7 @@
 				<passive_effect name="MagazineSize" operation="perc_add" value=".5"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="2155"/>
 			</effect_group>
+			<property name="EconomicValue" value="2155"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="PumpShotgun_parts"/>
 		</item_modifier>
@@ -594,6 +595,7 @@
 			<effect_group tiered="false">
 				<passive_effect name="EconomicValue" operation="base_set" value="2555"/>
 			</effect_group>
+			<property name="EconomicValue" value="2555"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="pistol_parts"/>
 		</item_modifier>
@@ -631,6 +633,7 @@
 				<!--<passive_effect name="Magazine_items" operation="base_set" value="ammoRocketHE,ammoRocketFrag"/>-->
 				<passive_effect name="EconomicValue" operation="base_set" value="9655"/>
 			</effect_group>
+			<property name="EconomicValue" value="9655"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceGoldNugget"/>
 			<property name="CustomIconTint" value="dcdc00"/>
@@ -657,6 +660,7 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffStunnedX"/>
 			</effect_group>
+			<property name="EconomicValue" value="7055"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceSilverNugget"/>
 			<property name="CustomIconTint" value="5a87ff"/>
@@ -683,6 +687,7 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShockedX"/>
 			</effect_group>
+			<property name="EconomicValue" value="9555"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceSilverNugget"/>
 			<property name="CustomIconTint" value="96d7ff"/>
@@ -712,6 +717,7 @@
 				<passive_effect name="DegradationMax" operation="perc_add" value="-.15"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="11555"/>
 			</effect_group>
+			<property name="EconomicValue" value="11555"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceSilverNugget"/>
 			<property name="CustomIconTint" value="ac2132"/>
@@ -732,6 +738,7 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="99"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffIntensifierX"/>
 			</effect_group>
+			<property name="EconomicValue" value="9555"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceRawDiamond"/>
 		</item_modifier>
@@ -766,6 +773,7 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="99"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned1"/>
 			</effect_group> -->
+			<property name="EconomicValue" value="11955"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="resourceSilverNugget"/> <!-- resourceRawDiamond resourceSilverNugget resourceGoldNugget -->
 			<property name="CustomIconTint" value="ac2132"/>
@@ -787,6 +795,7 @@
 				<passive_effect name="PerkLevel" tags="perkPackMule" operation="base_add" value="0"/>
 				<passive_effect name="EconomicValue" operation="base_set" value="7055"/>
 			</effect_group>
+			<property name="EconomicValue" value="7055"/>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 			<property name="CustomIcon" value="modArmorPlasticPlating"/>
 			<property name="CustomIconTint" value="ffcccc"/>

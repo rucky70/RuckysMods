@@ -220,7 +220,7 @@
 		<item group="BZGunsCompleteList"  count="1,2"/> <!-- std 1,2 test 4,5 -->
 		<item group="modAllT5SecretStash" count="2,3"/> <!-- std 2,3 test 7,9 -->
 		<item group="vehicleParts" count="1,2"/>
-<!-- -->		
+<!-- -->
 		<item group="generalResources" count="3,4"/>
 		<item group="constructionSupplies" count="1,2"/>
 		<item group="clothes" count="2,3"/>

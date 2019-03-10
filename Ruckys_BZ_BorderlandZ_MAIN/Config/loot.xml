@@ -72,31 +72,33 @@
 
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='ammoSteel']">
 		<lootgroup name="ammoExt" count="2">
-			<item name="ammoShotgunShell" count="20,50"/>
-			<item name="ammo9mmBullet" count="50,70" prob="1.5"/>
-			<item name="ammo762mmBulletFMJ" count="20,50"/>
-			<item name="ammo44MagnumBullet" count="20,30" prob="0.2"/>
+			<item name="ammoShotgunShell" count="10,30"/>
+			<item name="ammo9mmBullet" count="20,50" prob="1.5"/>
+			<item name="ammo762mmBulletFMJ" count="10,30"/>
+			<item name="ammo44MagnumBullet" count="10,20" prob="0.2"/>
 		</lootgroup>
 
 		<lootgroup name="ammoSteelExt" count="2">
-			<item name="ammoShotgunShell" count="30,60"/>
-			<item name="ammo9mmBulletSteel" count="60,90" prob="1.5"/>
-			<item name="ammo762mmBulletFMJSteel" count="30,60"/>
-			<item name="ammo44MagnumBulletSteel" count="25,40" prob="0.2"/>
+			<item name="ammoShotgunShell" count="10,30"/>
+			<item name="ammo9mmBulletSteel" count="20,50" prob="1.5"/>
+			<item name="ammo762mmBulletFMJSteel" count="10,30"/>
+			<item name="ammo44MagnumBulletSteel" count="10,20" prob="0.2"/>
 		</lootgroup>
 
 	</insertAfter>
 	
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']"><item name="ammo9mmBullet" count="30,60"/></append>
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']"><item name="ammo44MagnumBullet" count="20,40"/></append>
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']"><item name="ammoShotgunShell" count="20,40"/></append>
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']"><item name="ammo9mmBullet" count="50,100"/></append>
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']"><item name="ammo762mmBulletFMJ" count="50,100"/></append>
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']"><item name="ammo762mmBulletFMJ" count="30,50"/></append>
-	<append xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']"><item name="ammo762mmBulletFMJ" count="30,50"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']"><item name="ammo9mmBullet" count="10,30"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsMagnum+ammo']"><item name="ammo44MagnumBullet" count="10,20"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsShotgun+ammo']"><item name="ammoShotgunShell" count="10,20"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']"><item name="ammo9mmBullet" count="20,50"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']"><item name="ammo762mmBulletFMJ" count="30,70"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']"><item name="ammo762mmBulletFMJ" count="10,20"/></append>
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']"><item name="ammo762mmBulletFMJ" count="10,20"/></append>
 	
 	<set xpath="/lootcontainers/lootcontainer/item[@group='ammo']/@group">ammoExt</set>
 	<set xpath="/lootcontainers/lootcontainer/item[@group='ammoSteel']/@group">ammoSteelExt</set>
+
+	<set xpath="/lootcontainers/lootcontainer[@id='40']/@count">3,4</set> <!-- 1 -->
 
 	<set xpath="/lootcontainers/lootcontainer[@id='55']/@count">2,3</set> <!-- 1,5 -->
 	<set xpath="/lootcontainers/lootcontainer[@id='55']/item[@name='oldCash']/@count">120,160</set> <!-- 5,60 -->
@@ -163,6 +165,23 @@
 		<item group="modGunT3" count="1" prob="1.1"/>
 	</append>
 
+	<set xpath="/lootcontainers/lootcontainer[@id='34']/@size">7,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='34']/@count">7,8</set> <!-- 4 -->
+	<append xpath="/lootcontainers/lootcontainer[@id='34']">
+		<item group="ammoExt" count="2,3" prob="3"/>
+		<item group="ammoSteelExt" count="2,3" prob="2"/>
+		<item group="weaponsPistol+ammo" prob="9"/>
+		<item group="weaponsShotgun+ammo" prob="7"/>
+		<item group="weaponsHuntingRifle+ammo" prob="5"/>
+		<item group="weaponsMagnum+ammo" loot_prob_template="3"/>
+		<item group="weaponsMilitaryGuns+ammo" loot_prob_template="5"/>
+		<item name="resourceRepairKit" count="20,35" prob="5"/>
+		<item name="casinoCoin" count="2000,5410" prob="2"/>
+		<item name="oldCash" count="250,500" prob="3"/>
+		<item group="modGunT1" count="1" prob="2.5"/>
+		<item group="modGunT2" count="1" prob="1.7"/>
+		<item group="modGunT3" count="1" prob="1.1"/>
+	</append>
 
 	<!-- as the SawedOff-Mod and the Converter-Mods are NOT compatible, we remove the SawedOff from the Lootlists -->
 	
