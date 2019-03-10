@@ -9,6 +9,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunAdvancedBarrel']/effect_group/passive_effect[@name='SpreadMultiplierAiming']/@value">0.02,0.12</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunAdvancedBarrel']/effect_group/passive_effect[@name='EconomicValue']/@value">1250,1950</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunAdvancedBarrel']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunAdvancedBarrel']/effect_group/passive_effect" name="rand">0.2</setattribute>
 	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderII']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderII']/effect_group/passive_effect[@name='MagazineSize']/@value">1.0,1.5</set>
@@ -16,6 +17,7 @@
 	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderII']/effect_group"><passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.05,-0.01"/></append>	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderII']/effect_group/passive_effect[@name='EconomicValue']/@value">650,1050</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderII']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderII']/effect_group/passive_effect" name="rand">0.2</setattribute>
 	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderMagnum']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderMagnum']/effect_group/passive_effect[@name='MagazineSize']/@value">0.34,0.67</set>
@@ -23,6 +25,7 @@
 	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderMagnum']/effect_group"><passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.05,-0.01"/></append>	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderMagnum']/effect_group/passive_effect[@name='EconomicValue']/@value">550,850</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderMagnum']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderMagnum']/effect_group/passive_effect" name="rand">0.2</setattribute>
 	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderHR']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderHR']/effect_group/passive_effect[@name='MagazineSize']/@value">3.0,6.0</set>
@@ -30,6 +33,7 @@
 	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderHR']/effect_group"><passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.15,-0.1"/></append>	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderHR']/effect_group/passive_effect[@name='EconomicValue']/@value">550,850</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderHR']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderHR']/effect_group/passive_effect" name="rand">0.2</setattribute>
 	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderSG']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderSG']/effect_group/passive_effect[@name='MagazineSize']/@value">0.25,0.5</set>
@@ -37,6 +41,7 @@
 	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderSG']/effect_group"><passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-0.05,-0.01"/></append>	
 	<set xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderSG']/effect_group/passive_effect[@name='EconomicValue']/@value">550,850</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderSG']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtenderSG']/effect_group/passive_effect" name="rand">0.2</setattribute>
 
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIce']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIce']/effect_group/passive_effect[@name='EntityDamage']/@value">0.01,0.05</set>
@@ -46,6 +51,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIce']/effect_group/passive_effect[@name='DegradationMax']/@value">-0.07,-0.03</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIce']/effect_group/passive_effect[@name='EconomicValue']/@value">4250,4950</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementIce']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementIce']/effect_group/passive_effect" name="rand">0.2</setattribute>
 
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementElec']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementElec']/effect_group/passive_effect[@name='EntityDamage']/@value">0.01,0.05</set>
@@ -55,6 +61,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementElec']/effect_group/passive_effect[@name='DegradationMax']/@value">-0.07,-0.03</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementElec']/effect_group/passive_effect[@name='EconomicValue']/@value">6250,6950</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementElec']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementElec']/effect_group/passive_effect" name="rand">0.2</setattribute>
 
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementFire']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementFire']/effect_group/passive_effect[@name='EntityDamage']/@value">0.05,0.10</set>
@@ -64,6 +71,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementFire']/effect_group/passive_effect[@name='DegradationMax']/@value">-0.15,-0.11</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementFire']/effect_group/passive_effect[@name='EconomicValue']/@value">5250,5950</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementFire']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementFire']/effect_group/passive_effect" name="rand">0.2</setattribute>
 
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIntense']/effect_group/@tiered">true</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIntense']/effect_group/passive_effect[@name='EntityDamage']/@value">0.05,0.1</set>
@@ -73,6 +81,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIntense']/effect_group/passive_effect[@name='DegradationMax']/@value">-0.03,-0.02</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunElementIntense']/effect_group/passive_effect[@name='EconomicValue']/@value">6550,7150</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementIntense']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modGunElementIntense']/effect_group/passive_effect" name="rand">0.2</setattribute>
 
 	
 	<!-- BorderlandZ Armor Mods -->
@@ -87,6 +96,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorShield']/effect_group/passive_effect[@tags='perkPackMule']/@value">0,2</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorShield']/effect_group/passive_effect[@name='EconomicValue']/@value">1950,2950</set>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorShield']/effect_group/passive_effect" name="tier">1,255</setattribute>	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorShield']/effect_group/passive_effect" name="rand">0.2</setattribute>
 
 
 </configs>
